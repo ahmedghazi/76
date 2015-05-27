@@ -8,7 +8,7 @@ var MetiersController = function() {
 	};
 
 	this.bindEvents = function(){
-		$(".map_item").hover(function(e){
+		$(".map_item").mouseenter(function(e){
 			$(".map_item").attr('class','map_item');
 			$(this).attr('class','map_item hover');
 			var id = $(this).attr("id");
@@ -60,14 +60,15 @@ var MetiersController = function() {
 
 	this.metierAnimeOut = function(id){
 		var d = 0;
-		$(".agence_metier.show .slideRight").each(function(index, el) {
-			
+		$(".agence_metier.show .agence_metier_content").children("div,h2").each(function(index, el) {
+			//console.log(index, el);
 			setTimeout(function(){
 				$(el).addClass('slideRight');
 			},d);
 			d += delay*2;
-			console.log(d)
+			console.log(d);
 		});
+
 
 		setTimeout(function(){
 			$(".agence_metier").removeClass("show");
@@ -84,7 +85,7 @@ var MetiersController = function() {
 			setTimeout(function(){
 				$(el).removeClass('slideRight');
 			},d);
-			d += delay;
+			d += delay*2;
 			
 		});
 	};
