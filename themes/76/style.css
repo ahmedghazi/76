@@ -184,27 +184,23 @@ h1,h2,h3,h4{
 }
 
 
+
 @font-face {
-    font-family: 'EngraversGothicBT-Regular';
-    src: url('_/fonts/EngraGotBTReg.eot');
+	font-family: 'EngraversGothicBT-Regular';
+	src: url('_/fonts/EngraGotBTReg.eot?#iefix') format('embedded-opentype'), 
+	     url('_/fonts/EngraGotBTReg.woff') format('woff'), 
+	     url('_/fonts/EngraGotBTReg.ttf')  format('truetype'),
+	     url('_/fonts/EngraGotBTReg.svg#EngraGotBTReg') format('svg');
 }
 
 @font-face {
-    font-family: 'EngraversGothicBT-Regular';
-    src: url('_/fonts/EngraGotBTReg.woff') format('woff'),
-    url('_/fonts/EngraGotBTReg.svg#EngraversGothicBT-Regular') format('svg');
+	font-family: 'TimesNewRomanPS-Italic';
+	src: url('_/fonts/TimesNewRomPSIta.eot?#iefix') format('embedded-opentype'), 
+	     url('_/fonts/TimesNewRomPSIta.woff') format('woff'), 
+	     url('_/fonts/TimesNewRomPSIta.ttf')  format('truetype'),
+	     url('_/fonts/TimesNewRomPSIta.svg#TimesNewRomPSIta') format('svg');
 }
 
-@font-face {
-    font-family: 'TimesNewRomanPS-Italic';
-    src: url('_/fonts/TimesNewRomPSIta.eot');
-}
-
-@font-face {
-    font-family: 'TimesNewRomanPS-Italic';
-    src: url('_/fonts/TimesNewRomPSIta.woff') format('woff'),
-    url('_/fonts/TimesNewRomPSIta.svg#TimesNewRomanPS-Italic') format('svg');
-}
 .EngraversGothicBTn,
 .surtitre{font-family: 'EngraversGothicBT-Regular';}
 
@@ -216,7 +212,14 @@ h1,h2,h3,h4{
 /* ==============================================================================
 	ASSETS
    ============================================================================== */
-h2{font-size: 2em;margin-bottom: 1em;}
+h2{font-size: 2em;margin-bottom: 21px;}
+.surtitre{
+	font-size: 0.786em;
+	margin-bottom: 6px;
+}
+.soustitre{
+	margin-bottom: 21px;
+}
 
 .btn{
 	position: relative;
@@ -276,6 +279,14 @@ h2{font-size: 2em;margin-bottom: 1em;}
 	width: 100%;
 	height: 100%;
 	background-color: rgba(28, 28, 28, 0.85);
+}
+
+.slideRight{
+	-webkit-transform: translateX(100%);
+       -moz-transform: translateX(100%);
+		-ms-transform: translateX(100%);
+            transform: translateX(100%);
+	opacity: 0;
 }
 /* ==============================================================================
 	BLOCKS
@@ -481,10 +492,7 @@ article{
             transform: translateX(calc(100% + 753px));
 }
 .actionsBtn{display: inline-block;}
-.surtitre{
-	font-size: 0.786em;
-	margin-bottom: 0.429em;
-}
+
 .projet h2{font-size: 2em; margin-bottom: 1em;}
 .projet p{
 	white-space: pre-line;
@@ -590,12 +598,10 @@ article{
   	-webkit-transform: translateY(-50%);
 }
 .agence_metier{display: none;}
+.agence_metier.show{display: block}
 
 .agence_metier .soustitre{
 	white-space: pre-line;
-	font-family: Times New Roman, serif;
-	font-style: italic;
-	margin-bottom: 2em;
 }
 .agence_metier_content table{
 	float: left;
@@ -603,7 +609,7 @@ article{
 	color: #595959;
 	margin-right: 20px;
 }
-.agence_metier_content table tr:first-child td{padding-bottom: 20px;font-size: 18px;}
+.agence_metier_content table tr:first-child td{padding-bottom: 17px;font-size: 18px;}
 .agence_metier_content table tr td{padding-left: 10px;}
 .agence_metier_content table tr td p{margin-bottom: 0;}
 .map{
