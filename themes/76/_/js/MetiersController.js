@@ -18,7 +18,7 @@ var MetiersController = function() {
 		});
 
 		//$(".map_item").eq(0).trigger("mouseenter");
-		$("#social").trigger("mouseenter");
+		$("#print").trigger("mouseenter");
 	};
 
 	this.animateIn = function(){
