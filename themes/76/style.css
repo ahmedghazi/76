@@ -609,11 +609,12 @@ article{
 	color: #595959;
 	margin: 0 30px 30px 0;
 	max-width: 170px;
+	table-layout: fixed;
 }
 .agence_metier_content table:nth-child(3){margin-right: 0; clear: left;}
 .agence_metier_content table tr:first-child td{padding-bottom: 17px;font-size: 18px;}
 .agence_metier_content table tr td{padding-left: 10px; max-width: 170px;}
-.agence_metier_content table tr td p{margin-bottom: 0;}
+.agence_metier_content table tr td p{margin-bottom: 0;white-space: pre-wrap}
 .map{
 	position: relative;
 	max-width: 80%; max-height: 80%;
