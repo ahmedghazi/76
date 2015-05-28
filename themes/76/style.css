@@ -131,7 +131,7 @@ a, a:visited{color:#737375;}
 h1,h2,h3,h4{
 	text-transform: uppercase;
 	font-weight: 100;
-	-webkit-font-smoothing: antialiased;
+	
 }
 
 .alignleft{float: left;}
@@ -212,7 +212,7 @@ h1,h2,h3,h4{
 /* ==============================================================================
 	ASSETS
    ============================================================================== */
-h2{font-size: 2em;margin-bottom: 21px;}
+h2{font-size: 1.857em;margin-bottom: 21px;}
 .surtitre{
 	font-size: 0.786em;
 	margin-bottom: 6px;
@@ -829,9 +829,40 @@ article{
 
 #modal_close{
 	cursor: pointer;
-	font-size: 2em;
+	width: 15px; height: 15px;
+	margin: 0 auto;
+	position: relative;
+	margin-bottom: 6px;
 }
-#modal_close:hover{color: #595959}
+#modal_close div{
+	background: #ffffff;
+	width: 100%;
+	height: 1px;
+	position: absolute;
+	top: 7px;
+	-webkit-transform: rotate(45deg);
+	   -moz-transform: rotate(45deg);
+	     -o-transform: rotate(45deg);
+	        transform: rotate(45deg);
+}
+#modal_close .stripe2{
+	-webkit-transform: rotate(-45deg);
+	   -moz-transform: rotate(-45deg);
+	     -o-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
+}
+#modal_close:hover div{
+	-webkit-transform: rotate(-135deg);
+	   -moz-transform: rotate(-135deg);
+	     -o-transform: rotate(-135deg);
+	        transform: rotate(-135deg);
+}
+#modal_close:hover .stripe2{
+	-webkit-transform: rotate(135deg);
+	   -moz-transform: rotate(135deg);
+	     -o-transform: rotate(135deg);
+	        transform: rotate(135deg);
+}
 
 .diapo{
 	width: 100%; height: 100%;
@@ -842,6 +873,8 @@ article{
 	position: absolute;
 	background-size: cover;
 	background-position: center;
+	/*background-attachment: fixed;*/
+	background-repeat: no-repeat;
 }
 
 

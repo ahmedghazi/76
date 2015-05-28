@@ -1,7 +1,10 @@
 <div id="modal" class="vhidden anime">
 	<div id="modal_inside">
 		<div id="modal_header">
-			<div id="modal_close"><i class="fa fa-times"></i></div>
+			<div id="modal_close">
+				<div class="stripe1 anime_md"></div>
+				<div class="stripe2 anime_md"></div>
+			</div>
 			<div id="modal_surtitre" class="surtitre">modal_surtitre</div>
 			<h2 id="modal_titre">modal_titre</h2>
 		</div>
