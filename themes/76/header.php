@@ -116,7 +116,7 @@
 
 <body <?php body_class(); ?>>
 	
-	<div id="wrapper"><!-- not needed? up to you: http://camendesign.com/code/developpeurs_sans_frontieres -->
+	<div id="wrapper" class="vhidden"><!-- not needed? up to you: http://camendesign.com/code/developpeurs_sans_frontieres -->
 		
 		<header>
 			<!--h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1-->

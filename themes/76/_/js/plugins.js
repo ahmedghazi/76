@@ -47,3 +47,23 @@ function getImageBrightness(imageSrc,callback) {
         callback(brightness);
     }
 }
+
+(function(){
+/*
+    var section = document.querySelectorAll("section")
+        projet = document.querySelectorAll(".projet"),
+        speed = 0.5;
+console.log(section)
+console.log(projet)
+    section.onscroll = function(){
+        [].slice.call(projet).forEach(function(el,i){
+
+        var windowYOffset = window.pageYOffset,
+            elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+
+        el.style.backgroundPosition = elBackgrounPos;
+
+    });
+  };
+*/
+})();

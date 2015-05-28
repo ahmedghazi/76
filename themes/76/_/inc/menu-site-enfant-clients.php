@@ -8,27 +8,29 @@
 		//'posts_per_page' => -1,
 	);
 
-	$qq = new WP_Query( $argss );
+	$qqq = new WP_Query( $argss );
 //trace($q->max_num_pages);
 //$max = $q->max_num_pages;
-	if ( $qq->have_posts() ) :
-		echo '<ul class="sous_menu">';
-		while ( $qq->have_posts() ) : $qq->the_post();
+	if ( $qqq->have_posts() ) :
+		echo '<div class="sous_menu_projets_bande anime">';
+		echo '<ul class="sous_menu_projets">';
+		while ( $qqq->have_posts() ) : $qqq->the_post();
 
 			$url_thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), "full");
 			if(!$url_thumb)
 				$url_thumb[0] = 'http://placehold.it/26x48&text=Client';
 			//$url_thumb = $url_thumb[0];
-			$link = get_permalink(geT_the_ID());
+
+			$slug = $link."#".basename(get_permalink());
 			//include(locate_template('_/inc/jdb-article.php'));
 			echo "<li>";
-				echo '<div class="sous_menu_logo"><div class="sous_menu_logo_inside" style="background-image:url('.$url_thumb[0].')"></div></div>';
-				echo "<a data-role='ajax' class='anime' href='".$link."'>".get_the_title().'</a>';
-				include(locate_template('_/inc/menu-site-enfant-clients.php'));
+			echo '<div class="sous_menu_projets_thumbnail anime" style="background-image:url('.$url_thumb[0].')"></div>';
+			echo "<a data-role='hash' class='anime' href='".$slug."'>".get_the_title().'</a>';
 			echo "</li>";
 			
 		endwhile;
 		echo '</ul>';
+		echo '</div>';
 	endif;
 	wp_reset_postdata();
 ?>

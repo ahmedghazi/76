@@ -7,17 +7,14 @@ var dw,dh,ww,wh,
 	_NavigateController,
 	_MetiersController,
 	arr_slide = [];
+
 /* trigger when page is ready */
 $(document).ready(function (){
 
 	format();
-	
-
-
 	window.addEventListener("orientationchange", function() {
 		format();
 	}, false);
-	
 	
 });
 
@@ -29,16 +26,26 @@ $(window).resize(function() {
 	format();
 });
 
+/**********************
+
+**********************/
 function init_app(){
 	init_vendors();
 	init_objects();
+
+	reveal();
 }
 
+/**********************
+
+**********************/
 function init_vendors(){
 
 }
 
+/**********************
 
+**********************/
 function init_objects(){
 	var _Btn = new Btn();
 	_Btn.bindEvents();
@@ -55,6 +62,14 @@ function init_objects(){
 	_MetiersController = new MetiersController();
 	_MetiersController.init();
 	
+}
+
+/**********************
+
+**********************/
+function reveal(){
+	$("#wrapper").css({opacity:0});
+	$("#wrapper").removeClass('vhidden').animate({opacity:1});
 }
 
 function format(){

@@ -40,13 +40,19 @@ var NavigateController = function() {
 
     this.bindEvents = function(){
         $.navigate.init({
-            //ajaxLinks:'a:not(.btn_popup)[rel!="external"][target!="_blank"], .ajaxLink',
+            ajaxLinks:'a:not(.btn_popup)[rel!="external"][target!="_blank"][data-role!="hash"], .ajaxLink',
             defaultInsertFunction:'insertPageHtml'
         });
 
         $(window).on( 'hashchange', function(){
             _ScrollController.goToHash();
+
+            timer = setTimeout(function(){
+                if($('#burger').hasClass("toggled"))$('#burger').click();
+            },2000);
         });
+
+
         
     };
 
