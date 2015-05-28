@@ -45,11 +45,22 @@ var NavigateController = function() {
         });
 
         $(window).on( 'hashchange', function(){
-            _ScrollController.goToHash();
+            var hash = window.location.hash;
+            if(hash.search("&") != -1){
+                var queryParams = $.getQueryParameters();
+                if(queryParams.diapo)_Btn.loadModalContent({
+                    id:queryParams.diapo,
+                    action: "get_diapo_by_id"
+                })
+                console.log(queryParams)
+            }else{
+                _ScrollController.goToHash();
 
-            timer = setTimeout(function(){
-                if($('#burger').hasClass("toggled"))$('#burger').click();
-            },2000);
+                timer = setTimeout(function(){
+                    if($('#burger').hasClass("toggled"))$('#burger').click();
+                },2000);
+            }
+            
         });
 
 

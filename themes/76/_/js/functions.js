@@ -3,6 +3,7 @@
 //$.noConflict();
 
 var dw,dh,ww,wh,
+	_Btn,
 	_ScrollController,
 	_NavigateController,
 	_MetiersController,
@@ -47,7 +48,7 @@ function init_vendors(){
 
 **********************/
 function init_objects(){
-	var _Btn = new Btn();
+	_Btn = new Btn();
 	_Btn.bindEvents();
 
 	//var _ViewController = new ViewController();

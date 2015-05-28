@@ -48,22 +48,10 @@ function getImageBrightness(imageSrc,callback) {
     }
 }
 
-(function(){
-/*
-    var section = document.querySelectorAll("section")
-        projet = document.querySelectorAll(".projet"),
-        speed = 0.5;
-console.log(section)
-console.log(projet)
-    section.onscroll = function(){
-        [].slice.call(projet).forEach(function(el,i){
+jQuery.extend({
 
-        var windowYOffset = window.pageYOffset,
-            elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+  getQueryParameters : function(str) {
+      return (str || document.location.hash).replace(/(^\#)/,'').split("&").map(function(n){return n = n.split("="),this[n[0]] = n[1],this}.bind({}))[0];
+  }
 
-        el.style.backgroundPosition = elBackgrounPos;
-
-    });
-  };
-*/
-})();
+});

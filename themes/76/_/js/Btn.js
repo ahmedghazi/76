@@ -31,13 +31,16 @@ var Btn = function() {
 				surtitre: "surtitre",
 				titre: "titre"
 			}
+			//var hash = window.location.hash;
+			//console.log(window.location)
+			//window.location.href = window.location.href+"&diapo="+id;
 			_this.loadModalContent(o);
 		});
 
 		$("html").on("click", ".btn_video", function(e){
 			e.preventDefault();
 
-			$("#loader").removeClass("vhidden");
+			//$("#loader").removeClass("vhidden");
 
 			//var url = $(this).attr("href").split("-")[1];
 			//console.log(url)
@@ -67,6 +70,7 @@ var Btn = function() {
 		$("#modal").removeClass("vhidden");
 		
 		if($(".diapo_item").length > 1){
+
 			$('.diapo').cycle({ 
 				fx:     'scrollHorz', 
 				speed:   600, 
