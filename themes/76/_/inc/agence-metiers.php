@@ -5,7 +5,7 @@ data-slug="<?php echo $slug;?>"
 id="art-<?php echo $slug;?>">
 	<div class="metiers_map col">
 		<div class="map">
-			<?php include(locate_template('_/inc/disque-def.svg'));?>
+			<?php include(locate_template('_/inc/disque.svg'));?>
 		</div>
 	</div>
 	<div class="metiers_content col">
