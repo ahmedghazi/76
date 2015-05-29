@@ -414,7 +414,7 @@ article{
     z-index: 1;
     pointer-events:auto;
 }
-#burger:hover div{background:black;}
+#burger:hover div{}
 #burger:hover .burgx2{
 	-webkit-animation-name: burgerOn; /* Chrome, Safari, Opera */
 	-webkit-animation-duration: 0.4s; /* Chrome, Safari, Opera */
@@ -776,6 +776,7 @@ article{
 	position: absolute;
 	bottom: 70px; left: 60px;
 	min-height: 298px;
+	max-width: 564px;
 	text-align: center; 
 }
 .page-template-page-creations .contenu{

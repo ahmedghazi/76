@@ -33,7 +33,7 @@ id="art-<?php echo $slug;?>">
 			"post_status" => "publish",
 			"orderby" => "menu_order", 
 			//"order" => "DESC",
-			//'posts_per_page' => -1,
+			'posts_per_page' => -1,
 		);
 
 		$qq = new WP_Query( $argss );
