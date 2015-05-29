@@ -17,8 +17,18 @@ var MetiersController = function() {
 			
 		});
 
+		$(".map svg > g").mouseenter(function(e){
+			$(".map svg line,.map svg text").attr("class","");
+			var id = $(this).data("rel");
+			$(this).find("text,line").attr('class', 'rollover');
+			$("#"+id).attr('class', 'rollover');
+		}).mouseleave(function(event) {
+			$(".map svg line,.map svg text").attr("class","");
+		});
+
 		//$(".map_item").eq(0).trigger("mouseenter");
-		$("#trade").trigger("mouseenter");
+		//$("#trade").trigger("mouseenter");
+		_this.metierAnimeOut("metier_intro");
 	};
 
 	this.animateIn = function(){
@@ -77,6 +87,7 @@ var MetiersController = function() {
 	};
 
 	this.metierAnimeIn = function(id){
+		console.log(id)
 		$("#art-"+id).addClass("show");
 		var d = 0;
 		$("#art-"+id).find("div,h2").addClass('slideRight');

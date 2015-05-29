@@ -47,11 +47,14 @@ var ScrollController = function() {
 			window.location.hash = next;
 		});
 
-		$('section').scroll(function(){
+		$section = $('section');
+		$projets = $(".projet");
+
+		$section.scroll(function(){
 			if($("body").hasClass("page-template-page-client")){
-				[].slice.call($(".projet")).forEach(function(el,i){
-			        var windowXOffset = $('section').scrollLeft(),
-			            elBackgrounPos = "-" + (windowXOffset/20) + "px 50%";
+				[].slice.call($projets).forEach(function(el,i){
+			        var windowXOffset = $section.scrollLeft(),
+			            elBackgrounPos = "-" + (windowXOffset/10) + "px 50%";
 			        el.style.backgroundPosition = elBackgrounPos;
 			    });
 			}

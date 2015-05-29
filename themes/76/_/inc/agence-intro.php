@@ -12,10 +12,16 @@ id="art-<?php echo $slug;?>">
 		<div class="contenu">
 			<?php echo get_the_content(); ?>
 		</div>
+		
+		<div class="actionsBtn">
+			<a class="btn" data-role="hash" href="#brand">NOS MÉTIERS</a>
+		</div>
+		<div class="sep_18"></div>
+
 		<div class="contenu_en">
 			<?php echo get_field("contenu_en"); ?>
 		</div>
-		
+		<div class="sep_9"></div>
 
 		<div class="clear"></div>
 		<div class="logo ">

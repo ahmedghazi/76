@@ -29,7 +29,7 @@ Template Name: AGENCE
 				$c = 1;
 				while ( $q->have_posts() ) : $q->the_post(); 
 					//the_ID();
-					include(locate_template('_/inc/metiers.php'));
+					include(locate_template('_/inc/agence-metiers.php'));
 					$c++;
 				endwhile;
 			endif;

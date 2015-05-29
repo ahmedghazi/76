@@ -43,6 +43,11 @@ id="art-<?php echo $slug;?>">
 		<?php }?>
 </div>
 		<div class="clear"></div>
+
+		<!--div class="cl-effect-2">
+			<a href="#"><span data-hover="Ratatouille">Ratatouille</span></a>
+		</div-->
+		
 		<div class="logo align_right">
 			<?php include(locate_template('_/img/logo-soixanteseize-blanc.svg'));?>
 		</div>

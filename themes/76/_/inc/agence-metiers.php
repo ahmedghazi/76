@@ -4,9 +4,27 @@ $slug = $post->post_name;
 data-slug="<?php echo $slug;?>"
 id="art-<?php echo $slug;?>">
 	<div class="metiers_map col">
-		<?php include(locate_template('_/inc/agence-map.php'));?>
+		<div class="map">
+			<?php include(locate_template('_/inc/disque-def.svg'));?>
+		</div>
 	</div>
 	<div class="metiers_content col">
+		<div class="agence_metier metier_intro " id="art-metier_intro">
+			<div class="agence_metier_content">
+				<h2 class="slideRight anime_md"><?php the_title(); ?></h2>
+				<div class="soustitre slideRight anime_md"><?php the_content(); ?></div>
+			</div>
+
+			<div class="stripes slideRight">
+				<div class="stripe0 anime"></div>
+				<div class="stripe1 anime"></div>
+				<div class="stripe2 anime"></div>
+				<div class="stripe3 anime"></div>
+				<div class="stripe4 anime"></div>
+				<div class="stripe5 anime"></div>
+				<div class="stripe6 anime"></div>
+			</div>
+		</div>
 	<?php
 	//the_ID();
 		$argss = array(
