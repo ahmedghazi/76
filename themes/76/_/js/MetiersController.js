@@ -8,20 +8,22 @@ var MetiersController = function() {
 	};
 
 	this.bindEvents = function(){
-		$(".map_item").mouseenter(function(e){
+		/*$(".map_item").mouseenter(function(e){
 			$(".map_item").attr('class','map_item');
 			$(this).attr('class','map_item hover');
 			var id = $(this).attr("id");
 			
-			_this.metierAnimeOut(id);
+			//_this.metierAnimeOut(id);
 			
-		});
+		});*/
 
 		$(".map svg > g").mouseenter(function(e){
 			$(".map svg line,.map svg text").attr("class","");
 			var id = $(this).data("rel");
 			$(this).find("text,line").attr('class', 'rollover');
 			$("#"+id).attr('class', 'rollover');
+			_this.metierAnimeOut(id);
+
 		}).mouseleave(function(event) {
 			$(".map svg line,.map svg text").attr("class","");
 		});
