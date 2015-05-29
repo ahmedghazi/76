@@ -198,14 +198,15 @@ h1,h2,h3,h4{
 	     url('_/fonts/TimesNewRomPSIta.svg#TimesNewRomPSIta') format('svg');
 }
 
-.EngraversGothicBTn,
-.surtitre{font-family: 'EngraversGothicBT-Regular';}
+
 
 .TimesNewRomanPS,
 .contenu p,
 .soustitre{font-family: 'TimesNewRomanPS-Italic';}
 
-
+.EngraversGothicBTn,
+.surtitre,
+.contenu table p{font-family: 'EngraversGothicBT-Regular';}
 /* ==============================================================================
 	ASSETS
    ============================================================================== */

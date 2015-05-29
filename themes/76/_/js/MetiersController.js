@@ -41,23 +41,27 @@ var MetiersController = function() {
 		$(".map svg line").css({opacity:0});
 		$(".map svg path").css({opacity:0});
 		$(".map svg text").css({opacity:0});
+		
 		var d = 0;
+
+		$(".map svg text").each(function(index, el) {
+			_this.animateInEl(d,this);
+			d+=delay*2;
+		});	
+
 		$(".map svg line").each(function(index, el) {
 			_this.animateInEl(d,this);
-			d+=delay;
+			d+=delay/4;
 		});	
 
 		
 		$(".map svg path").each(function(index, el) {
 			_this.animateInEl(d,this);
-			d+=delay*1;
+			d+=delay/8;
 		});
 
 		
-		$(".map svg text").each(function(index, el) {
-			_this.animateInEl(d,this);
-			d+=delay*1;
-		});	
+		
 
 		setTimeout(function(){
 			_this.bindEvents();
