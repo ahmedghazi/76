@@ -751,7 +751,15 @@ article{
 .map svg polygon{cursor: pointer;}
 .map svg line,
 .map svg path,
-.map svg text{opacity: 0;}
+.map svg text{
+	opacity: 0;
+	-webkit-transition: all .2s ease-in-out;
+       -moz-transition: all .2s ease-in-out;
+        -ms-transition: all .2s ease-in-out;
+         -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+	
+}
 .map svg .map_item{cursor: pointer;}
 .map svg text.rollover{
 	color:white;
