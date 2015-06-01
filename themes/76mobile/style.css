@@ -1097,8 +1097,17 @@ article{
 		padding-top: 13px;
 		text-align: center;
 	}
+	.projet_banner{
+		width: 100%;
+		height: 30%;
+		background-size: cover;
+  		background-position: center center;
+	}
 	.projet_content{margin: 0; background-color: transparent; padding: 23px}
 	.projet_content p{margin-bottom: 18px;}
+	.projet_content .actionsBtn .btn{margin: 0;}
+	.projet_content .actionsBtn .btn:nth-child(1){float: left;}
+	.projet_content .actionsBtn .btn:nth-child(2){float: right;}
 
 	#modal{padding: 23px}
 	.modal_controls{

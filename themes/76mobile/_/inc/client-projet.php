@@ -13,8 +13,8 @@ id="art-<?php echo $slug;?>">
 		<?php include(locate_template('_/img/logo-soixanteseize-blanc.svg'));?>
 	</div>
 
-	<div class="projet_banner">
-		<img src="<?php echo $bg[0];?>" alt="" width="100%" height="">
+	<div class="projet_banner" <?php echo $css;?>>
+		
 	</div>
 
 	<div class="projet_content anime_lg ">
