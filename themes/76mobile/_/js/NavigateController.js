@@ -9,6 +9,8 @@
         var bdc = $("#bdc", options.html).attr("class");
         $("body").attr("class", bdc);
 
+        _MetiersController.reset();
+
         $('section').scrollLeft(0);
         $('section').html($("section", options.html).html());
         $('section').animate({opacity:1},1000);
@@ -20,7 +22,7 @@
         timer = setTimeout(function(){
             $('#burger').click();
             _ScrollController.handleArrArticles();
-        },2000);
+        },400);
 
     };
 })(jQuery);
@@ -35,32 +37,30 @@ var NavigateController = function() {
             //$('html,body').animate({ scrollTop: $(window.location.hash).position().top }, 400);
             console.log("hashchange : "+window.location.hash);
             _ScrollController.goToHash();
+            window.location.hash == "#brand" ? $("#burger").hide() : $("#burger").show();
         }
 	};
 
     this.bindEvents = function(){
+        //console.log($('a[data-role="hash"]'))
         $.navigate.init({
-            //ajaxLinks:'a:not(.btn_popup)[rel!="external"][target!="_blank"][data-role!="hash"], .ajaxLink',
-            ajaxLinks:'a:not(.btn_popup)[rel!="external"][target!="_blank"][data-role!="hash"]',
+            ajaxLinks:'a:not(.btn_popup)[rel!="external"][target!="_blank"][data-role!="hash"], .ajaxLink',
             defaultInsertFunction:'insertPageHtml'
         });
 
         $(window).on( 'hashchange', function(){
             var hash = window.location.hash;
-            if(hash.search("&") != -1){
-                var queryParams = $.getQueryParameters();
-                if(queryParams.diapo)_Btn.loadModalContent({
-                    id:queryParams.diapo,
-                    action: "get_diapo_by_id"
-                })
-                
-            }else{
-                _ScrollController.goToHash();
+            
+            _MetiersController.reset();
+            
+            _ScrollController.goToHash();
 
-                timer = setTimeout(function(){
-                    if($('#burger').hasClass("toggled"))$('#burger').click();
-                },2000);
-            }
+            hash == "#brand" ? $("#burger").hide() : $("#burger").show();
+
+            timer = setTimeout(function(){
+                if($('#burger').hasClass("toggled"))$('#burger').click();
+            },2000);
+            
             
         });
 

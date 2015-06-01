@@ -1,5 +1,5 @@
 /*   
-Theme Name: 76
+Theme Name: 76 Mobile
 Theme URI: http://html5reset.org
 Description: A style-free theme to get you started on an HTML5-based Wordpress theme of your own.
 Author: Monkey Do!
@@ -361,6 +361,13 @@ a.btn{color: white}
 		-ms-transform: translateX(100%);
             transform: translateX(100%);
 }
+.slideBottom{
+	-webkit-transform: translateY(400%);
+       -moz-transform: translateY(400%);
+		-ms-transform: translateY(400%);
+            transform: translateY(400%);
+    opacity: 0;
+}
 /* ==============================================================================
 	BLOCKS
    ============================================================================== */
@@ -428,7 +435,7 @@ article{
 }
 
 .burgx1, .burgx2, .burgx3 {
-	margin-top: 3px;
+	/* margin-top: 3px; */
 	background: #737375;
 	width: 100%;
 	height: 1px;
@@ -441,10 +448,10 @@ article{
 .burgx2{width: 11px;margin-left: 4px;}
 
 .burgx2 {
-	margin-top: 7px;
+	margin-top: 4px;
 }
 .burgx3 {
-	margin-top: 11px;
+	margin-top: 8px;
 	-webkit-transform: rotate(180deg);
 	transform: rotate(180deg);
 	-moz-transform: rotate(180deg);
@@ -679,7 +686,7 @@ article{
 	max-width: 564px;
 	text-align: center; 
 }
-.page-template-page-agence .agence_content .actionsBtn .btn{margin-right: 0;}
+
 
 /* ==============================================================================
 	MÉTIERS
@@ -908,14 +915,14 @@ article{
 	text-align: right;
 }
 
-#modal_close{
+.close{
 	cursor: pointer;
 	width: 15px; height: 15px;
 	margin: 0 auto;
 	position: relative;
 	margin-bottom: 6px;
 }
-#modal_close div{
+.close div{
 	background: #ffffff;
 	width: 100%;
 	height: 1px;
@@ -926,19 +933,19 @@ article{
 	     -o-transform: rotate(45deg);
 	        transform: rotate(45deg);
 }
-#modal_close .stripe2{
+.close .stripe2{
 	-webkit-transform: rotate(-45deg);
 	   -moz-transform: rotate(-45deg);
 	     -o-transform: rotate(-45deg);
 	        transform: rotate(-45deg);
 }
-#modal_close:hover div{
+.close:hover div{
 	-webkit-transform: rotate(-135deg);
 	   -moz-transform: rotate(-135deg);
 	     -o-transform: rotate(-135deg);
 	        transform: rotate(-135deg);
 }
-#modal_close:hover .stripe2{
+.close:hover .stripe2{
 	-webkit-transform: rotate(135deg);
 	   -moz-transform: rotate(135deg);
 	     -o-transform: rotate(135deg);
@@ -998,19 +1005,59 @@ article{
 	
 }
 @media only screen and (max-width:480px) {
-	.page-template-page-agence .agence_content{margin:20px; }
+	.page-template-page-agence .agence_content{margin:20px; margin-top: 70px;}
 	.page-template-page-agence .contenu,
 	.page-template-page-agence .contenu_en{
 		max-width: 70%;
   		margin: 0 auto;
+
 	}
+	.agence_intro{position: relative;}
+	.agence_intro .action{
+		position: absolute;
+		right: 20px;top: 20px;
+		color: white;
+	}
+
+	.metiers_header{position: fixed; left:23px; top: 23px;}
+	#metiers_close{position: absolute;top: 4px;}
 	.article_agence_1 .col{
 		width: 100%;
+		position: relative;
+		margin-bottom: 23px;
 	}
+	.metiers_map{padding-top: 154px;}
 	.map{
 		float: none;
 		margin: 0 auto;
+		top: 0;
+		transform: translateY(0%);
+  		-ms-transform: translateY(0%);
+  		-webkit-transform: translateY(0%);
+  		max-width: 100%;
+  		max-height: 100%;
 	}
+
+	.article_agence_1{padding: 23px;text-align: center; overflow: auto;}
+	.article_agence_1 .logo{margin-bottom: 18px;}
+	.article_agence_1 .soustitre{white-space: pre-wrap;}
+
+	.article_agence_1 .col{
+		height: auto;
+		display: block;
+	}
+	.metiers_content{padding-left: 0; }
+	.agence_metier{
+		position: static;
+		top: 0;
+		transform: translateY(0%);
+  		-ms-transform: translateY(0%);
+  		-webkit-transform: translateY(0%);
+		text-align: center;
+	}
+	.agence_metier_content table{margin-right: 0; border-left: 0; float: none; width: 100%; max-width: 100%}
+	.agence_metier_content table tr td{padding-left: 0;text-align: center; width: 100%; max-width: 100%}
+	.agence_metier_content table tr td p{width: 100%; white-space: auto}
 }
 
 @media only screen and (max-width:768px) {

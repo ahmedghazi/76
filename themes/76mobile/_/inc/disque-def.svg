@@ -1,0 +1,219 @@
+<svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100%" height="100%" viewBox="0 0 515.5 516.795" enable-background="new 0 0 515.5 516.795" xml:space="preserve"  text-rendering="geometricPrecision">
+
+<text transform="matrix(1 0 0 1 219.7051 253.4521)"><tspan x="0" y="0" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="24.5388">B</tspan><tspan x="16.023" y="0" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="24.5388">R</tspan><tspan x="29.766" y="0" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="24.5388">AND</tspan></text>
+<text transform="matrix(1 0 0 1 217.3633 274.2119)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="24.5388">DESIGN</text>
+
+<g data-rel="crm">
+	<text transform="matrix(1 0 0 1 156.7842 118.8696)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="15.1008" id="crm" class="map_item">CRM</text>
+	<polygon fill="transparent" points="167.426,167.382 109.481,109.425 203.3,55.272 224.501,134.429 	" data-rel="crm"/>
+	<line fill="#595959" stroke="#595959" stroke-width="1" stroke-miterlimit="10" x1="203.3" y1="55.272" x2="224.501" y2="134.429" data-rel="crm"/>
+	<line fill="#595959" stroke="#595959" stroke-width="1" stroke-miterlimit="10" x1="167.426" y1="167.382" x2="109.481" y2="109.425" data-rel="crm"/>
+	<g>
+		<line fill="#595959" stroke="#595959" stroke-width="1" stroke-miterlimit="10" x1="201.218" y1="162.69" x2="195.486" y2="152.547"/>
+		<line fill="#595959" stroke="#595959" stroke-width="1" stroke-miterlimit="10" x1="204.585" y1="160.788" x2="200.764" y2="154.022"/>
+		<line fill="#595959" stroke="#595959" stroke-width="1" stroke-miterlimit="10" x1="197.85" y1="164.593" x2="194.027" y2="157.828"/>
+		<line fill="#595959" stroke="#595959" stroke-width="1" stroke-miterlimit="10" x1="207.953" y1="158.884" x2="206.043" y2="155.502"/>
+		<line fill="#595959" stroke="#595959" stroke-width="1" stroke-miterlimit="10" x1="194.482" y1="166.495" x2="192.57" y2="163.113"/>
+	</g>
+</g>
+<g data-rel="acquisition">
+	<text transform="matrix(1 0 0 1 65.5293 181.6582)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="15.1008" id="acquisition" class="map_item">ACQUISITION</text>
+	<polygon fill="transparent" points="134.462,224.451 55.285,203.227 109.481,109.425 167.426,167.382 	" data-rel="acquisition"/>
+	<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="55.285" y1="203.227" x2="134.462" y2="224.451"  data-rel="acquisition"/>
+	<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="167.426" y1="167.382" x2="109.481" y2="109.425"  data-rel="acquisition"/>
+	<g>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="161.295" y1="204.06" x2="151.152" y2="198.328"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="159.392" y1="207.428" x2="152.626" y2="203.605"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="163.198" y1="200.691" x2="156.432" y2="196.869"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="157.489" y1="210.795" x2="154.107" y2="208.885"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="165.101" y1="197.324" x2="161.718" y2="195.412"/>
+	</g>
+</g>
+<g data-rel="social">
+	<text transform="matrix(1 0 0 1 70.6943 260.7754)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="15.1008" id="social" class="map_item">SOCIAL</text>
+	<polygon fill="transparent" points="134.455,290.356 55.299,311.558 55.285,203.227 134.462,224.451 	" data-rel="social"/>
+	<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="55.285" y1="203.227" x2="134.462" y2="224.451"  data-rel="social"/>
+	<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="134.455" y1="290.356" x2="55.299" y2="311.558"  data-rel="social"/>
+	<g>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="147.329" y1="256.272" x2="135.679" y2="256.272"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="147.329" y1="252.404" x2="139.559" y2="252.404"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="147.329" y1="260.141" x2="139.559" y2="260.141"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="147.329" y1="248.536" x2="143.444" y2="248.536"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="147.329" y1="264.01" x2="143.444" y2="264.01"/>
+	</g>
+</g>
+<g data-rel="interactive">
+	<text transform="matrix(1 0 0 1 67.9912 341.2441)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="15.1008" id="interactive" class="map_item">INTERACTIVE</text>
+	<polygon fill="transparent" points="55.299,311.558 134.455,290.356 167.408,347.434 109.451,405.378 	" data-rel="interactive"/>
+	<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="109.452" y1="405.378" x2="167.409" y2="347.43"  data-rel="interactive"/>
+	<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="134.455" y1="290.356" x2="55.299" y2="311.558"  data-rel="interactive"/>
+	<g>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="161.83" y1="311.233" x2="151.687" y2="316.967"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="159.927" y1="307.867" x2="153.162" y2="311.69"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="163.732" y1="314.604" x2="156.968" y2="318.426"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="158.024" y1="304.499" x2="154.642" y2="306.41"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="165.636" y1="317.973" x2="162.254" y2="319.883"/>
+	</g>
+</g>
+<g data-rel="gaming">
+	<text transform="matrix(1 0 0 1 145.8506 405.4062)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="15.1008" id="gaming" class="map_item">GAMING</text>
+	<polygon fill="transparent" points="109.452,405.378 167.409,347.43 224.478,380.396 203.253,459.572 	" data-rel="gaming"/>
+	<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="224.478" y1="380.396" x2="203.253" y2="459.572"  data-rel="gaming"/>
+	<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="109.452" y1="405.378" x2="167.409" y2="347.43"  data-rel="gaming"/>
+	<g>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="201.218" y1="350.998" x2="195.486" y2="361.145"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="204.585" y1="352.9" x2="200.764" y2="359.666"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="197.85" y1="349.096" x2="194.027" y2="355.861"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="207.953" y1="354.807" x2="206.043" y2="358.188"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="194.482" y1="347.193" x2="192.57" y2="350.574"/>
+	</g>
+</g>
+<g data-rel="film">
+	<text transform="matrix(1 0 0 1 241.8877 434.3555)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="15.1008" id="film" class="map_item">FILM</text>
+	<polygon fill="transparent" points="290.432,380.4 311.631,459.558 203.3,459.568 224.524,380.393 	" data-rel="film"/>
+	<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="290.432" y1="380.4" x2="311.631" y2="459.558"  data-rel="film"/>
+	<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="224.524" y1="380.393" x2="203.3" y2="459.568"  data-rel="film"/>
+	<g>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="256.368" y1="367.452" x2="256.368" y2="379.103"/>	
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="252.501" y1="367.452" x2="252.501" y2="375.224"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="260.237" y1="367.452" x2="260.237" y2="375.224"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="248.632" y1="367.452" x2="248.632" y2="371.338"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="264.104" y1="367.452" x2="264.104" y2="371.338"/>
+	</g>
+</g>
+<g data-rel="print">
+	<text transform="matrix(1 0 0 1 324.5137 405.4062)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="15.1008" id="print" class="map_item">PRINT</text>
+	<polygon fill="transparent" points="405.771,405.378 347.816,347.43 290.747,380.396 311.971,459.572 	" data-rel="print"/>
+	<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="290.747" y1="380.396" x2="311.971" y2="459.572"  data-rel="print"/>
+	<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="405.771" y1="405.378" x2="347.816" y2="347.43"  data-rel="print"/>
+	<g>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="312.401" y1="351.533" x2="318.135" y2="361.679"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="309.032" y1="353.439" x2="312.855" y2="360.204"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="315.768" y1="349.631" x2="319.591" y2="356.396"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="305.666" y1="355.342" x2="307.576" y2="358.722"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="319.138" y1="347.729" x2="321.047" y2="351.112"/>
+	</g>
+</g>
+<g data-rel="street">
+	<text transform="matrix(1 0 0 1 377.3613 341.2441)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="15.1008" id="street" class="map_item">STREET</text>
+	<polygon fill="transparent" points="459.926,311.558 380.769,290.356 347.816,347.434 405.771,405.378 	" data-rel="street"/>
+	<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="405.771" y1="405.378" x2="347.816" y2="347.43"  data-rel="street"/>
+	<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="380.769" y1="290.356" x2="459.926" y2="311.558"  data-rel="street"/>
+	<g>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="351.791" y1="311.233" x2="361.933" y2="316.967"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="353.693" y1="307.867" x2="360.458" y2="311.69"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="349.885" y1="314.604" x2="356.649" y2="318.426"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="355.596" y1="304.499" x2="358.977" y2="306.41"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="347.982" y1="317.973" x2="351.367" y2="319.883"/>
+	</g>
+</g>
+<g data-rel="event">
+	<text transform="matrix(1 0 0 1 401.3262 260.4951)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="15.1008" id="event" class="map_item">EVENT</text>
+	<polygon fill="transparent" points="380.769,290.356 459.926,311.558 459.94,203.227 380.761,224.451 	" data-rel="event"/>
+	<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="459.94" y1="203.227" x2="380.761" y2="224.451"  data-rel="event"/>
+	<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="380.769" y1="290.356" x2="459.926" y2="311.558"  data-rel="event"/>
+	<g>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="367.548" y1="256.272" x2="379.197" y2="256.272"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="367.548" y1="260.141" x2="375.319" y2="260.141"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="367.548" y1="252.404" x2="375.319" y2="252.404"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="367.548" y1="264.01" x2="371.434" y2="264.01"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="367.548" y1="248.536" x2="371.434" y2="248.536"/>
+	</g>
+</g>
+<g data-rel="trade">
+	<text transform="matrix(1 0 0 1 380.1992 183.4258)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="15.1008" id="trade" class="map_item">TRADE</text>
+	<polygon fill="transparent" points="380.761,224.451 459.94,203.227 405.742,109.425 347.798,167.382 	" data-rel="trade"/>
+	<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="459.94" y1="203.227" x2="380.761" y2="224.451"  data-rel="trade"/>
+	<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="347.798" y1="167.382" x2="405.742" y2="109.425"  data-rel="trade"/>
+	<g>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="352.325" y1="202.989" x2="362.468" y2="197.259"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="354.228" y1="206.357" x2="360.993" y2="202.535"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="350.423" y1="199.622" x2="357.188" y2="195.8"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="356.13" y1="209.726" x2="359.515" y2="207.814"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="348.517" y1="196.254" x2="351.901" y2="194.342"/>
+	</g>
+</g>
+<g data-rel="apps">
+	<text transform="matrix(1 0 0 1 323.5566 118.8696)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="15.1008" id="apps" class="map_item">APPS</text>
+	<polygon fill="transparent" points="347.798,167.382 405.742,109.425 311.926,55.272 290.723,134.429 	" data-rel="apps"/>
+	<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="311.926" y1="55.272" x2="290.723" y2="134.429"  data-rel="apps"/>
+	<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="347.798" y1="167.382" x2="405.742" y2="109.425"  data-rel="apps"/>
+	<g>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="312.401" y1="162.155" x2="318.135" y2="152.011"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="309.032" y1="160.252" x2="312.855" y2="153.487"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="315.768" y1="164.058" x2="319.591" y2="157.292"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="305.666" y1="158.35" x2="307.576" y2="154.966"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="319.138" y1="165.961" x2="321.047" y2="162.579"/>
+	</g>
+</g>
+<g data-rel="website">
+	<text transform="matrix(1 0 0 1 224.5312 91.3257)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="15.1008" id="website" class="map_item">WEBSITE</text>
+	<polygon fill="transparent" points="224.501,134.428 203.3,55.272 311.631,55.26 290.407,134.435 	" data-rel="website"/>
+	<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="224.501" y1="134.428" x2="203.3" y2="55.272"  data-rel="website"/>	
+	<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="290.407" y1="134.435" x2="311.631" y2="55.26"  data-rel="website"/>
+	<g>		
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="256.904" y1="147.233" x2="256.904" y2="135.583"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="260.771" y1="147.233" x2="260.771" y2="139.463"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="253.035" y1="147.233" x2="253.035" y2="139.463"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="264.642" y1="147.233" x2="264.642" y2="143.349"/>
+		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="249.168" y1="147.233" x2="249.168" y2="143.349"/>
+	</g>
+</g>
+
+
+<g id="Calque_2">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</g>
+<text transform="matrix(0.9849 -0.1734 0.1734 0.9849 208.8193 23.7651)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="24.5386">P</text>
+<text transform="matrix(0.9929 -0.1193 0.1193 0.9929 222.8721 21.4512)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="24.5389">L</text>
+<text transform="matrix(0.9979 -0.0647 0.0647 0.9979 234.7988 20.0303)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="24.5387">A</text>
+<text transform="matrix(0.9998 -0.0198 0.0198 0.9998 247.5312 19.1069)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="24.5386">T</text>
+<text transform="matrix(0.9997 0.0262 -0.0262 0.9997 257.7002 19.0273)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="24.5388">F</text>
+<text transform="matrix(0.9966 0.0828 -0.0828 0.9966 269.5645 19.2637)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="24.5387">O</text>
+<text transform="matrix(0.9895 0.1445 -0.1445 0.9895 285 20.4541)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="24.5388">R</text>
+<text transform="matrix(0.9778 0.2097 -0.2097 0.9778 299.0869 22.5791)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="24.5387">M</text>
+<text transform="matrix(0.071 0.9975 -0.9975 0.071 494.9072 234.2461)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="24.539">F</text>
+<text transform="matrix(0.0345 0.9994 -0.9994 0.0345 495.6943 246.291)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="24.539">I</text>
+<text transform="matrix(-0.0046 1 -1 -0.0046 496.1182 251.8281)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="24.5389">E</text>
+<text transform="matrix(-0.0571 0.9984 -0.9984 -0.0571 495.9678 265.0039)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="24.539">L</text>
+<text transform="matrix(-0.114 0.9935 -0.9935 -0.114 495.4307 277.0059)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="24.5388">D</text>
+<text transform="matrix(-0.223 -0.9748 0.9748 -0.223 25.6221 313.6367)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="24.5388">I</text>
+<text transform="matrix(-0.1811 -0.9835 0.9835 -0.1811 24.2168 308.0859)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="24.5389">N</text>
+<text transform="matrix(-0.126 -0.992 0.992 -0.126 21.5981 293.5967)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="24.5388">F</text>
+<text transform="matrix(-0.0761 -0.9971 0.9971 -0.0761 20.0137 281.6953)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="24.5387">L</text>
+<text transform="matrix(-0.0219 -0.9998 0.9998 -0.0219 19.1899 269.7432)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="24.5389">U</text>
+<text transform="matrix(0.0347 -0.9994 0.9994 0.0347 18.9102 255.7021)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="24.5389">E</text>
+<text transform="matrix(0.0932 -0.9957 0.9957 0.0932 19.29 242.5801)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="24.5388">N</text>
+<text transform="matrix(0.154 -0.9881 0.9881 0.154 20.6968 227.6807)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="24.539">C</text>
+<text transform="matrix(0.2111 -0.9775 0.9775 0.2111 22.8682 213.2354)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="24.5389">E</text>
+<text transform="matrix(0.9905 0.1378 -0.1378 0.9905 215.0811 507.4736)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="23.7308">C</text>
+<text transform="matrix(0.9969 0.0782 -0.0782 0.9969 229.918 509.5918)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="23.731">O</text>
+<text transform="matrix(0.9998 0.018 -0.018 0.9998 245.6064 510.7568)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="23.731">N</text>
+<text transform="matrix(0.9995 -0.0317 0.0317 0.9995 260.6875 510.9521)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="23.7311">T</text>
+<text transform="matrix(0.9969 -0.0783 0.0783 0.9969 270.916 510.5195)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="23.7309">E</text>
+<text transform="matrix(0.991 -0.1341 0.1341 0.991 284.4336 509.5234)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="23.7309">N</text>
+<text transform="matrix(0.9831 -0.1832 0.1832 0.9831 299.2754 507.4727)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="23.731">T</text>
+<g>
+	<path fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" d="M203.298,498.202
+		c-86.081-19.274-155.17-83.522-181.314-166.787"/>
+	<path fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" d="M498.216,311.605
+		c-20.096,89.676-89.008,160.907-177.375,184.337"/>
+	<path fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" d="M332.937,22.434
+		c86.145,27.653,151.653,101.364,167.543,192.145"/>
+	<path fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" d="M21.981,183.433
+		c0.187-0.595,0.375-1.189,0.566-1.783c25.596-79.415,90.348-141.25,171.511-162.761"/>
+</g>
+
+</svg>
