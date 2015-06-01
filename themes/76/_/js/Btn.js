@@ -1,5 +1,6 @@
 var Btn = function() {
-	var _this 		= this;
+	var _this 		= this,
+		delay = 20;
 			
 	this.bindEvents = function(){
 		var toggled = 0;
@@ -11,6 +12,14 @@ var Btn = function() {
 		$('#burger').click(function(){
 			$(this).toggleClass('toggled');
 			$("#menu").toggleClass("toggled");
+
+			setTimeout(function(){
+				if($("#menu").hasClass("toggled")){
+					_this.animateOut();
+				}else{
+					_this.animateIn();
+				}
+			},200);
 		});
 
 		$(document).keyup(function(e) {
@@ -53,6 +62,28 @@ var Btn = function() {
 
 		
 
+	};
+
+	this.animateIn = function(){
+		console.log("animateIn")
+		var d = 0;
+		$(".l0").each(function(idx,el){
+			setTimeout(function(){
+				$(el).removeClass("l0")
+			},d);
+			d+=delay*2;
+		});
+	};
+
+	this.animateOut = function(){
+		console.log("animateOut")
+		var d = 0;
+		$(".l0").each(function(idx,el){
+			setTimeout(function(){
+				$(el).addClass("l0")
+			},d);
+			d+=delay*2;
+		});
 	};
 
 	this.loadModalContent = function(o){

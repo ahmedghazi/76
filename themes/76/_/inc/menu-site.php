@@ -18,7 +18,7 @@
 			$template = basename( get_page_template() );
 			$href = get_permalink(geT_the_ID());
 			if($template == "page-clients.php")$href = "#";
-			echo "<li><a data-role='ajax' class='anime' href='".$href."'>".get_the_title().'</a></li>';
+			echo "<li class='anime_md l0'><a data-role='ajax' class='anime' href='".$href."'>".get_the_title().'</a></li>';
 
 			if($template == "page-clients.php")include(locate_template('_/inc/menu-site-enfant.php'));
 		
