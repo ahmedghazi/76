@@ -26,6 +26,9 @@ var Btn = function() {
 
 			$("#loader").removeClass("vhidden");
 
+			var id = $(this).data("href");
+				id = id.split("-")[1]
+				
 			var surtitre = $(this).data("surtitre");
 			var titre = $(this).data("titre");
 			console.log(id)
