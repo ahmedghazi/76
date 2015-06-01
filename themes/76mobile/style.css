@@ -905,6 +905,21 @@ article{
     animation-duration: .7s;
 }
 
+.stripesBottom{width: 19px; margin: 0 auto; margin-bottom: 21px}
+.stripesBottom div{
+	margin-right: 2px; background-color: white; width: 1px;
+	position: relative; left: 0;
+	float: left;
+}
+.stripesBottom div:last-child{margin-right: 0;}
+.stripesBottom .stripe0,
+.stripesBottom .stripe6{height: 2px; width: 1px;}
+.stripesBottom .stripe1,
+.stripesBottom .stripe5{height: 4px; width: 1px;}
+.stripesBottom .stripe2,
+.stripesBottom .stripe4{height: 8px; width: 1px;}
+.stripesBottom .stripe3{height: 12px; width: 1px;}
+
 #modal_prev{
 	left: 60px;
 	text-align: right;
