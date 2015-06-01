@@ -13,7 +13,7 @@ var dw,dh,ww,wh,
 /* trigger when page is ready */
 $(document).ready(function (){
 
-	format();
+	
 	window.addEventListener("orientationchange", function() {
 		format();
 	}, false);
@@ -21,6 +21,7 @@ $(document).ready(function (){
 });
 
 $(window).load(function() {
+	format();
 	init_app();
 });
 
@@ -81,6 +82,11 @@ function format(){
 	ww = $(window).width();
 	wh = $(window).height();
 
+	clearTimeout($.data(this, 'formatTimer'));
+    $.data(this, 'formatTimer', setTimeout(function() {
+    	console.log("end resize");
+    	if(window.location.hash && _ScrollController)_ScrollController.goToHash();
+    }, 50));
 }
 
 

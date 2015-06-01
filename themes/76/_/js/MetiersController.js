@@ -8,15 +8,7 @@ var MetiersController = function() {
 	};
 
 	this.bindEvents = function(){
-		/*$(".map_item").mouseenter(function(e){
-			$(".map_item").attr('class','map_item');
-			$(this).attr('class','map_item hover');
-			var id = $(this).attr("id");
-			
-			//_this.metierAnimeOut(id);
-			
-		});*/
-
+		
 		$(".map svg > g").mouseenter(function(e){
 			$(".map svg line,.map svg text").attr("class","");
 			var id = $(this).data("rel");
@@ -28,8 +20,6 @@ var MetiersController = function() {
 			$(".map svg line,.map svg text").attr("class","");
 		});
 
-		//$(".map_item").eq(0).trigger("mouseenter");
-		//$("#trade").trigger("mouseenter");
 		_this.metierAnimeOut("metier_intro");
 	};
 
@@ -82,7 +72,7 @@ var MetiersController = function() {
 				$(el).addClass('slideRight');
 			},d);
 			d += delay*2;
-			console.log(d);
+			//console.log(d);
 		});
 
 

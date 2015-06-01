@@ -26,18 +26,16 @@ var Btn = function() {
 
 			$("#loader").removeClass("vhidden");
 
-			var id = $(this).data("href");
-				id = id.split("-")[1]
+			var surtitre = $(this).data("surtitre");
+			var titre = $(this).data("titre");
 			console.log(id)
 			var o = {
 				action: "get_diapo_by_id",
 				id: id,
-				surtitre: "surtitre",
-				titre: "titre"
+				surtitre: surtitre,
+				titre: titre
 			}
-			//var hash = window.location.hash;
-			//console.log(window.location)
-			//window.location.href = window.location.href+"&diapo="+id;
+			
 			_this.loadModalContent(o);
 		});
 
