@@ -1117,7 +1117,8 @@ article{
 	}
 	#modal_prev{left: 23px}
 	#modal_next{right: 23px}
-
+	#modal_slider{height: 222px;}
+	.diapo_item{max-height: 170px;}
 	.page_controls{bottom: 23px; left: 23px; width: calc(100% - 46px)}
 }
 
