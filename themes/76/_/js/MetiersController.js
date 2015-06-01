@@ -17,7 +17,7 @@ var MetiersController = function() {
 			_this.metierAnimeOut(id);
 
 		}).mouseleave(function(event) {
-			$(".map svg line,.map svg text").attr("class","");
+			//$(".map svg line,.map svg text").attr("class","");
 		});
 
 		_this.metierAnimeOut("metier_intro");
