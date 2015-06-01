@@ -407,6 +407,7 @@ article{
 	background-size: cover;
 	background-position: center;
 	color: white;
+	white-space: normal;
 }
 /* ==============================================================================
 	HEADER
@@ -1005,6 +1006,7 @@ article{
 	
 }
 @media only screen and (max-width:480px) {
+	article{white-space: initial}
 	.page-template-page-agence .agence_content{margin:20px; margin-top: 70px;}
 	.page-template-page-agence .contenu,
 	.page-template-page-agence .contenu_en{
@@ -1019,14 +1021,14 @@ article{
 		color: white;
 	}
 
-	.metiers_header{position: absolute; left:23px; top: 23px; z-index: 1}
+	.metiers_header{position: absolute; left:23px; top: 23px; z-index: 1; max-width: calc(100% - 46px)}
 	#metiers_close{position: absolute;top: 4px;}
 	.article_agence_1 .col{
 		width: 100%;
 		position: relative;
 		margin-bottom: 23px;
 	}
-	.metiers_map{padding-top: 154px;}
+	.metiers_map{padding-top: 113px;}
 	.map{
 		float: none;
 		margin: 0 auto;
@@ -1040,8 +1042,9 @@ article{
 
 	.article_agence_1{padding: 23px;text-align: center; overflow: auto;}
 	.article_agence_1 .logo{margin-bottom: 18px;}
-	.article_agence_1 .soustitre{white-space: pre-wrap;}
-
+	.article_agence_1 .soustitre{white-space: pre-line; margin: 0;}
+	.article_agence_1 .soustitre p{margin-bottom: 0;}
+	.article_agence_1 .soustitre br{display: none;}
 	.article_agence_1 .col{
 		height: auto;
 		display: block;
@@ -1055,6 +1058,7 @@ article{
   		-webkit-transform: translateY(0%);
 		text-align: center;
 	}
+	.agence_metier .soustitre{margin-bottom: 21px}
 	.agence_metier_content table{margin-right: 0; border-left: 0; float: none; width: 100%; max-width: 100%}
 	.agence_metier_content table tr td{padding-left: 0;text-align: center; width: 100%; max-width: 100%}
 	.agence_metier_content table tr td p{width: 100%; white-space: auto}
