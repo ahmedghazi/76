@@ -24,7 +24,7 @@ var ScrollController = function() {
 
 	this.bindEvents = function(){
 		$("html").on("click", "a[data-role=hash]", function(e){
-			console.log(e)
+			//console.log(e)
 		});
 
 		$("html").on("click", ".page_prev", function(e){

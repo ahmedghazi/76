@@ -97,6 +97,12 @@ var MetiersController = function() {
 		});
 	};
 
+	this.reset = function(){
+		$(".map svg line").css({opacity:0});
+		$(".map svg path").css({opacity:0});
+		$(".map svg text").css({opacity:0});
+		$(".agence_metier.show .agence_metier_content").children("div,h2").addClass('slideBottom');
+	};
 	
 
 };

@@ -9,18 +9,20 @@
         var bdc = $("#bdc", options.html).attr("class");
         $("body").attr("class", bdc);
 
+        _MetiersController.reset();
+
         $('section').scrollLeft(0);
         $('section').html($("section", options.html).html());
         $('section').animate({opacity:1},1000);
 
-//
-
         $(this).trigger({type:"finishrefreshinsert"});
         
+        clearTimeout(timer);
         timer = setTimeout(function(){
+            console.log(burger)
             $('#burger').click();
             _ScrollController.handleArrArticles();
-        },2000);
+        },400);
 
     };
 })(jQuery);
@@ -47,21 +49,13 @@ var NavigateController = function() {
 
         $(window).on( 'hashchange', function(){
             var hash = window.location.hash;
-            if(hash.search("&") != -1){
-                var queryParams = $.getQueryParameters();
-                if(queryParams.diapo)_Btn.loadModalContent({
-                    id:queryParams.diapo,
-                    action: "get_diapo_by_id"
-                })
-                
-            }else{
-                _ScrollController.goToHash();
+            console.log("hashchange : "+window.location.hash);
+            _ScrollController.goToHash();
 
-                timer = setTimeout(function(){
-                    if($('#burger').hasClass("toggled"))$('#burger').click();
-                },2000);
-            }
-            
+            clearTimeout(timer);
+            timer = setTimeout(function(){
+                if($('#burger').hasClass("toggled"))$('#burger').click();
+            },400);
         });
 
 
