@@ -554,6 +554,7 @@ article{
 }
 .sous_menu_projets{
 	width: 100%; height: 100%;
+	padding-left: 1px;
 }
 .sous_menu_projets li{
 	height: 85px;
@@ -1021,6 +1022,14 @@ article{
 	
 }
 @media only screen and (max-width:480px) {
+	header{
+		width: 215px;
+	}
+	#burger{left: 18px;}
+	#menu{padding: 23px 50px}
+	.sous_menu{width: 165px;}
+	.sous_menu_projets_bande{left: 215px;}
+
 	article{white-space: initial}
 	.page-template-page-agence .agence_content{margin:20px; margin-top: 70px;}
 	.page-template-page-agence .contenu,
@@ -1056,7 +1065,7 @@ article{
 	}
 
 	.article_agence_1{padding: 23px;text-align: center; overflow: auto;}
-	.article_agence_1 .logo{margin-bottom: 18px;}
+	article .logo{margin-bottom: 18px;}
 	.article_agence_1 .soustitre{white-space: pre-line; margin: 0;}
 	.article_agence_1 .soustitre p{margin-bottom: 0;}
 	.article_agence_1 .soustitre br{display: none;}
@@ -1077,6 +1086,27 @@ article{
 	.agence_metier_content table{margin-right: 0; border-left: 0; float: none; width: 100%; max-width: 100%}
 	.agence_metier_content table tr td{padding-left: 0;text-align: center; width: 100%; max-width: 100%}
 	.agence_metier_content table tr td p{width: 100%; white-space: auto}
+
+	.page-template-page-creations .creation_content{padding: 23px; left: 0; bottom: 29px; color: black}
+	.page-template-page-creations .creation_content svg path{
+		color: black;
+	  	fill: currentColor;
+	}
+
+	.projet{
+		padding-top: 13px;
+		text-align: center;
+	}
+	.projet_content{margin: 0; background-color: transparent; padding: 23px}
+	.projet_content p{margin-bottom: 18px;}
+
+	#modal{padding: 23px}
+	.modal_controls{
+		top: auto;
+		bottom: 23px;
+	}
+	#modal_prev{left: 23px}
+	#modal_next{right: 23px}
 }
 
 @media only screen and (max-width:768px) {

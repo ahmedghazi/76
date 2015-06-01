@@ -13,18 +13,6 @@ id="art-<?php echo $slug;?>">
 			<?php the_content(); ?>
 		</div>
 	
-		<div class="actionsBtn">
-			<a class="btn btn_diapo" href="#">EN SAVOIR PLUS</a>
-		</div>
-
-		<div class="sep_20"></div>
-
-		<div class="contenu_en">
-			<?php echo get_field("contenu_en"); ?>
-		</div>
-		
-
-		<div class="clear"></div>
 		<div class="logo ">
 			<?php include(locate_template('_/img/logo-soixanteseize-blanc.svg'));?>
 		</div>

@@ -12,9 +12,7 @@ id="art-<?php echo $slug;?>">
 		<div class="contenu">
 			<?php echo get_the_content(); ?>
 		</div>
-		<div class="contenu_en">
-			<?php echo get_field("contenu_en"); ?>
-		</div>
+		
 		
 
 		<div class="clear"></div>
