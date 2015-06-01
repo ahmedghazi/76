@@ -861,7 +861,7 @@ article{
 	width: 100%;
 	height: 423px;
 	margin-bottom: 68px;
-	background-color: black;
+	
 }
 #modal_footer{
 }
@@ -976,10 +976,17 @@ article{
 .diapo_item{
 	width: 100%; height: 100%;
 	position: absolute;
+	
+}
+.diapo_item_image{
+	width: 100%; height: 90%;
 	background-size: contain;
 	background-position: center;
-	/*background-attachment: fixed;*/
 	background-repeat: no-repeat;
+}
+.diapo_item_desciption{
+	text-align: center;
+	font-family: 'TimesNewRomanPS-Italic';
 }
 
 
@@ -1086,6 +1093,7 @@ article{
 	.agence_metier_content table{margin-right: 0; border-left: 0; float: none; width: 100%; max-width: 100%}
 	.agence_metier_content table tr td{padding-left: 0;text-align: center; width: 100%; max-width: 100%}
 	.agence_metier_content table tr td p{width: 100%; white-space: auto}
+	.agence_metier .actionsBtn{margin-bottom: 21px;}
 
 	.page-template-page-creations .creation_content{padding: 23px; left: 0; bottom: 29px; color: black}
 	.page-template-page-creations .creation_content svg path{

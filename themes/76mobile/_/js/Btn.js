@@ -28,12 +28,14 @@ var Btn = function() {
 
 			var id = $(this).data("href");
 				id = id.split("-")[1]
+			var surtitre = $(this).data("surtitre");
+			var titre = $(this).data("titre");
 			console.log(id)
 			var o = {
 				action: "get_diapo_by_id",
 				id: id,
-				surtitre: "surtitre",
-				titre: "titre"
+				surtitre: surtitre,
+				titre: titre
 			}
 			//var hash = window.location.hash;
 			//console.log(window.location)
@@ -61,6 +63,7 @@ var Btn = function() {
 			type:'POST',
 			data: o,
 			success: function(html){
+				console.log(html)
 				$("#modal_slider").html(html);
 				$("#modal_surtitre").text(o.surtitre);
 				$("#modal_titre").text(o.titre);

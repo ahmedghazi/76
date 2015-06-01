@@ -12,7 +12,10 @@ function handle_get_diapo_by_id() {
     $html = '<div class="diapo">';
     foreach($gallery_items as $item){
     	$css = 'style="background-image:url('.$item["image_url"].')"';
-    	$html .= '<div class="diapo_item" '.$css.'></div>';
+    	$html .= '<div class="diapo_item">';
+        $html .= '<div class="diapo_item_image" '.$css.'></div>';
+        $html .= '<div class="diapo_description" '.$item["description"].'></div>';
+        $html .= '</div>';
     }
     $html .= '</div>';
     echo $html;
