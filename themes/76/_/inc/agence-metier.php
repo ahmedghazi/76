@@ -8,10 +8,11 @@ id="art-<?php echo $slug;?>">
 			<?php //the_field("surtitre"); ?>
 			NOS MÉTIERS
 		</div>
-		<h2 class="slideBottom anime_md"><?php the_title(); ?></h2>
-		<div class="soustitre slideBottom anime_md"><?php the_field("soustitre"); ?></div>
+		<h2 class="slideRight anime_md"><?php the_title(); ?></h2>
+		<div class="soustitre slideRight anime_md"><?php the_field("soustitre"); ?></div>
 		
-		<div class="slideBottom anime_md">
+		
+		<div class="slideRight anime_md abtn">
 
 			<?php 
 				$diapo = get_field("diaporama_id");

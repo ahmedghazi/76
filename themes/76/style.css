@@ -723,6 +723,7 @@ article{
 #art-metier_intro .soustitre,
 #art-metier_intro p{margin-bottom: 0;}
 
+.agence_metier .abtn{margin-bottom: 21px;}
 .agence_metier .soustitre{
 	white-space: pre-line;
 }
