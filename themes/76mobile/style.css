@@ -1019,7 +1019,7 @@ article{
 		color: white;
 	}
 
-	.metiers_header{position: fixed; left:23px; top: 23px;}
+	.metiers_header{position: absolute; left:23px; top: 23px; z-index: 1}
 	#metiers_close{position: absolute;top: 4px;}
 	.article_agence_1 .col{
 		width: 100%;
