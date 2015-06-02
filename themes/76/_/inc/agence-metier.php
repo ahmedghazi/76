@@ -9,8 +9,12 @@ id="art-<?php echo $slug;?>">
 			NOS MÉTIERS
 		</div>
 		<h2 class="slideRight anime_md"><?php the_title(); ?></h2>
-		<div class="soustitre slideRight anime_md"><?php the_field("soustitre"); ?></div>
-		
+		<div class="soustitre slideRight anime_md"><?php the_field("soustitre"); ?></div>	
+
+		<div class="contenu slideRight anime_md">
+			<?php the_content(); ?>
+			<div class="clear"></div>
+		</div>
 		
 		<div class="slideRight anime_md abtn">
 
@@ -44,14 +48,6 @@ id="art-<?php echo $slug;?>">
 					</div>
 			<?php }?>
 		</div>
-
-		
-
-		<div class="contenu slideRight anime_md">
-			<?php the_content(); ?>
-			<div class="clear"></div>
-		</div>
-		
 		
 	</div>
 </div>

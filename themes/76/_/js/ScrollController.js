@@ -67,7 +67,7 @@ var ScrollController = function() {
 
 	this.goToHash = function(){		
 		var hash = window.location.hash.split("#")[1];
-console.log(hash)
+//console.log(hash)
 		$("article").removeClass('current');
 		$("article#art-"+hash).addClass('current');
 
@@ -81,8 +81,6 @@ console.log(hash)
 		}, 1000, "easeInOutQuint", function(){
 			
 			_this.handleDominanteColor(hash);
-
-			
 			
 			if($("svg").length && hash == "brand")_MetiersController.animateIn();
 		});
