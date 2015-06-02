@@ -17,9 +17,7 @@ console.log(options)
         $('head').html($("head", options.head).html());
         $('section').scrollLeft(0);
         $('section').html($("section", options.html).html());
-        $('section').animate({opacity:1},1000);
-
-        handle_anime();
+        $('section').removeClass("section_loading");
 
         $(this).trigger({type:"finishrefreshinsert"});
         
@@ -27,6 +25,7 @@ console.log(options)
         timer = setTimeout(function(){
             $('#burger').click();
             _ScrollController.handleArrArticles();
+            handle_anime();
         },400);
 
     };

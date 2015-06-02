@@ -72,7 +72,7 @@ console.log(hash)
 		$("article#art-"+hash).addClass('current');
 
 		var idx = arr_slide.indexOf(hash);
-		//console.log(idx);
+		console.log(idx);
 		idx>0 ? $(".page_prev").show() : $(".page_prev").hide();
 		idx<arr_slide.length-1 ? $(".page_next").show() : $(".page_next").hide();
 
@@ -81,6 +81,8 @@ console.log(hash)
 		}, 1000, "easeInOutQuint", function(){
 			
 			_this.handleDominanteColor(hash);
+
+			
 			
 			if($("svg").length && hash == "brand")_MetiersController.animateIn();
 		});

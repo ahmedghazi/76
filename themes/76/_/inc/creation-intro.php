@@ -13,9 +13,15 @@ id="art-<?php echo $slug;?>">
 			<?php the_content(); ?>
 		</div>
 	
-		<div class="actionsBtn">
-			<a class="btn btn_diapo" href="#">EN SAVOIR PLUS</a>
-		</div>
+		<?php $redirect = get_field("redirect");?>
+		<?php if($redirect){?>
+			<?php $redirect_label = get_field("redirect_label");?>
+			<div class="actionsBtn">
+				<a class="btn" data-role="hash" href="<?php echo $redirect; ?>"><?php echo $redirect_label; ?></a>
+			</div>
+			<div class="sep_18"></div>
+		<?php } ?>
+
 
 		<div class="sep_20"></div>
 

@@ -405,7 +405,7 @@ jQuery.navigate = {
 			html:null
 		};
 
-		$('section').animate({opacity:0});
+		$('section').addClass("section_loading");
 		//console.log(me);
 		/* get the href */
 			//cancel if this is a js link only

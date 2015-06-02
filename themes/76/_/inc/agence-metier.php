@@ -4,7 +4,7 @@ $slug = $post->post_name;
 data-slug="<?php echo $slug;?>"
 id="art-<?php echo $slug;?>">
 	<div class="agence_metier_content">
-		<div class="surtitre slideBottom anime_md">
+		<div class="surtitre slideRight anime_md">
 			<?php //the_field("surtitre"); ?>
 			NOS MÉTIERS
 		</div>
@@ -47,7 +47,7 @@ id="art-<?php echo $slug;?>">
 
 		
 
-		<div class="contenu slideBottom anime_md">
+		<div class="contenu slideRight anime_md">
 			<?php the_content(); ?>
 			<div class="clear"></div>
 		</div>
