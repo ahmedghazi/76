@@ -1,5 +1,6 @@
 var Btn = function() {
-	var _this 		= this;
+	var _this 		= this,
+		delay 		= 20;
 			
 	this.bindEvents = function(){
 		var toggled = 0;
@@ -18,7 +19,7 @@ var Btn = function() {
 				}else{
 					_this.animateIn();
 				}
-			},200);
+			},100);
 		});
 
 		$(document).keyup(function(e) {
@@ -75,7 +76,7 @@ var Btn = function() {
 	this.animateOut = function(){
 		console.log("animateOut")
 		var d = 0;
-		$(".l0").each(function(idx,el){
+		$("#menu li").each(function(idx,el){
 			setTimeout(function(){
 				$(el).addClass("l0")
 			},d);
