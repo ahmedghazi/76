@@ -21,7 +21,7 @@
 			//$url_thumb = $url_thumb[0];
 			$link = get_permalink(geT_the_ID());
 			//include(locate_template('_/inc/jdb-article.php'));
-			echo "<li class='l0 anime_md'>";
+			echo "<li class='l0 anime'>";
 				echo '<div class="sous_menu_logo"><div class="sous_menu_logo_inside" style="background-image:url('.$url_thumb[0].')"></div></div>';
 				echo "<a data-role='ajax' class='anime' href='".$link."'>".get_the_title().'</a>';
 				include(locate_template('_/inc/menu-site-enfant-clients.php'));

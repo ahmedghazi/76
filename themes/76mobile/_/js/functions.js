@@ -13,7 +13,7 @@ var dw,dh,ww,wh,
 /* trigger when page is ready */
 $(document).ready(function (){
 
-	format();
+	
 	window.addEventListener("orientationchange", function() {
 		format();
 	}, false);
@@ -21,6 +21,7 @@ $(document).ready(function (){
 });
 
 $(window).load(function() {
+	format();
 	init_app();
 });
 
@@ -34,8 +35,13 @@ $(window).resize(function() {
 function init_app(){
 	init_vendors();
 	init_objects();
-
+	
 	reveal();
+
+	clearTimeout(timer);
+    timer = setTimeout(function(){
+        handle_anime();
+    },400);
 }
 
 /**********************
@@ -69,6 +75,37 @@ function init_objects(){
 /**********************
 
 **********************/
+function handle_anime(){
+	var path = window.location.pathname;
+	console.log(path)
+	switch(path){
+		case "/contacts/":
+		$(".contact_content").removeClass("slideBottom");
+		var sourceImage = $("article").eq(0).css("background-image").slice(4,$("article").eq(0).css("background-image").length-1);
+		_ScrollController.handleDominanteColorByUrl(sourceImage);
+		break;
+
+		case "/agence/":
+		case "/":
+		var sourceImage = $("article").eq(0).css("background-image").slice(4,$("article").eq(0).css("background-image").length-1);
+		_ScrollController.handleDominanteColorByUrl(sourceImage);
+		break;
+
+	}
+}
+
+function reset_anime(){
+	var path = window.location.pathname;
+	switch(path){
+		case "/contacts/":
+		$(".contact_content").addClass("slideBottom")
+		break;
+	}
+}
+
+/**********************
+
+**********************/
 function reveal(){
 	$("#wrapper").css({opacity:0});
 	$("#wrapper").removeClass('vhidden').animate({opacity:1});
@@ -81,6 +118,11 @@ function format(){
 	ww = $(window).width();
 	wh = $(window).height();
 
+	clearTimeout($.data(this, 'formatTimer'));
+    $.data(this, 'formatTimer', setTimeout(function() {
+    	//console.log("end resize");
+    	//if(window.location.hash && _ScrollController)_ScrollController.goToHash();
+    }, 50));
 }
 
 

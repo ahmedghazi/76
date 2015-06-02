@@ -35,8 +35,13 @@ $(window).resize(function() {
 function init_app(){
 	init_vendors();
 	init_objects();
-
+	
 	reveal();
+
+	clearTimeout(timer);
+    timer = setTimeout(function(){
+        handle_anime();
+    },400);
 }
 
 /**********************
@@ -70,6 +75,27 @@ function init_objects(){
 /**********************
 
 **********************/
+function handle_anime(){
+	var path = window.location.pathname;
+	switch(path){
+		case "/contacts/":
+		$(".contact_content").removeClass("slideBottom")
+		break;
+	}
+}
+
+function reset_anime(){
+	var path = window.location.pathname;
+	switch(path){
+		case "/contacts/":
+		$(".contact_content").addClass("slideBottom")
+		break;
+	}
+}
+
+/**********************
+
+**********************/
 function reveal(){
 	$("#wrapper").css({opacity:0});
 	$("#wrapper").removeClass('vhidden').animate({opacity:1});
@@ -84,8 +110,8 @@ function format(){
 
 	clearTimeout($.data(this, 'formatTimer'));
     $.data(this, 'formatTimer', setTimeout(function() {
-    	console.log("end resize");
-    	if(window.location.hash && _ScrollController)_ScrollController.goToHash();
+    	//console.log("end resize");
+    	//if(window.location.hash && _ScrollController)_ScrollController.goToHash();
     }, 50));
 }
 

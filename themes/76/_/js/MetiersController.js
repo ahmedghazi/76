@@ -3,7 +3,7 @@ var MetiersController = function() {
 		delay = 20;
 			
 	this.init = function(){
-		//_this.animateIn();
+		_this.reset();
 		
 	};
 
@@ -98,10 +98,11 @@ var MetiersController = function() {
 	};
 
 	this.reset = function(){
+		console.log("reset")
 		$(".map svg line").css({opacity:0});
 		$(".map svg path").css({opacity:0});
 		$(".map svg text").css({opacity:0});
-		$(".agence_metier.show .agence_metier_content").children("div,h2").addClass('slideBottom');
+		$(".agence_metier.show .agence_metier_content").children("div,h2").addClass('slideRight');
 	};
 	
 

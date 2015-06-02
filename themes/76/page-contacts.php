@@ -14,7 +14,7 @@ Template Name: CONTACTS
 		$bg = wp_get_attachment_image_src( get_post_thumbnail_id(), "full");
 		$css = 'style="background-image:url('.$bg[0].')"';
 		?><article class="" <?php echo $css;?>>
-			<div class="contact_content">
+			<div class="contact_content slideBottom anime_md">
 				<div class="logo ">
 					<?php include(locate_template('_/img/logo-soixanteseize-blanc.svg'));?>
 				</div>

@@ -361,6 +361,13 @@ a.btn{color: white}
 		-ms-transform: translateX(100%);
             transform: translateX(100%);
 }
+.slideBottom{
+	opacity: 0;
+	-webkit-transform: translateY(400%);
+       -moz-transform: translateY(400%);
+		-ms-transform: translateY(400%);
+            transform: translateY(400%);
+}
 /* ==============================================================================
 	BLOCKS
    ============================================================================== */
@@ -758,7 +765,7 @@ article{
 .map svg line,
 .map svg path,
 .map svg text{
-	opacity: 1;
+	opacity: 0;
 	-webkit-transition: all .2s ease-in-out;
        -moz-transition: all .2s ease-in-out;
         -ms-transition: all .2s ease-in-out;

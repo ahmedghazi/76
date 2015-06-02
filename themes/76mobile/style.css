@@ -816,24 +816,33 @@ article{
    ============================================================================== */
 .page-template-page-contacts .contact_content{
 	position: absolute;
-	left: 50%; margin-left: -225px;
-	top:50%; margin-top: -169px;
-	padding: 23px 44px 35px;
+	left: 50%;
+  	margin-left: -118px;
+	top: 100px;
+	/* margin-top: -169px; */
+	padding: 23px 28px 35px;
 	text-align: center;
 	background-color: rgba(28, 28, 28, 0.8);
+	max-width: 236px;
 }
 .page-template-page-contacts .logo{margin-bottom: 16px;}
 .page-template-page-contacts .logo svg{
-	width: 190px;
-	height: 30px;
+	width: 115px;
+  	height: 19px;
 }
 .adresse{
 	font-family: Times New Roman, serif;
 	font-style: italic;
 	line-height: 1.429em;
+	letter-spacing: 0;
 }
 .page-template-page-contacts .outline{
-	margin: 0 11px;
+	margin: 0;
+}
+.page-template-page-contacts .contact_links{
+	margin: 0 auto;
+	width: 180px;
+	display: block;
 }
 /* ==============================================================================
 	MODAL
