@@ -67,24 +67,21 @@ var ScrollController = function() {
 
 	this.goToHash = function(){		
 		var hash = window.location.hash.split("#")[1];
+console.log(hash)
+		$("article").removeClass('current');
+		$("article#art-"+hash).addClass('current');
 
-		$(".projet").removeClass('current');
-		$(".projet#art-"+hash).addClass('current');
-
-		setTimeout(function(){
-			//$(".projet#art-"+hash).find(".projet_content").removeClass("toggled");
-		},200);
+		var idx = arr_slide.indexOf(hash);
+		//console.log(idx);
+		idx>0 ? $(".page_prev").show() : $(".page_prev").hide();
+		idx<arr_slide.length-1 ? $(".page_next").show() : $(".page_next").hide();
 
 		$('section').stop().animate({
 			scrollLeft: $("#art-"+hash).data("px")
 		}, 1000, "easeInOutQuint", function(){
+			
 			_this.handleDominanteColor(hash);
 			
-			var idx = arr_slide.indexOf(hash);
-			//console.log(idx);
-			idx>0 ? $(".page_prev").show() : $(".page_prev").hide();
-			idx<arr_slide.length-1 ? $(".page_next").show() : $(".page_next").hide();
-
 			if($("svg").length && hash == "brand")_MetiersController.animateIn();
 		});
 	};
@@ -109,7 +106,7 @@ var ScrollController = function() {
 	this.handleDominanteColorByUrl = function(sourceImage){
 		
 		getImageBrightness(sourceImage,function(brightness) {
-			console.log(brightness)
+			//console.log(brightness)
 			if(brightness > midDominante){
 				$(".page_controls").css({color:"#1c1c1c"});
 				$(".page_controls .stripes div").css({"background-color":"#1c1c1c"});

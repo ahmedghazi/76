@@ -969,7 +969,7 @@ $.fn.cycle.commonReset = function(curr,next,opts,w,h,rev) {
 
 // the actual fn for effecting a transition
 $.fn.cycle.custom = function(curr, next, opts, cb, fwd, speedOverride) {
-	console.log(opts)
+//	console.log(opts)
 	var $l = $(curr), $n = $(next);
 	var speedIn = opts.speedIn, speedOut = opts.speedOut, easeIn = opts.easeIn, easeOut = opts.easeOut, animInDelay = opts.animInDelay, animOutDelay = opts.animOutDelay;
 	$n.css(opts.cssBefore);
@@ -983,7 +983,7 @@ $.fn.cycle.custom = function(curr, next, opts, cb, fwd, speedOverride) {
 
 
 	var fn = function() {
-		console.log(opts.animOut)
+//		console.log(opts.animOut)
 		$n.delay(animInDelay).animate(opts.animIn, speedIn, easeIn, function() {
 			cb();
 		});

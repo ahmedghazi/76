@@ -13,6 +13,7 @@ var dw,dh,ww,wh,
 /* trigger when page is ready */
 $(document).ready(function (){
 
+	FastClick.attach(document.body);
 	
 	window.addEventListener("orientationchange", function() {
 		format();

@@ -387,6 +387,8 @@ html,body{
 #wrapper{
 	width: 100%;
 	height: 100%;
+	-webkit-perspective: 1500px;
+  	perspective: 1500px;
 }
 header{
 	position: fixed;
@@ -400,7 +402,20 @@ section{
 	width: 100%; height: 100%;
 	white-space: nowrap;
 	overflow: hidden;
+	-webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+	position: relative;
+	left: 0;
+	z-index: 0;
+	perspective: 1000px;
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
 }
+section.toggled{
+	-webkit-transform: translate3d(0, 0, -300px);
+  	        transform: translate3d(0, 0, -300px);
+}
+
 article{
 	display: inline-block; vertical-align: top;
 	width: 100%; height: 100%;
@@ -480,16 +495,15 @@ article{
 	margin-top: 8px;
 }
 
-
+/* ==============================================================================
+	MENU
+   ============================================================================== */
 #menu{
 	padding:23px 60px;
 	height: 100%;
 	background-color:white;
 	-webkit-transform: translateX(0);
             transform: translateX(0);
-
-    
-  	overflow: auto;
 }
 #menu.toggled{
 	-webkit-transform: translateX(-410px);

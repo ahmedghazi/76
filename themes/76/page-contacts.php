@@ -24,8 +24,7 @@ Template Name: CONTACTS
 				</div>
 				
 				<div class="contact_links">
-					<a class="outline float_left" href="#" class="align_right">E-MAIL</a>
-					<a class="outline float_right" href="#" class="align_left">PLAN</a>
+					<a class="outline " href="#" class="align_right">E-MAIL</a>
 				</div>
 				<div class="clear"></div>
 			</div>

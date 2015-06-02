@@ -12,7 +12,8 @@ var Btn = function() {
 		$('#burger').click(function(){
 			$(this).toggleClass('toggled');
 			$("#menu").toggleClass("toggled");
-
+			$("section").toggleClass("toggled");
+			
 			setTimeout(function(){
 				if($("#menu").hasClass("toggled")){
 					_this.animateOut();

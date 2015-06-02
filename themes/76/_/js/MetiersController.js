@@ -83,7 +83,7 @@ var MetiersController = function() {
 	};
 
 	this.metierAnimeIn = function(id){
-		console.log(id)
+		//console.log(id)
 		$("#art-"+id).addClass("show");
 		var d = 0;
 		$("#art-"+id).find("div,h2").addClass('slideRight');
