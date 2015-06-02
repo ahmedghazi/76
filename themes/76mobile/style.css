@@ -488,6 +488,7 @@ article{
 	background-color:white;
 	-webkit-transform: translateX(0);
             transform: translateX(0);
+    overflow: auto;
 }
 #menu.toggled{
 	-webkit-transform: translateX(-410px);

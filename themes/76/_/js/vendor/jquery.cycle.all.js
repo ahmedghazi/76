@@ -969,6 +969,7 @@ $.fn.cycle.commonReset = function(curr,next,opts,w,h,rev) {
 
 // the actual fn for effecting a transition
 $.fn.cycle.custom = function(curr, next, opts, cb, fwd, speedOverride) {
+	console.log(opts)
 	var $l = $(curr), $n = $(next);
 	var speedIn = opts.speedIn, speedOut = opts.speedOut, easeIn = opts.easeIn, easeOut = opts.easeOut, animInDelay = opts.animInDelay, animOutDelay = opts.animOutDelay;
 	$n.css(opts.cssBefore);
@@ -979,7 +980,10 @@ $.fn.cycle.custom = function(curr, next, opts, cb, fwd, speedOverride) {
 			speedIn = speedOut = 1;
 		easeIn = easeOut = null;
 	}
+
+
 	var fn = function() {
+		console.log(opts.animOut)
 		$n.delay(animInDelay).animate(opts.animIn, speedIn, easeIn, function() {
 			cb();
 		});
@@ -1184,6 +1188,24 @@ $.fn.cycle.transitions.scrollVert = function($cont, $slides, opts) {
 	opts.cssBefore.left = 0;
 	opts.animIn.top = 0;
 	opts.animOut.left = 0;
+};
+$.fn.cycle.transitions.scrollHorzZoom = function($cont, $slides, opts) { 
+    $cont.css('overflow','hidden').width();
+	opts.before.push(function(curr, next, opts, fwd) {
+		if (opts.rev)
+			fwd = !fwd;
+		$.fn.cycle.commonReset(curr,next,opts);
+		opts.cssBefore.left = fwd ? (next.cycleW-1) : (1-next.cycleW);
+		opts.animOut.left = fwd ? -curr.cycleW : curr.cycleW;
+	});
+	//console.log(opts)
+	
+	opts.cssBefore 	= { top: 0, zIndex: 1 }; 
+	//opts.cssFirst 	= { left:0, opacity:0.76 };
+	//opts.cssBefore 	= { top:0 };
+	opts.animIn 	= { left:0, transform: "scale(1)", background: "red" };
+	opts.animOut 	= { transform: "scale(.25)", background: "blue" };
+	opts.cssAfter  	= { zIndex: 0 }; 
 };
 
 // slideX/slideY

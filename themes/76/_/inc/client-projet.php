@@ -28,7 +28,13 @@ id="art-<?php echo $slug;?>">
 			<!--a class="btn btn_diapo" href="diapo-<?php echo $diapo?>">
 				<?php echo $diapo_label?>
 			</a-->
-			<button type="button" class="btn btn_diapo" data-href="diapo-<?php echo $diapo?>"><?php echo $diapo_label?></button>
+			<button 
+			type="button" 
+			class="btn btn_diapo" 
+			data-href="diapo-<?php echo $diapo?>" 
+			data-surtitre="<?php the_field("surtitre");?>" 
+			data-titre="<?php the_title();?>" 
+			><?php echo $diapo_label?></button>
 		<?php }?>
 
 		<?php

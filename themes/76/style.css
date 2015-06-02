@@ -487,6 +487,9 @@ article{
 	background-color:white;
 	-webkit-transform: translateX(0);
             transform: translateX(0);
+
+    
+  	overflow: auto;
 }
 #menu.toggled{
 	-webkit-transform: translateX(-410px);
@@ -588,6 +591,7 @@ article{
 .l0{
 	opacity: 0;
 	margin-left: -100px;
+	border-top-width: 0;
 }
 /* ==============================================================================
 	PROJET
@@ -959,18 +963,32 @@ article{
 }
 
 .diapo{
-	width: 100%; height: 100%;
+	width: 100% !important; height: 100% !important;
 	position: relative;
 }
 .diapo_item{
+	width: 100% ; height: 100% ;
+}
+.diapo_item_image{
 	width: 100%; height: 100%;
-	position: absolute;
 	background-size: contain;
 	background-position: center;
 	/*background-attachment: fixed;*/
 	background-repeat: no-repeat;
 }
 
+.scaleIt{
+	-webkit-transform: scale(0.6);
+	   -moz-transform: scale(0.6);
+	     -o-transform: scale(0.6);
+	        transform: scale(0.6);
+	opacity: 0 !important;
+	-webkit-transition: all .4s ease-in-out;
+       -moz-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+         -o-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+}
 
 /*------------------------------------*\
     The animation code
@@ -1000,6 +1018,35 @@ article{
     50%  {left:100%;}
     50.1%  {left:-100%;}
     100% {left:0;}
+}
+
+
+
+/* The animation code */
+@-webkit-keyframes animeMenu {
+    0%   {
+		opacity: 0;
+		margin-left: -100px;
+		border-top-width: 0;
+    }
+    50%  {
+    	opacity: 1;
+		margin-left: 0px;
+    }
+    100% {border-top-width: 100%;}
+}
+/* The animation code */
+@keyframes animeMenu {
+    0%   {
+		opacity: 0;
+		margin-left: -100px;
+		border-top-width: 0;
+    }
+    50%  {
+    	opacity: 1;
+		margin-left: 0px;
+    }
+    100% {border-top-width: 100%;}
 }
 
 

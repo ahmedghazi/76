@@ -107,6 +107,7 @@ var Btn = function() {
 
 			$('.diapo').cycle({ 
 				fx:     'scrollHorz', 
+//				fx: 	'scrollHorzZoom',
 				speed:   600, 
 				//timeout: 0,
 				//pause:   1,
@@ -115,7 +116,8 @@ var Btn = function() {
 				next:   '#modal_next', 
 				prev:   '#modal_prev',
 				before:function(el_in,el_out,opt){
-
+					$(el_in).addClass("scaleIt")
+					$(el_out).removeClass("scaleIt")
 				},
 				after:function(el_in,el_out,opt){
 

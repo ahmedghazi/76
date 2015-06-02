@@ -79,7 +79,15 @@ function handle_anime(){
 	var path = window.location.pathname;
 	switch(path){
 		case "/contacts/":
-		$(".contact_content").removeClass("slideBottom")
+		$(".contact_content").removeClass("slideBottom");
+		var sourceImage = $("article").eq(0).css("background-image").slice(4,$("article").eq(0).css("background-image").length-1);
+		_ScrollController.handleDominanteColorByUrl(sourceImage);
+		break;
+
+		case "/agence/":
+		case "/":
+		var sourceImage = $("article").eq(0).css("background-image").slice(4,$("article").eq(0).css("background-image").length-1);
+		_ScrollController.handleDominanteColorByUrl(sourceImage);
 		break;
 	}
 }
