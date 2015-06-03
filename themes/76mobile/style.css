@@ -1186,6 +1186,7 @@ article{
 		right: 20px;top: 20px;
 		color: white;
 	}
+	.article_agence_1 .logo{margin-top: -3px;}
 
 	.metiers_header{position: absolute; left:18px; top: 18px; z-index: 1; max-width: calc(100% - 36px)}
 	#metiers_close{position: absolute;top: 4px;}
@@ -1207,7 +1208,7 @@ article{
 	}
 
 	.article_agence_1{padding: 18px;text-align: center; overflow: auto;}
-	article .logo{margin-bottom: 18px; margin-top: -3px;}
+	article .logo{margin-bottom: 18px; }
 	.article_agence_1 .soustitre{white-space: pre-line; margin: 0;}
 	.article_agence_1 .soustitre p{margin-bottom: 0;}
 	.article_agence_1 .soustitre br{display: none;}
