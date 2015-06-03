@@ -1,6 +1,8 @@
 <?php 
 $bg = wp_get_attachment_image_src( get_post_thumbnail_id(), "full");
-$css = 'style="background-image:url('.$bg[0].')"';
+$bg = get_field("image_mobile");
+//var_dump($bg);
+$css = 'style="background-image:url('.$bg["url"].')"';
 $slug = $post->post_name;
 ?><article class="creation_intro article_creation_<?php echo $c;?>" <?php echo $css;?>
 data-slug="<?php echo $slug;?>"

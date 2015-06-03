@@ -1,6 +1,9 @@
 <?php 
-$bg = wp_get_attachment_image_src( get_post_thumbnail_id(), "full");
-$css = 'style="background-image:url('.$bg[0].')"';
+//$bg = wp_get_attachment_image_src( get_post_thumbnail_id(), "full");
+//$css = 'style="background-image:url('.$bg[0].')"';
+$bg = get_field("image_mobile");
+$css = 'style="background-image:url('.$bg["url"].')"';
+
 $slug = $post->post_name;
 ?><article class="agence_intro article_agence_<?php echo $c;?>" <?php echo $css;?>
 data-slug="<?php echo $slug;?>"

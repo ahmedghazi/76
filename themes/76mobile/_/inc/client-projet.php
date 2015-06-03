@@ -1,6 +1,9 @@
 <?php 
 $bg = wp_get_attachment_image_src( get_post_thumbnail_id(), "full");
 $css = 'style="background-image:url('.$bg[0].')"';
+//$bg = get_field("image_mobile");
+//$css = 'style="background-image:url('.$bg["url"].')"';
+
 global $post; 
 $slug = $post->post_name;
 ?><article class="projet " <?php //echo $css;?> 
