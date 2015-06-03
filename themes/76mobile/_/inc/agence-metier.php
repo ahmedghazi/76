@@ -11,37 +11,8 @@ id="art-<?php echo $slug;?>">
 		<h2 class="slideBottom anime_md"><?php the_title(); ?></h2>
 		<div class="soustitre slideBottom anime_md"><?php the_field("soustitre"); ?></div>
 		
-		<div class="slideBottom anime_md">
-
-			<?php 
-				$diapo = get_field("diaporama_id");
-				$video = get_field("video_url");
-				if($diapo || $video){
-			?>
-					<div class="actionsBtn ">
-						<?php
-						$diapo = get_field("diaporama_id");
-						if($diapo){
-							$diapo_label = get_field("diaporama_label"); ?>
-				
-							<button 
-							type="button" 
-							class="btn btn_diapo" 
-							data-href="diapo-<?php echo $diapo?>" 
-							data-surtitre="<?php the_field("surtitre");?>" 
-							data-titre="<?php the_title();?>"
-							><?php echo $diapo_label?></button>
-						<?php }?>
-
-						<?php
-						
-						if($video){
-							$video_label = get_field("video_label"); ?>
-				
-							<button type="button" class="btn btn_video" data-href="video-<?php echo $video?>"><?php echo $video_label?></button>
-						<?php }?>
-					</div>
-			<?php }?>
+		<div class="slideRight anime_md abtn">
+			<?php include(locate_template('_/inc/btn-media.php'));?>
 		</div>
 
 		<div class="stripes stripesBottom">

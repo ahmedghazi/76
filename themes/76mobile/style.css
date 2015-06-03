@@ -353,7 +353,35 @@ a.btn{color: white}
 	width: 100%;
 	height: 100%;
 	background-color: rgba(28, 28, 28, 0.85);
+	
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	display: none;
 }
+
+#loader .stripes{
+	width: 25px;margin: 0 auto;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+#loader .stripes div{
+	margin-bottom: 3px;
+	-webkit-animation-name: kitt;
+    animation-name: kitt;
+    -webkit-animation-timing-function: infinite;
+    animation-timing-function: infinite;
+}
+#loader .stripes .stripe3{width: 25px;}
+#loader .stripes .stripe2, 
+#loader .stripes .stripe4{width: 18px;}
+#loader .stripes .stripe1, 
+#loader .stripes .stripe5{width: 11px;}
+#loader .stripes .stripe0, 
+#loader .stripes .stripe6{width: 4px;}
 
 .slideRight{
 	-webkit-transform: translateX(100%);
@@ -865,7 +893,7 @@ article{
     display: -webkit-flex;
     -webkit-align-items: center;
     -webkit-justify-content: center;
-
+	display: none;
 }
 #modal_inside{
 	width: 80%; 
@@ -873,6 +901,44 @@ article{
 	text-align: center;
 }
 #modal_header{margin-bottom: 68px;}
+
+#modal_close{
+	cursor: pointer;
+	width: 15px; height: 15px;
+	margin: 0 auto;
+	position: relative;
+	margin-bottom: 6px;
+}
+#modal_close div{
+	background: #ffffff;
+	width: 100%;
+	height: 1px;
+	position: absolute;
+	top: 7px;
+	-webkit-transform: rotate(45deg);
+	   -moz-transform: rotate(45deg);
+	     -o-transform: rotate(45deg);
+	        transform: rotate(45deg);
+}
+#modal_close .stripe2{
+	-webkit-transform: rotate(-45deg);
+	   -moz-transform: rotate(-45deg);
+	     -o-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
+}
+#modal_close:hover div{
+	-webkit-transform: rotate(-135deg);
+	   -moz-transform: rotate(-135deg);
+	     -o-transform: rotate(-135deg);
+	        transform: rotate(-135deg);
+}
+#modal_close:hover .stripe2{
+	-webkit-transform: rotate(135deg);
+	   -moz-transform: rotate(135deg);
+	     -o-transform: rotate(135deg);
+	        transform: rotate(135deg);
+}
+
 #modal_slider{
 	width: 100%;
 	height: 423px;
@@ -1005,6 +1071,48 @@ article{
 	font-family: 'TimesNewRomanPS-Italic';
 }
 
+.diapo_item_image{
+	width: 100%; height: 100%;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.diapo_item .diapo_item_image,
+.diapo_item .diapo_play,
+.diapo_item iframe{position: absolute; left: 0;}
+
+.diapo_item .diapo_play{
+	left: 50%; top: 50%;
+	margin-left: -36px; margin-top: -36px;
+	width: 73px; height: 73px;
+	-webkit-transform: rotate(45deg);
+	   -moz-transform: rotate(45deg);
+	     -o-transform: rotate(45deg);
+	        transform: rotate(45deg);
+	background-color: rgba(28, 28, 28, 0.85);
+	cursor: pointer;
+}
+.diapo_play .stripes{
+	max-width: 25px;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	margin-left: 30px;
+  	margin-top: 19px;
+}
+.diapo_play .stripes div{margin-bottom: 3px;}
+.diapo_play .stripes .stripe3{width: 25px;}
+.diapo_play .stripes .stripe2, 
+.diapo_play .stripes .stripe4{width: 18px;}
+.diapo_play .stripes .stripe1, 
+.diapo_play .stripes .stripe5{width: 11px;}
+.diapo_play .stripes .stripe0, 
+.diapo_play .stripes .stripe6{width: 4px;}
+
+.diapo_item iframe{
+	width: 100%; height: 100%;
+}
 
 /*------------------------------------*\
     The animation code

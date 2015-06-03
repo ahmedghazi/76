@@ -75,10 +75,14 @@
 	   	wp_register_script('cycle', ($templatedir."/_/js/vendor/jquery.cycle.all.js"), false);
 	   	wp_enqueue_script('cycle');
 
-	   	wp_deregister_script('color-thief');
-	   	wp_register_script('color-thief', ($templatedir."/_/js/vendor/color-thief.js"), false);
-	   	wp_enqueue_script('color-thief');
-	   	
+	   	//wp_deregister_script('color-thief');
+	   	//wp_register_script('color-thief', ($templatedir."/_/js/vendor/color-thief.js"), false);
+	   	//wp_enqueue_script('color-thief');
+	   	wp_deregister_script('FastClick');
+	   	wp_register_script('FastClick', ($templatedir."/_/js/vendor/fastclick.js"), false);
+	   	wp_enqueue_script('FastClick');
+
+
 	   	wp_deregister_script('navigate');
 	   	wp_register_script('navigate', ($templatedir."/_/js/vendor/navigate.js"), false);
 	   	wp_enqueue_script('navigate');
