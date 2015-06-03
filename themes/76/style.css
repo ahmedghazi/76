@@ -589,12 +589,17 @@ article{
 	background-color: #1c1c1c !important;
 }
 
+.menu_scroll{
+	height: 100%;
+	overflow: auto;
+}
+
 #menu .menu > li{
 	padding-top: 25px;
 	margin-bottom: 25px;
 	border-top: 1px solid;
 }
-#menu .menu > li:first-child{border-top: none;padding-top: 0;}
+#menu .menu > li:first-child{border-top: none;padding-top: 0; margin-top: 1px;}
 
 #menu li{cursor: pointer;pointer-events:auto;}
 #menu li:hover a{margin-left: 10px;}
@@ -646,6 +651,12 @@ article{
 }
 .sous_menu_projets{
 	width: 100%; height: 100%;
+	padding-left: 1px;
+	position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .sous_menu_projets li{
 	height: 85px;

@@ -24,6 +24,7 @@ var MetiersController = function() {
 	};
 
 	this.animateIn = function(){
+		
 		$(".page_controls").css({color:"#ffffff"});
 		$(".page_controls .stripes div").css({"background-color":"#ffffff"});
 		$("#burger div").css({"background-color":"#ffffff"});
@@ -50,9 +51,6 @@ var MetiersController = function() {
 			d+=delay/8;
 		});
 
-		
-		
-
 		setTimeout(function(){
 			_this.bindEvents();
 		},d);
@@ -74,7 +72,6 @@ var MetiersController = function() {
 			d += delay*2;
 			console.log(d);
 		});
-
 
 		setTimeout(function(){
 			$(".agence_metier").removeClass("show");

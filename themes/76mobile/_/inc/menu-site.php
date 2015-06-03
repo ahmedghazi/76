@@ -1,3 +1,4 @@
+<div class="menu_scroll">
 <?php
 	$args = array(
 		"post_type" => "page",
@@ -27,3 +28,4 @@
 	endif;
 	wp_reset_postdata();
 ?>
+</div>

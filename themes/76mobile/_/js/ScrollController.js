@@ -64,12 +64,11 @@ var ScrollController = function() {
 	this.goToHash = function(){		
 		var hash = window.location.hash.split("#")[1];
 
+		$("#burger").show();
 		$(".projet").removeClass('current');
 		$(".projet#art-"+hash).addClass('current');
 
-		setTimeout(function(){
-			//$(".projet#art-"+hash).find(".projet_content").removeClass("toggled");
-		},200);
+		if($("svg").length && hash == "brand")$("#burger").hide();
 
 		$('section').stop().animate({
 			scrollLeft: $("#art-"+hash).data("px")
@@ -105,7 +104,7 @@ var ScrollController = function() {
 	this.handleDominanteColorByUrl = function(sourceImage){
 		
 		getImageBrightness(sourceImage,function(brightness) {
-			console.log(brightness)
+			//console.log(brightness)
 			if(brightness > midDominante){
 				$(".page_controls").css({color:"#1c1c1c"});
 				$(".page_controls .stripes div").css({"background-color":"#1c1c1c"});
