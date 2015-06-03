@@ -31,9 +31,10 @@ id="art-<?php echo $slug;?>">
 		
 		<div class="actionsBtn">
 		<?php
-		$diapo = get_field("diaporama_id");
-		if($diapo){
-			$diapo_label = get_field("diaporama_label"); ?>
+		$photos = get_field("photos");
+		print_r($photos);
+		if($photos){
+			$photos_label = get_field("diaporama_label"); ?>
 			
 			<!--a class="btn btn_diapo" href="diapo-<?php echo $diapo?>">
 				<?php echo $diapo_label?>

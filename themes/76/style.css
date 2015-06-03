@@ -353,6 +353,7 @@ a.btn{color: white}
 	width: 100%;
 	height: 100%;
 	background-color: rgba(28, 28, 28, 0.85);
+	display: none;
 }
 
 .slideRight{
@@ -818,6 +819,9 @@ article{
 	position: relative;
 	max-width: 80%; max-height: 80%;
 	float: right;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
 }
 .map svg{
 	display: block;
@@ -915,12 +919,22 @@ article{
     display: -webkit-flex;
     -webkit-align-items: center;
     -webkit-justify-content: center;
+	display: none;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
 
 }
 #modal_inside{
 	width: 80%; 
 	margin: 0 auto;
+	margin-top: -42px;
 	text-align: center;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
 }
 #modal_header{margin-bottom: 68px;}
 #modal_slider{
@@ -941,7 +955,12 @@ article{
 	cursor: pointer;
 	overflow: hidden;
 }
-.stripes{overflow: hidden;}
+.stripes{
+	overflow: hidden;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
 .stripes div{
 	margin-bottom: 2px; background-color: white; height: 1px;
 	position: relative; left: 0;
@@ -957,6 +976,11 @@ article{
 	-webkit-animation-name: kitt;
     animation-name: kitt;
 }
+.stripes.stripes_loading{
+	-webkit-animation-name: kitt;
+    animation-name: kitt;
+}
+
 .stripes:hover .stripe3{
 	-webkit-animation-duration: .3s;
     animation-duration: .3s;
@@ -1025,14 +1049,50 @@ article{
 	position: relative;
 }
 .diapo_item{
-	width: 100% ; height: 100% ;
+	width: 100% ; height: 100%;
+	position: relative;
 }
 .diapo_item_image{
 	width: 100%; height: 100%;
 	background-size: contain;
 	background-position: center;
-	/*background-attachment: fixed;*/
 	background-repeat: no-repeat;
+}
+.diapo_item .diapo_item_image,
+.diapo_item .diapo_play,
+.diapo_item iframe{position: absolute; left: 0;}
+
+.diapo_item .diapo_play{
+	left: 50%; top: 50%;
+	margin-left: -36px; margin-top: -36px;
+	width: 73px; height: 73px;
+	-webkit-transform: rotate(45deg);
+	   -moz-transform: rotate(45deg);
+	     -o-transform: rotate(45deg);
+	        transform: rotate(45deg);
+	background-color: rgba(28, 28, 28, 0.85);
+	cursor: pointer;
+}
+.diapo_play .stripes{
+	max-width: 25px;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	margin-left: 30px;
+  	margin-top: 19px;
+}
+.diapo_play .stripes div{margin-bottom: 3px;}
+.diapo_play .stripes .stripe3{width: 25px;}
+.diapo_play .stripes .stripe2, 
+.diapo_play .stripes .stripe4{width: 18px;}
+.diapo_play .stripes .stripe1, 
+.diapo_play .stripes .stripe5{width: 11px;}
+.diapo_play .stripes .stripe0, 
+.diapo_play .stripes .stripe6{width: 4px;}
+
+.diapo_item iframe{
+	width: 100%; height: 100%;
 }
 
 .scaleIt{

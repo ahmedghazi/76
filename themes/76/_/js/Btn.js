@@ -28,20 +28,18 @@ var Btn = function() {
 		});
 
 		$("html").on("click","#modal_close", function(){
-			$("#modal").addClass("vhidden");
+			$("#modal").fadeOut("fast");
 		});
 
 		$("html").on("click",".btn_diapo", function(e){
 			e.preventDefault();
 
-			$("#loader").removeClass("vhidden");
+			$("#loader").fadeIn("fast");
 
-			var id = $(this).data("href");
-				id = id.split("-")[1];
+			var id = $(this).data("href"),
+				surtitre = $(this).data("surtitre"),
+				titre = $(this).data("titre");
 				
-			var surtitre = $(this).data("surtitre");
-			var titre = $(this).data("titre");
-			
 			var o = {
 				action: "get_diapo_by_id",
 				id: id,
@@ -55,13 +53,32 @@ var Btn = function() {
 		$("html").on("click", ".btn_video", function(e){
 			e.preventDefault();
 
-			//$("#loader").removeClass("vhidden");
+			$("#loader").fadeIn("fast");
 
-			//var url = $(this).attr("href").split("-")[1];
-			//console.log(url)
+			var thumbnail_video = $(this).data("thumbnail-video"),
+				url_video = $(this).data("href"),
+				surtitre = $(this).data("surtitre"),
+				titre = $(this).data("titre");
+			
+			var o = {
+				thumbnail_video: thumbnail_video,
+				url_video: url_video,
+				surtitre: surtitre,
+				titre: titre
+			}
+
+			_this.renderModalContentVideo(o);
 		});
 
-		
+		$("html").on("click", ".diapo_play", function(e){
+			$(this).addClass('stripes_loading');
+			var url_video = $(this).parent().data("video");
+			var o = {
+				action: "get_oembed_by_url",
+				url: url_video
+			}
+			_this.loadOEmbedVideo(o);
+		});
 
 	};
 
@@ -95,15 +112,73 @@ var Btn = function() {
 				$("#modal_slider").html(html);
 				$("#modal_surtitre").text(o.surtitre);
 				$("#modal_titre").text(o.titre);
-				_this.revealModal(o);
+				_this.revealModal();
+				_this.launchCycle();
 			}
 		});
 	};
 
-	this.revealModal = function(o){
-		$("#loader").addClass("vhidden");
-		$("#modal").removeClass("vhidden");
+	this.loadOEmbedVideo = function(o){
+		//console.log(o)
+        $.ajax({
+			url: ajaxUrl,
+			type:'POST',
+			data: o,
+			success: function(html){
+				$(".diapo_play").removeClass('stripes_loading').hide();
+				$(".diapo_item").append(html);
+				var src = $(".diapo_item iframe").attr("src");
+					src += "?autoplay=1";
+
+				$(".diapo_item iframe").attr("src", src);
+			}
+		});
+	};
+
+	this.renderModalContentVideo = function(o){
+		$(".diapo_play").show();
+
+		var css = 'style="background-image:url('+o.thumbnail_video+')"';
+
+		var html = '<div class="diapo">';
+	        html +=  '<div class="diapo_item" data-video="'+o.url_video+'">';
+		        html +=  '<div class="diapo_item_image" '+css+'></div>';
+		        html +=  '<div class="diapo_play">';
+		        	html +=  '<div class="diapo_play_fond"></div>';
+		        	html +=  '<div class="stripes">';
+			        	html +=  '<div class="stripe0 anime"></div>';
+			        	html +=  '<div class="stripe1 anime"></div>';
+			        	html +=  '<div class="stripe2 anime"></div>';
+			        	html +=  '<div class="stripe3 anime"></div>';
+			        	html +=  '<div class="stripe4 anime"></div>';
+			        	html +=  '<div class="stripe5 anime"></div>';
+			        	html +=  '<div class="stripe6 anime"></div>';
+		        	html +=  '</div>';
+		        html +=  '</div>';
+	        html +=  '</div>';
+        html +=  '</div>';
+
+        $("#modal_slider").html(html);
+		$("#modal_surtitre").text(o.surtitre);
+		$("#modal_titre").text(o.titre);
+
+		_this.revealModal();
+	};
+
+	this.revealModal = function(){
 		
+		
+		if($(".diapo_item").length > 1){
+			$(".modal_controls").show();
+		}else{
+			$(".modal_controls").hide();
+		}
+
+		$("#modal").fadeIn("fast");
+		$("#loader").fadeOut("fast");
+	}
+
+	this.launchCycle = function(){
 		if($(".diapo_item").length > 1){
 
 			$('.diapo').cycle({ 
@@ -128,5 +203,5 @@ var Btn = function() {
 				}
 			});
 		}
-	}
+	};
 }

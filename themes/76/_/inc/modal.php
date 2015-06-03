@@ -1,4 +1,4 @@
-<div id="modal" class="vhidden anime">
+<div id="modal" class=" anime">
 	<div id="modal_inside">
 		<div id="modal_header">
 			<div id="modal_close">
@@ -39,4 +39,4 @@
 
 </div>
 
-<div id="loader" class="vhidden anime"></div>
+<div id="loader" class=" anime"></div>

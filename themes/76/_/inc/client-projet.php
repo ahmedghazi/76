@@ -20,34 +20,8 @@ id="art-<?php echo $slug;?>">
 		</div>
 		
 		<div class="actionsBtn">
-		<?php
-		$diapo = get_field("diaporama_id");
-		if($diapo){
-			$diapo_label = get_field("diaporama_label"); ?>
-			
-			<!--a class="btn btn_diapo" href="diapo-<?php echo $diapo?>">
-				<?php echo $diapo_label?>
-			</a-->
-			<button 
-			type="button" 
-			class="btn btn_diapo" 
-			data-href="diapo-<?php echo $diapo?>" 
-			data-surtitre="<?php the_field("surtitre");?>" 
-			data-titre="<?php the_title();?>" 
-			><?php echo $diapo_label?></button>
-		<?php }?>
-
-		<?php
-		$video = get_field("video_url");
-		if($video){
-			$video_label = get_field("video_label"); ?>
-		
-			<!--a class="btn btn_video" href="video-<?php echo $video?>">
-				<?php echo $video_label?>
-			</a-->
-			<button type="button" class="btn btn_video" data-href="video-<?php echo $video?>"><?php echo $video_label?></button>
-		<?php }?>
-</div>
+			<?php include(locate_template('_/inc/btn-media.php'));?>
+		</div>
 		<div class="clear"></div>
 
 		<!--div class="cl-effect-2">
