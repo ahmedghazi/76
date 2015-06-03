@@ -28,7 +28,9 @@ var Btn = function() {
 		});
 
 		$("html").on("click","#modal_close", function(){
-			$("#modal").fadeOut("fast");
+			$("#modal").fadeOut("fast", function(){
+				$("#modal_slider").html("");
+			});
 		});
 
 		$("html").on("click",".btn_diapo", function(e){
@@ -125,7 +127,7 @@ var Btn = function() {
 			type:'POST',
 			data: o,
 			success: function(html){
-				$(".diapo_play").removeClass('stripes_loading').hide();
+				//$(".diapo_play").removeClass('stripes_loading').hide();
 				$(".diapo_item").append(html);
 				var src = $(".diapo_item iframe").attr("src");
 					src += "?autoplay=1";
@@ -166,15 +168,13 @@ var Btn = function() {
 	};
 
 	this.revealModal = function(){
-		
-		
 		if($(".diapo_item").length > 1){
 			$(".modal_controls").show();
 		}else{
 			$(".modal_controls").hide();
 		}
 
-		$("#modal").fadeIn("fast");
+		$("#modal").fadeIn();
 		$("#loader").fadeOut("fast");
 	}
 

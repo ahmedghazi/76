@@ -1,4 +1,4 @@
-<div id="modal" class=" anime">
+<div id="modal" class=" ">
 	<div id="modal_inside">
 		<div id="modal_header">
 			<div id="modal_close">
@@ -39,4 +39,16 @@
 
 </div>
 
-<div id="loader" class=" anime"></div>
+<div id="loader" class=" ">
+	
+	<div class="stripes">
+		<div class="stripe0"></div>
+		<div class="stripe1"></div>
+		<div class="stripe2"></div>
+		<div class="stripe3"></div>
+		<div class="stripe4"></div>
+		<div class="stripe5"></div>
+		<div class="stripe6"></div>
+	</div>
+
+</div>
