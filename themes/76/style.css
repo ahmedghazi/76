@@ -628,9 +628,9 @@ article{
 .sous_menu .sous_menu_logo:after{bottom: 0;opacity: 0;}
 .sous_menu li:last-child .sous_menu_logo:after{bottom: 0;opacity: 0;}
 .sous_menu .sous_menu_logo_inside{
-	width: 26px;height: 24px;
+	width: 40px;height: 40px;
 	background-size: cover;	
-	margin-left: 18px;
+	margin-left: 11px;
 }
 .sous_menu li:hover .sous_menu_logo_inside{background-position: center bottom;}
 .sous_menu li:hover .sous_menu_projets_bande{
