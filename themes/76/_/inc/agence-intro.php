@@ -19,7 +19,7 @@ id="art-<?php echo $slug;?>">
 			<div class="actionsBtn">
 				<a class="btn" data-role="hash" href="<?php echo $redirect; ?>"><?php echo $redirect_label; ?></a>
 			</div>
-			<div class="sep_18"></div>
+			
 		<?php } ?>
 
 		<div class="contenu_en">

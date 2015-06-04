@@ -214,7 +214,7 @@ h2{font-size: 1.857em;margin-bottom: 21px;}
 .surtitre{
 	font-size: 0.786em;
 	/*font-size: 0.643em;*/
-	margin-bottom: 6px;
+	margin-bottom: 4px;
 }
 .soustitre{
 	margin-bottom: 21px;
@@ -222,18 +222,20 @@ h2{font-size: 1.857em;margin-bottom: 21px;}
 }
 .contenu p,
 .contenu_en p{
-	line-height: 1.357em;
+	line-height: 1.457em;
 	display:table;
     white-space: pre-wrap; /* css-3 */
     white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
     white-space: -pre-wrap; /* Opera 4-6 */
     white-space: -o-pre-wrap; /* Opera 7 */
     word-wrap: break-word; /* Internet Explorer 5.5+ */
+    margin-bottom: 13px;
+    letter-spacing: 0;
 }
 
 .contenu_en p{
-	/*font-size: 0.643em;*/
-	font-size: 0.786em;
+	font-size: 0.643em;
+	/*font-size: 0.786em;*/
 	color:#747474;
 	font-family: arial;
 }
@@ -243,7 +245,7 @@ h2{font-size: 1.857em;margin-bottom: 21px;}
 	min-width: 128px;
 	border: 0;
 	color: white;
-	padding: 4px 0 3px 0;
+	padding: 3px 0 2px 0;
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 0.786em;
@@ -267,12 +269,12 @@ a.btn{color: white}
 .btn:after{bottom: 0;}
 
 .btn:hover{
-	-webkit-animation-name: kitttext;
+	/*-webkit-animation-name: kitttext;
 	-webkit-animation-duration: 1s;
     animation-name: kitttext;
-    animation-duration: 1s;
+    animation-duration: 1s;*/
 }
-/*
+
 .btn:hover:before{
 	-webkit-animation-name: kitttext;
 	-webkit-animation-duration: 1s;
@@ -285,7 +287,6 @@ a.btn{color: white}
     animation-name: kitttext;
     animation-duration: .5s;
 }
-*/
 
 .cl-effect-2 a {
 	line-height: 26px;
@@ -347,13 +348,13 @@ a.btn{color: white}
 	min-width: 128px;
 	border: 1px solid;
 	color: white;
-	padding: 6px 0;
+	padding: 2px 0 2px 0;
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 0.786em;
 	background: transparent;
 	display: inline-block;
-	
+	height: 20px;
 }
 .outline:hover{
 	color: white;
@@ -747,8 +748,7 @@ article{
             transform: translateX(calc(100% + 753px));
 }
 .actionsBtn{display: inline-block;}
-.actionsBtn .btn{margin-right: 14px;}
-.actionsBtn .btn:nth-child(3){display: block;}
+
 
 .projet_content .actionsBtn{display: block; max-width: 290px}
 .projet_content .actionsBtn .btn{margin: 0 14px 14px 0;float: left;}
@@ -808,6 +808,7 @@ article{
 }
 .page-template-page-agence .agence_content{
 	margin: 70px 60px 0 0;
+	margin: 86px 64px 0 0;
 	float: right;
 	
 	min-height: 298px;
@@ -815,6 +816,10 @@ article{
 	text-align: center; 
 }
 .page-template-page-agence .agence_content .actionsBtn .btn{margin-right: 0;}
+.page-template-page-agence .agence_content .actionsBtn{
+	height: 20px;
+	margin-bottom: 17px;
+}
 
 /* ==============================================================================
 	MÉTIERS
@@ -837,12 +842,15 @@ article{
 .map{
 	position: absolute;
 	width: 100%; 
+	top: 89px;
+}
+.agence_metier{
+	display: none;
 	top: 50%;
   	transform: translateY(-50%);
   	-ms-transform: translateY(-50%);
   	-webkit-transform: translateY(-50%);
 }
-.agence_metier{display: none;}
 .agence_metier.show{display: block}
 
 #art-metier_intro{position: relative;}
@@ -877,11 +885,12 @@ article{
 .agence_metier_content table tr td p{margin-bottom: 0;white-space: pre-wrap}
 .map{
 	position: relative;
-	max-width: 80%; max-height: 80%;
+	width: 82.7%; height: 82.7%;
 	float: right;
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
 	transform-style: preserve-3d;
+	margin-right: -6px;
 }
 .map svg{
 	display: block;
@@ -922,18 +931,20 @@ article{
 	float: left;
 	*/
 	position: absolute;
-	bottom: 70px; left: 60px;
+	top: 50%; 
+	margin-top: 30px;
+	left: calc(100%/3);
+	margin-left: -282px;
 	min-height: 298px;
 	max-width: 564px;
 	text-align: center; 
 }
-.page-template-page-creations .contenu{
+.page-template-page-creations .actionsBtn{
 	/*white-space: pre-line;*/
-	
+	height: 20px;
+	margin-bottom: 17px;
 }
-.page-template-page-creations .contenu_en{
 
-}
 
 /* ==============================================================================
 	CONTACT
@@ -941,12 +952,12 @@ article{
 .page-template-page-contacts .contact_content{
 	position: absolute;
 	left: 50%; margin-left: -225px;
-	top:50%; margin-top: -169px;
+	top:147px;
 	padding: 23px 44px 35px;
 	text-align: center;
-	background-color: rgba(28, 28, 28, 0.8);
+	background-color: rgba(0, 0, 0, 0.8);
 }
-.page-template-page-contacts .logo{margin-bottom: 16px;}
+.page-template-page-contacts .logo{margin-bottom: 7px;}
 .page-template-page-contacts .logo svg{
 	width: 190px;
 	height: 30px;
@@ -956,8 +967,9 @@ article{
 	font-style: italic;
 	line-height: 1.429em;
 }
+.adresse p{margin-bottom: 10px;}
 .page-template-page-contacts .outline{
-	margin: 0 11px;
+	
 }
 /* ==============================================================================
 	MODAL
