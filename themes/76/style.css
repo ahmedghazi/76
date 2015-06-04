@@ -842,14 +842,14 @@ article{
 .map{
 	position: absolute;
 	width: 100%; 
-	top: 89px;
-}
-.agence_metier{
-	display: none;
 	top: 50%;
   	transform: translateY(-50%);
   	-ms-transform: translateY(-50%);
   	-webkit-transform: translateY(-50%);
+}
+.agence_metier{
+	display: none;
+	
 }
 .agence_metier.show{display: block}
 

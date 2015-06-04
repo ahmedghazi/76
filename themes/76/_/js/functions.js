@@ -116,11 +116,13 @@ function format(){
 	ww = $(window).width();
 	wh = $(window).height();
 
+	$("section").css({width:dw})
+
 	clearTimeout($.data(this, 'formatTimer'));
     $.data(this, 'formatTimer', setTimeout(function() {
-    	//console.log("end resize");
-    	//if(window.location.hash && _ScrollController)_ScrollController.goToHash();
-    }, 50));
+    	console.log("end resize");
+    	if(window.location.hash && _ScrollController)_ScrollController.goToHash();
+    }, 400));
 }
 
 
