@@ -588,7 +588,7 @@ article{
 	MENU
    ============================================================================== */
 #menu{
-	padding:23px 60px;
+	padding:23px 0 23px 60px;
 	height: 100%;
 	background-color:white;
 	-webkit-transform: translateX(0);
@@ -608,13 +608,15 @@ article{
 }
 
 #menu .menu > li{
-	padding-top: 25px;
-	margin-bottom: 25px;
-	border-top: 1px solid;
+	padding-top: 22px;
+	margin-bottom: 22px;
+	border-top: 1px solid rgba(88, 88, 90, 0.2);
+	color: rgba(88, 88, 90, 0.2);
 }
 #menu .menu > li:first-child{border-top: none;padding-top: 0; margin-top: 1px;}
 
 #menu li{cursor: pointer;pointer-events:auto;}
+#menu li a{color: #58585a}
 #menu li:hover a{margin-left: 10px;}
 
 
@@ -626,7 +628,7 @@ article{
 }
 .sous_menu .sous_menu_logo{
 	position: relative;
-	padding: 25px 0;
+	padding: 10px 0;
 	margin-right: 10px;
 	width: 62px;
 }
@@ -635,7 +637,7 @@ article{
 	content:"";
     position:absolute;
     width: 100%; height: 1px;
-    background-color: #737375;
+    background-color: rgba(88, 88, 90, 0.2);
 }
 .sous_menu .sous_menu_logo:before{top: 0}
 .sous_menu .sous_menu_logo:after{bottom: 0;opacity: 0;}
