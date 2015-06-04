@@ -22,7 +22,7 @@ $(document).ready(function (){
 });
 
 $(window).load(function() {
-	FastClick.attach(document.body);
+	//FastClick.attach(document.body);
 	
 	format();
 	init_app();
