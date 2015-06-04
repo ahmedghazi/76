@@ -1,4 +1,5 @@
 <div id="modal" class=" ">
+	<div id="modal_inner">
 	<div id="modal_inside">
 		<div id="modal_header">
 			<div id="modal_close">
@@ -50,5 +51,5 @@
 		<div class="stripe5"></div>
 		<div class="stripe6"></div>
 	</div>
-
+</div>
 </div>

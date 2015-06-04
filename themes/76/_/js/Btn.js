@@ -145,7 +145,7 @@ var Btn = function() {
 		var html = '<div class="diapo">';
 	        html +=  '<div class="diapo_item" data-video="'+o.url_video+'">';
 		        html +=  '<div class="diapo_item_image" '+css+'></div>';
-		        html +=  '<div class="diapo_play">';
+		        html +=  '<div class="diapo_play ">';
 		        	html +=  '<div class="diapo_play_fond"></div>';
 		        	html +=  '<div class="stripes">';
 			        	html +=  '<div class="stripe0 anime"></div>';
