@@ -276,16 +276,18 @@ a.btn{color: white}
 }
 
 .btn:hover:before{
-	-webkit-animation-name: kitttext;
-	-webkit-animation-duration: 1s;
-    animation-name: kitttext;
-    animation-duration: 1s;
+	-webkit-animation-name: kitt;
+	-webkit-animation-duration: .4s;
+    animation-name: kitt;
+    animation-duration: .4s;
 }
 .btn:hover:after{
-	-webkit-animation-name: kitttext;
-	-webkit-animation-duration: .5s;
-    animation-name: kitttext;
-    animation-duration: .5s;
+	-webkit-animation-name: kitt;
+	-webkit-animation-duration: .4s;
+    animation-name: kitt;
+    animation-duration: .4s;
+    -webkit-animation-delay: .1s; /* Chrome, Safari, Opera */
+    animation-delay: .1s;
 }
 
 .cl-effect-2 a {
@@ -774,12 +776,20 @@ article{
 }
 .page_controls span,
 .page_controls .stripes{display: inline-block;vertical-align: middle;}
+.page_controls span{
+	vertical-align: top;
+	  line-height: 18px;
+  font-size: 15px;
+}
+.page_controls .stripes div{margin-bottom: 3px}
+
 .page_prev{display: none}
 .page_prev .stripes{
 	text-align: right;
 	-webkit-transform: rotate(-180deg);
 	transform: rotate(-180deg);
 }
+.page_prev .stripes div{margin-bottom: 0; margin-top: 3px;}
 
 .page_control:hover div{
 	-webkit-animation-name: kitt;
@@ -868,7 +878,7 @@ article{
 #art-metier_intro .soustitre,
 #art-metier_intro p{margin-bottom: 0;}
 
-.agence_metier .abtn{margin-bottom: 21px;}
+.agence_metier .abtn{margin-bottom: 21px; margin-top: 1px;}
 .agence_metier .soustitre{
 	white-space: pre-line;
 }
