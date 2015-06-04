@@ -1,6 +1,7 @@
 <?php
 $photos = get_field("photos");
 if($photos){
+	//print_r($photos);
 	foreach($photos as $photo){
 		$label_photo = $photo["label_photo"];
 		$id_diaporama = $photo["id_diaporama"];

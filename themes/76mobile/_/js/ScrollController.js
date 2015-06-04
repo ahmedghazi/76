@@ -64,7 +64,7 @@ var ScrollController = function() {
 	this.goToHash = function(){		
 		var hash = window.location.hash.split("#")[1];
 
-		$("#burger").show();
+		
 		$(".projet").removeClass('current');
 		$(".projet#art-"+hash).addClass('current');
 
@@ -80,7 +80,10 @@ var ScrollController = function() {
 			idx>0 ? $(".page_prev").show() : $(".page_prev").hide();
 			idx<arr_slide.length-1 ? $(".page_next").show() : $(".page_next").hide();
 
-			if($("svg").length && hash == "brand")_MetiersController.animateIn();
+			if($("svg").length && hash == "brand")
+				_MetiersController.animateIn();
+			else
+				$("#burger").show();
 		});
 	};
 

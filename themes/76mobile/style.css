@@ -1241,12 +1241,14 @@ article.agence_intro .logo svg{width: 100%; height: 100%;}
   		-webkit-transform: translateY(0%);
 		text-align: center;
 	}
+	.agence_metier h2{margin-bottom: 9px;}
 	.agence_metier .soustitre{margin-bottom: 21px}
 	.agence_metier_content table{margin-right: 0; border-left: 0; float: none; width: 100%; max-width: 100%}
 	.agence_metier_content table tr td{padding-left: 0;text-align: center; width: 100%; max-width: 100%}
 	.agence_metier_content table tr td p{width: 100%; white-space: auto}
 	.agence_metier .actionsBtn{margin-bottom: 21px;}
-
+	.abtn{margin-bottom: 20px;}
+	
 	.page-template-page-creations .creation_content{padding: 23px; left: 0; bottom: 29px; color: black}
 	.page-template-page-creations .creation_content svg path{
 		color: black;

@@ -11,7 +11,7 @@ id="art-<?php echo $slug;?>">
 		<h2 class="slideBottom anime_md"><?php the_title(); ?></h2>
 		<div class="soustitre slideBottom anime_md"><?php the_field("soustitre"); ?></div>
 		
-		<div class="slideRight anime_md abtn">
+		<div class="slideBottom anime_md abtn">
 			<?php include(locate_template('_/inc/btn-media.php'));?>
 		</div>
 

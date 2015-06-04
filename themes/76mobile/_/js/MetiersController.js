@@ -20,16 +20,6 @@ var MetiersController = function() {
 			//$(".map svg line,.map svg text").attr("class","");
 		});
 
-		$(".map svg > g").on("touch", function(e){
-			console.log(e);
-			$(".map svg line,.map svg text").attr("class","");
-			var id = $(this).data("rel");
-			$(this).find("text,line").attr('class', 'rollover');
-			$("#"+id).attr('class', 'rollover');
-			_this.metierAnimeOut(id);
-
-		})
-
 		_this.metierAnimeOut("brand-design");
 	};
 

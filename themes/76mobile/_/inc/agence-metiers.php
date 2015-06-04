@@ -25,22 +25,7 @@ id="art-<?php echo $slug;?>">
 		</div>
 	</div>
 	<div class="metiers_content col">
-		<!--div class="agence_metier metier_intro " id="art-metier_intro">
-			<div class="agence_metier_content">
-				<h2 class="slideBottom anime_md"><?php the_title(); ?></h2>
-				
-			</div>
-
-			<div class="stripes slideBottom">
-				<div class="stripe0 anime"></div>
-				<div class="stripe1 anime"></div>
-				<div class="stripe2 anime"></div>
-				<div class="stripe3 anime"></div>
-				<div class="stripe4 anime"></div>
-				<div class="stripe5 anime"></div>
-				<div class="stripe6 anime"></div>
-			</div>
-		</div-->
+		
 	<?php
 	//the_ID();
 		$argss = array(
