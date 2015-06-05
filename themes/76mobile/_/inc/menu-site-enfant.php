@@ -23,7 +23,9 @@
 			//include(locate_template('_/inc/jdb-article.php'));
 			echo "<li class='anime_md l0'>";
 				echo '<div class="sous_menu_logo"><div class="sous_menu_logo_inside" style="background-image:url('.$url_thumb[0].')"></div></div>';
-				echo "<a data-role='ajax' class='anime' href='".$link."'>".get_the_title().'</a>';
+				echo '<div class="sous_menu_">';
+					echo "<a data-role='ajax' class='anime' href='".$link."'>".get_the_title().'</a>';
+				echo '</div>';
 				include(locate_template('_/inc/menu-site-enfant-clients.php'));
 			echo "</li>";
 			

@@ -39,7 +39,7 @@
 
 </div>
 
-<div id="loader" class=" ">
+<div id="loader" class="stripes_loading">
 	
 	<div class="stripes">
 		<div class="stripe0"></div>

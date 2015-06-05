@@ -88,7 +88,8 @@ var ScrollController = function() {
 	};
 
 	this.handleDominanteColor = function(hash){
-		var sourceImage = $("#art-"+hash).css("background-image").slice(4,$("#art-"+hash).css("background-image").length-1);
+		console.log(hash)
+		var sourceImage = $("#art-"+hash).find(".projet_banner").css("background-image").slice(4,$("#art-"+hash).css("background-image").length-1);
 		
 		getImageBrightness(sourceImage,function(brightness) {
 			//console.log(brightness)

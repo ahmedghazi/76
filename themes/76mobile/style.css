@@ -415,7 +415,7 @@ a.btn{color: white}
 
 html,body{
 	background-color: black;
-	font-size: 14px;
+	font-size: 13px;
 	line-height: 15px;
 	font-family: 'EngraversGothicBT-Regular';
 	letter-spacing: 1px;
@@ -1020,6 +1020,33 @@ article{
     animation-duration: .7s;
 }
 
+.stripes_loading .stripes div{
+	-webkit-animation-name: kitt;
+    animation-name: kitt;
+
+    -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+    animation-iteration-count: infinite;
+}
+.stripes_loading .stripe3{
+	-webkit-animation-duration: .3s;
+    animation-duration: .3s;
+}
+.stripes_loading .stripe4,
+.stripes_loading .stripe2{
+	-webkit-animation-duration: .5s;
+    animation-duration: .5s;
+}
+.stripes_loading .stripe5,
+.stripes_loading .stripe1{
+	-webkit-animation-duration: .7s;
+    animation-duration: .7s;
+}
+.stripes_loading .stripe6,
+.stripes_loading .stripe0{
+	-webkit-animation-duration: .9s;
+    animation-duration: .9s;
+}
+
 .stripesBottom{width: 19px; margin: 0 auto; margin-bottom: 21px}
 .stripesBottom div{
 	margin-right: 2px; background-color: white; width: 1px;
@@ -1186,25 +1213,41 @@ article{
 }
 @media only screen and (max-width:480px) {
 	header{
-		width: 215px;
+		width: 248px;
 	}
-	#burger{left: 18px;}
-	#menu{padding: 23px 0 23px 50px}
-	.sous_menu{width: 165px;}
+	#burger{left: 21px; top: 26px;}
+	#burger.toggled{top: 23px;}
+	#menu{padding: 24px 0 24px 60px}
+	#menu li a{  
+    	
+    	-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+		-ms-hyphens: auto;
+		-o-hyphens: auto;
+		hyphens: auto;
+		
+	}
+	.sous_menu li{}
+	.sous_menu .sous_menu_{
+		display: inline-block;vertical-align: middle;
+	}
+	.sous_menu .sous_menu_ a{
+		display: block;
+	}
+	.sous_menu{width: auto;}
 	.sous_menu_projets_bande{left: 215px;}
 
 	article{white-space: initial}
-	.page-template-page-agence .agence_content{margin:20px; margin-top: 70px;}
+	.page-template-page-agence .agence_content{margin:21px; margin-top: 76px;}
 	.page-template-page-agence .contenu,
 	.page-template-page-agence .contenu_en{
 		max-width: 70%;
   		margin: 0 auto;
-
 	}
 	.agence_intro{position: relative;}
 	.agence_intro .action{
 		position: absolute;
-		right: 20px;top: 20px;
+		right: 21px;top: 23px;
 		color: white;
 	}
 	.article_agence_1 .logo{margin-top: -3px;}
@@ -1214,9 +1257,9 @@ article{
 	.article_agence_1 .col{
 		width: 100%;
 		position: relative;
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 	}
-	.metiers_map{padding-top: 120px;}
+	.metiers_map{padding-top: 81px;}
 	.map{
 		float: none;
 		margin: 0 auto;
@@ -1228,7 +1271,7 @@ article{
   		max-height: 100%;
 	}
 
-	.article_agence_1{padding: 21px;text-align: center; overflow: auto;}
+	.article_agence_1{padding: 22px;text-align: center; overflow: auto;}
 	article .logo{margin-bottom: 19px; }
 article.agence_intro .logo svg{width: 100%; height: 100%;}
 	.agence_content .logo{margin: 0; width: 89px; height: 15px; margin: 0 auto;}
@@ -1249,37 +1292,46 @@ article.agence_intro .logo svg{width: 100%; height: 100%;}
 		text-align: center;
 	}
 	.agence_metier h2{margin-bottom: 9px;}
-	.agence_metier .soustitre{margin-bottom: 21px}
+	.agence_metier .soustitre{margin-bottom: 11px}
+	.agence_metier_content .stripesBottom{margin-bottom: 20px;}
 	.agence_metier_content table{margin-right: 0; border-left: 0; float: none; width: 100%; max-width: 100%}
 	.agence_metier_content table tr td{padding-left: 0;text-align: center; width: 100%; max-width: 100%}
 	.agence_metier_content table tr td p{width: 100%; white-space: auto}
 	.agence_metier .actionsBtn{margin-bottom: 21px;}
 	.abtn{margin-bottom: 20px;}
 	
-	.page-template-page-creations .creation_content{padding: 23px; left: 0; bottom: 29px; color: black}
+	.page-template-page-creations .creation_content{padding: 23px 34px 0 23px; left: 0; bottom: 34px; color: black}
 	.page-template-page-creations .creation_content svg path{
 		color: black;
 	  	fill: currentColor;
 	}
+	.creation_content h2{margin-bottom: 18px;}
 
 	.projet{
-		padding-top: 13px;
+		padding-top: 16px;
 		text-align: center;
 	}
+	.projet_content .logo{width: 88px; height: 14px; margin-bottom: 20px;}
 	.projet_banner{
 		width: 100%;
-		height: 30%;
+		height: 226px;
 		background-size: cover;
   		background-position: center center;
 	}
-	.projet_content{margin: 0; background-color: transparent; padding: 23px}
-	.projet_content p{margin-bottom: 18px;}
+	.projet_content{margin: 0; background-color: transparent; padding: 19px}
+	.projet_content p{margin-bottom: 24px;}
 	.projet_content .actionsBtn{display: block;}
-	.projet_content .actionsBtn .btn{margin: 0;}
-	.projet_content .actionsBtn .btn:nth-child(1){float: left;}
-	.projet_content .actionsBtn .btn:nth-child(2){float: right;}
+	.projet_content .actionsBtn .btn{margin: 0; margin-bottom: 10px;}
+	.projet_content .actionsBtn .btn:nth-child(even){float: left; margin-left: 8px;}
+	.projet_content .actionsBtn .btn:nth-child(odd){float: right; margin-right: 8px;}
 
-	#modal{padding: 23px}
+	#modal{padding: 23px 21px}
+	#modal_inside{width: auto;}
+	#modal_header,
+	#modal_slider,
+	#modal_footer{position: absolute; width: calc(100% - 42px);}
+	#modal_slider{top: 50%; margin-top: -111px;}
+	#modal_footer{bottom: 23px;}
 	.modal_controls{
 		top: auto;
 		bottom: 23px;
@@ -1287,10 +1339,22 @@ article.agence_intro .logo svg{width: 100%; height: 100%;}
 	#modal_prev{left: 23px}
 	#modal_next{right: 23px}
 	#modal_slider{height: 222px;}
-	.diapo_item{max-height: 170px;}
+	.diapo_item{max-height: 200px;}
 	.page_controls{bottom: 23px; left: 23px; width: calc(100% - 46px)}
 
 	.creation_intro .logo{margin-bottom: 0;}
+
+	.page-template-page-contacts .contact_content{
+		top: 120px;
+		background-color: rgba(0, 0, 0, 0.8);
+		max-width: 276px;
+		margin-left: -138px;
+	}
+	.page-template-page-contacts .logo{
+		width: 134px;height: 21px;
+		margin: 0 auto;
+		margin-bottom: 16px;
+	}
 }
 
 @media only screen and (max-width:768px) {

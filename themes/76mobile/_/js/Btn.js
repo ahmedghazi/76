@@ -29,13 +29,16 @@ var Btn = function() {
 		$("html").on("click","#modal_close", function(){
 			$("#modal").fadeOut("fast", function(){
 				$("#modal_slider").html("");
+				$(".page_controls").css({color:"#ffffff"});
+				$(".page_controls .stripes div").css({"background-color":"#ffffff"});
+				$("#burger div").css({"background-color":"#ffffff"});
 			});
 		});
 
 		$("html").on("click",".btn_diapo", function(e){
 			e.preventDefault();
 
-			$("#loader").removeClass("vhidden");
+			$("#loader").fadeIn("fast");
 
 			var id = $(this).data("href"),
 				surtitre = $(this).data("surtitre"),
@@ -176,6 +179,10 @@ var Btn = function() {
 
 		$("#modal").fadeIn();
 		$("#loader").fadeOut("fast");
+
+		$(".page_controls").css({color:"#ffffff"});
+		$(".page_controls .stripes div").css({"background-color":"#ffffff"});
+		$("#burger div").css({"background-color":"#ffffff"});
 	}
 
 
