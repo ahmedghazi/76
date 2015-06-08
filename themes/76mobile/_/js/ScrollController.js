@@ -89,7 +89,16 @@ var ScrollController = function() {
 
 	this.handleDominanteColor = function(hash){
 		console.log(hash)
-		var sourceImage = $("#art-"+hash).find(".projet_banner").css("background-image").slice(4,$("#art-"+hash).css("background-image").length-1);
+		console.log($("#art-"+hash).attr("style"))
+		var style = $("#art-"+hash).attr("style");
+		if(!style){
+			$(".page_controls").css({color:"#ffffff"});
+			$(".page_controls .stripes div").css({"background-color":"#ffffff"});
+			$("#burger div").css({"background-color":"#ffffff"});
+			return;
+		};
+
+		var sourceImage = $("#art-"+hash).css("background-image").slice(4,$("#art-"+hash).css("background-image").length-1);
 		
 		getImageBrightness(sourceImage,function(brightness) {
 			//console.log(brightness)

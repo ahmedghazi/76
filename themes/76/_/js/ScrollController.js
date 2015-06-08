@@ -10,10 +10,13 @@ var ScrollController = function() {
 
 	this.handleArrArticles = function(){
 		arr_slide = [];
+		var px = 0;
 		if($("article").length > 1){
 			$("article").each(function(index, el) {
 				arr_slide.push($(this).data("slug"));
 				$(this).data("px",$(this).position().left);
+				$(this).data("pxx",px);
+				px += ww
 			});
 			if(!window.location.hash)
 				if(arr_slide.length>1)
@@ -77,7 +80,7 @@ var ScrollController = function() {
 		idx<arr_slide.length-1 ? $(".page_next").show() : $(".page_next").hide();
 
 		$('section').stop().animate({
-			scrollLeft: $("#art-"+hash).data("px")
+			scrollLeft: $("#art-"+hash).data("pxx")
 		}, 1000, "easeInOutQuint", function(){
 			
 			_this.handleDominanteColor(hash);

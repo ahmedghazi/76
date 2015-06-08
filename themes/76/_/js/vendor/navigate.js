@@ -406,6 +406,7 @@ jQuery.navigate = {
 		};
 
 		$('section').addClass("section_loading");
+		$("#loader").fadeIn("fast");
 		//console.log(me);
 		/* get the href */
 			//cancel if this is a js link only

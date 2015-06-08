@@ -13,6 +13,7 @@ console.log(options)
         $("body").attr("class", options.class);
 
         _MetiersController.reset();
+        $("#loader").fadeOut("fast");
 
         $('head').html($("head", options.head).html());
         $('section').scrollLeft(0);

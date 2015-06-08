@@ -116,12 +116,18 @@ function format(){
 	ww = $(window).width();
 	wh = $(window).height();
 
-	$("section").css({width:dw})
+	var secw = ww*$("article").length;
+	//$("section").css({width:secw});
+	var artw = secw/$("article").length;
+	$("article").css({width:artw});
 
 	clearTimeout($.data(this, 'formatTimer'));
     $.data(this, 'formatTimer', setTimeout(function() {
     	console.log("end resize");
-    	if(window.location.hash && _ScrollController)_ScrollController.goToHash();
+    	if(window.location.hash && _ScrollController){
+    		_ScrollController.handleArrArticles();
+    		_ScrollController.goToHash();
+    	}
     }, 400));
 }
 

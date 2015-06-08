@@ -405,7 +405,7 @@ jQuery.navigate = {
 			html:null
 		};
 
-		$('section').animate({opacity:0});
+
 		//console.log(me);
 		/* get the href */
 			//cancel if this is a js link only
@@ -415,7 +415,7 @@ jQuery.navigate = {
 			if(href =="javascript://") return true;
 			if(!href) href = document.location.href;
 
-console.log(baseOptions)
+//console.log(baseOptions)
 			//ie add the absolute location on href attribute
 			var base = window.location.href.substring(0, window.location.href.lastIndexOf("/") + 1);
 			href = href.replace(base, ""); 
@@ -456,7 +456,11 @@ console.log(baseOptions)
 			if(!insertFunction) insertFunction=null;
 			baseOptions.insertFunction = insertFunction;
 
-		options = $.extend(baseOptions,options); 
+		options = $.extend(baseOptions,options);
+
+		$('section').animate({opacity:0}, 200, function(){
+			//console.log("anime 0")
+		}); 
 		//console.log(options);
 		History.pushState(
 			{

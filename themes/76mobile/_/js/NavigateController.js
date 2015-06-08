@@ -5,7 +5,7 @@
     $.fn.insertPageHtml = function(options) {
         //the option is an array : {html:the ajax html, scripts: the scripts that already are in the html, customData:any data you associated to this state during navigate} 
         //switch elements
-console.log(options)
+//console.log(options)
         //var bdc = $("#bdc", options.html).attr("class");
 
         reset_anime();
@@ -17,7 +17,9 @@ console.log(options)
         $('head').html($("head", options.head).html());
         $('section').scrollLeft(0);
         $('section').html($("section", options.html).html());
-        $('section').animate({opacity:1},1000);
+        $('section').animate({opacity:1},400, function(){
+            //console.log("anime end")
+        });
 
         handle_anime();
 
@@ -25,6 +27,7 @@ console.log(options)
         
         clearTimeout(timer);
         timer = setTimeout(function(){
+            $('section').css({opacity:1});
             $('#burger').click();
             _ScrollController.handleArrArticles();
         },400);

@@ -17,7 +17,7 @@ Template Name: CONTACTS
 		$css = 'style="background-image:url('.$bg["url"].')"';
 
 		?><article class="" <?php echo $css;?>>
-			<div class="contact_content slideBottom anime_md">
+			<div class="contact_content slideBottom anime_lg">
 				<div class="logo ">
 					<?php include(locate_template('_/img/logo-soixanteseize-blanc.svg'));?>
 				</div>
@@ -27,7 +27,9 @@ Template Name: CONTACTS
 				</div>
 				
 				<div class="contact_links">
-					<a class="outline " href="#" class="align_center">E-MAIL</a>
+					<a class="outline " href="#" class="align_center">
+						<span>E-MAIL</span>
+					</a>
 				</div>
 			</div>
 		</article>

@@ -198,15 +198,22 @@ outline.{
 	     url('_/fonts/TimesNewRomPSIta.svg#TimesNewRomPSIta') format('svg');
 }
 
-
+*{
+	font-family: 'EngraversGothicBT-Regular' !important;
+	/*text-shadow: 0 0 1px rgba(0,0,0,0.3);*/
+	-webkit-font-smoothing: subpixel-antialiased;
+}
 
 .TimesNewRomanPS,
 .contenu p,
-.soustitre{font-family: 'TimesNewRomanPS-Italic';}
+.soustitre,
+.adresse p{font-family: 'TimesNewRomanPS-Italic' !important;}
 
 .EngraversGothicBTn,
 .surtitre,
-.contenu table p{font-family: 'EngraversGothicBT-Regular';}
+.contenu table p{
+	font-family: 'EngraversGothicBT-Regular' !important;
+}
 /* ==============================================================================
 	ASSETS
    ============================================================================== */
@@ -238,7 +245,7 @@ h2{font-size: 1.857em;margin-bottom: 21px;}
 	font-size: 0.643em;
 	/*font-size: 0.786em;*/
 	color:#747474;
-	font-family: arial;
+	font-family: arial !important;
 }
 
 .btn{
@@ -256,7 +263,7 @@ h2{font-size: 1.857em;margin-bottom: 21px;}
 	letter-spacing: 2px;
 }
 a.btn{color: white}
-
+.btn span{z-index: 1; position: relative;}
 .btn:before,
 .btn:after{
 	position: absolute;
@@ -264,32 +271,23 @@ a.btn{color: white}
 	background-color: white;
 	content: "";
 	left: 0;
-	
+	z-index: 0;
+	animation: tobgout .3s ease-in-out forwards;
+	-webkit-animation: tobgout .3s ease-in-out forwards;
 }
 .btn:before{top: 0;}
 .btn:after{bottom: 0;}
 
 .btn:hover{
-	/*-webkit-animation-name: kitttext;
-	-webkit-animation-duration: 1s;
-    animation-name: kitttext;
-    animation-duration: 1s;*/
+    color: black;
 }
 
-.btn:hover:before{
-	-webkit-animation-name: kitt;
-	-webkit-animation-duration: .4s;
-    animation-name: kitt;
-    animation-duration: .4s;
-}
+.btn:hover:before,
 .btn:hover:after{
-	-webkit-animation-name: kitt;
-	-webkit-animation-duration: .4s;
-    animation-name: kitt;
-    animation-duration: .4s;
-    -webkit-animation-delay: .1s; /* Chrome, Safari, Opera */
-    animation-delay: .1s;
+	animation: tobgin .3s ease-in-out forwards;
+	-webkit-animation: tobgin .3s ease-in-out forwards;
 }
+
 
 .cl-effect-2 a {
 	line-height: 26px;
@@ -351,16 +349,39 @@ a.btn{color: white}
 	min-width: 128px;
 	border: 1px solid;
 	color: white;
-	padding: 2px 0 2px 0;
+	padding: 3px 0 2px 0;
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 0.786em;
 	background: transparent;
 	display: inline-block;
 	height: 20px;
+	position: relative;
+	border-top: 0;
+	border-bottom: 0;
 }
-.outline:hover{
-	color: white;
+.outline span{z-index: 1; position: relative;}
+.outline:before,
+.outline:after{
+	position: absolute;
+	width: 100%; height: 1px;
+	background-color: white;
+	content: "";
+	left: 0;
+	z-index: 0;
+	animation: tobgout .3s ease-in-out forwards;
+	-webkit-animation: tobgout .3s ease-in-out forwards;
+}
+.outline:before{top: 0;}
+.outline:after{bottom: 0;}
+.outline:hover:before,
+.outline:hover:after{
+	animation: tobgin .3s ease-in-out forwards;
+	-webkit-animation: tobgin .3s ease-in-out forwards;
+}
+.outline:hover{color: white}
+.outline:hover span{
+	color: black;
 }
 
 #loader{
@@ -626,10 +647,23 @@ article{
 	content: "";
 	left: 0;
 	bottom: 0;
+	-webkit-transition: all .4s .2s ease-in-out;
+       -moz-transition: all .4s .2s ease-in-out;
+        -ms-transition: all .4s .2s ease-in-out;
+         -o-transition: all .4s .2s ease-in-out;
+            transition: all .4s .2s ease-in-out;
 }
 #menu .menu > li:first-child{padding-top: 0; margin-top: 1px;}
 #menu .menu > li:last-child:after{display: none;}
 
+#menu .menu li.l0{
+	opacity: 0;
+	margin-left: -100px;
+	border-top-width: 0;
+}
+#menu .menu li.l0:after{
+	width: 0;
+}
 
 #menu li a{color: #58585a}
 #menu li:hover a{margin-left: 10px;}
@@ -726,11 +760,7 @@ article{
 	display: block;
 }
 
-.l0{
-	opacity: 0;
-	margin-left: -100px;
-	border-top-width: 0;
-}
+
 /* ==============================================================================
 	PROJET
    ============================================================================== */
@@ -749,7 +779,8 @@ article{
 	/* center it */
 	background-attachment: fixed;
 	background-position: center center;
-	background-position: 0 0;
+	background-position: center center;
+	background-repeat: no-repeat;
 	color: white;
 	overflow: hidden;
 }
@@ -771,7 +802,7 @@ article{
 	-webkit-transform: translateX(calc(100% + 753px));
             transform: translateX(calc(100% + 753px));
 }
-.actionsBtn{display: inline-block;}
+.actionsBtn{display: inline-block; z-index: 0; position: relative;}
 
 
 .projet_content .actionsBtn{display: block; max-width: 290px}
@@ -1279,6 +1310,44 @@ article{
 }
 
 /* The animation code */
+@-webkit-keyframes kittmenu {
+    0%   {left:0%;}
+    50%  {left:100%;}
+    50.1%  {left:-100%;}
+    100% {left:0;}
+}
+/* The animation code */
+@keyframes kittmenu {
+    0%   {left:0%;}
+    50%  {left:100%;}
+    50.1%  {left:-100%;}
+    100% {left:0;}
+}
+
+/* The animation code */
+@-webkit-keyframes tobgin {
+    0%   {height:1px;}
+    100% {height:60%;}
+}
+/* The animation code */
+@keyframes tobgin {
+    0%   {height:1px;}
+    100% {height:60%;}
+}
+
+/* The animation code */
+@-webkit-keyframes tobgout {
+    0%   {height:60%;}
+    100% {height:1px;}
+}
+/* The animation code */
+@keyframes tobgout {
+    0%   {height:60%;}
+    100% {height:1px;}
+}
+
+
+/* The animation code */
 @-webkit-keyframes kitt {
     0%   {left:0%;}
     50%  {left:100%;}
@@ -1293,20 +1362,7 @@ article{
     100% {left:0;}
 }
 
-/* The animation code */
-@-webkit-keyframes kittmenu {
-    0%   {left:0%;}
-    50%  {left:100%;}
-    50.1%  {left:-100%;}
-    100% {left:0;}
-}
-/* The animation code */
-@keyframes kittmenu {
-    0%   {left:0%;}
-    50%  {left:100%;}
-    50.1%  {left:-100%;}
-    100% {left:0;}
-}
+
 
 /* The animation code */
 @-webkit-keyframes kitttext {

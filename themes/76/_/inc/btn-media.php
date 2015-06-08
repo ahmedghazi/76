@@ -11,7 +11,7 @@ if($photos){
 			data-href="<?php echo $id_diaporama?>" 
 			data-surtitre="<?php the_field("surtitre");?>" 
 			data-titre="<?php the_title();?>" 
-			><?php echo $label_photo?></button>
+			><span class="anime"><?php echo $label_photo?></span></button>
 	<?php }?>
 	
 <?php }?>
@@ -32,7 +32,7 @@ if($videos){
 			data-thumbnail-video="<?php echo $thumbnail_video?>" 
 			data-surtitre="<?php the_field("surtitre");?>" 
 			data-titre="<?php the_title();?>" 
-			><?php echo $label_video?></button>
+			><span class="anime"><?php echo $label_video?></span></button>
 	<?php }?>
 	
 <?php }?>

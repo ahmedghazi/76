@@ -95,6 +95,12 @@ function handle_anime(){
 		break;
 
 	}
+
+	if($("body").hasClass('page-template-page-client')){
+		$(".page_controls").css({color:"#ffffff"});
+		$(".page_controls .stripes div").css({"background-color":"#ffffff"});
+		$("#burger div").css({"background-color":"#ffffff"});
+	}
 }
 
 function reset_anime(){

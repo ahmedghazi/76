@@ -16,7 +16,9 @@ id="art-<?php echo $slug;?>">
 
 		
 
-		<div class="soustitre  anime_md"><?php the_content(); ?></div>
+		<div class="soustitre anime_md TimesNewRomanPS-Italic">
+			<?php the_content(); ?>
+		</div>
 	</div>
 
 	<div class="metiers_map col">

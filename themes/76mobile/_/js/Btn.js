@@ -85,7 +85,7 @@ var Btn = function() {
 	};
 
 	this.animateIn = function(){
-		console.log("animateIn")
+		//console.log("animateIn")
 		var d = 0;
 		$(".l0").each(function(idx,el){
 			setTimeout(function(){
@@ -96,7 +96,7 @@ var Btn = function() {
 	};
 
 	this.animateOut = function(){
-		console.log("animateOut")
+		//console.log("animateOut")
 		var d = 0;
 		$("#menu li").each(function(idx,el){
 			setTimeout(function(){

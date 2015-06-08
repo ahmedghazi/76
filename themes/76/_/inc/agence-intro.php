@@ -17,7 +17,9 @@ id="art-<?php echo $slug;?>">
 		<?php if($redirect){?>
 			<?php $redirect_label = get_field("redirect_label");?>
 			<div class="actionsBtn">
-				<a class="btn" data-role="hash" href="<?php echo $redirect; ?>"><?php echo $redirect_label; ?></a>
+				<a class="btn" data-role="hash" href="<?php echo $redirect; ?>">
+					<span class="anime"><?php echo $redirect_label; ?></span>
+				</a>
 			</div>
 			
 		<?php } ?>
