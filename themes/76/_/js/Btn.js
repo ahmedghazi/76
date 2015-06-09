@@ -129,7 +129,7 @@ var Btn = function() {
 			success: function(html){
 				//$(".diapo_play").removeClass('stripes_loading').hide();
 				$(".diapo_item_image").css("background-image","")
-				
+
 				$(".diapo_item").append(html);
 				var src = $(".diapo_item iframe").attr("src");
 					src += "?autoplay=1";
@@ -187,6 +187,8 @@ var Btn = function() {
 			$('.diapo').cycle({ 
 				fx:     'scrollHorz', 
 //				fx: 	'scrollHorzZoom',
+				containerResize: 1,
+    			width: 'fit',
 				speed:   600, 
 				//timeout: 0,
 				//pause:   1,

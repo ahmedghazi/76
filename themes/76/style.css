@@ -1239,18 +1239,22 @@ article{
 	     -o-transform: rotate(-45deg);
 	        transform: rotate(-45deg);
 }
-#modal_close:hover div{
-	-webkit-transform: rotate(-135deg);
-	   -moz-transform: rotate(-135deg);
-	     -o-transform: rotate(-135deg);
-	        transform: rotate(-135deg);
+#modal_close:hover {
+	-webkit-transform: rotate(-180deg);
+	   -moz-transform: rotate(-180deg);
+	     -o-transform: rotate(-180deg);
+	        transform: rotate(-180deg);
+	margin-top: -3px;
+	margin-bottom: 5px;
 }
+/*
 #modal_close:hover .stripe2{
 	-webkit-transform: rotate(135deg);
 	   -moz-transform: rotate(135deg);
 	     -o-transform: rotate(135deg);
 	        transform: rotate(135deg);
 }
+*/
 
 .diapo{
 	width: 100% !important; height: 100% !important;

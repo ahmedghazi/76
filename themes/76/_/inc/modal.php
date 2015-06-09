@@ -2,7 +2,7 @@
 	<div id="modal_inner">
 	<div id="modal_inside">
 		<div id="modal_header">
-			<div id="modal_close">
+			<div id="modal_close" class="anime">
 				<div class="stripe1 anime_md"></div>
 				<div class="stripe2 anime_md"></div>
 			</div>
