@@ -38,6 +38,8 @@ function init_app(){
 	
 	reveal();
 
+//$('#burger').click();
+
 	clearTimeout(timer);
     timer = setTimeout(function(){
         handle_anime();

@@ -128,6 +128,8 @@ var Btn = function() {
 			data: o,
 			success: function(html){
 				//$(".diapo_play").removeClass('stripes_loading').hide();
+				$(".diapo_item_image").css("background-image","")
+				
 				$(".diapo_item").append(html);
 				var src = $(".diapo_item iframe").attr("src");
 					src += "?autoplay=1";
@@ -163,6 +165,7 @@ var Btn = function() {
         $("#modal_slider").html(html);
 		$("#modal_surtitre").text(o.surtitre);
 		$("#modal_titre").text(o.titre);
+
 
 		_this.revealModal();
 	};

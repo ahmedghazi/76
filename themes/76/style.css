@@ -665,7 +665,7 @@ article{
 	width: 0;
 }
 
-#menu li a{color: #58585a}
+#menu li a{color: #58585a; padding: 22px 0}
 #menu li:hover a,
 #menu li.current-menu a{margin-left: 20px;}
 #menu li:hover:after{
@@ -1115,9 +1115,11 @@ article{
 	max-width: 80%;
 	position: absolute;
 	*/
+	max-width: 60%;
 	top: 50%;
 	margin-top: -211px;
 	left: 60px;
+	left:calc(100%/2 - 60%/2);
 }
 
 #modal_footer{bottom: 0;}
