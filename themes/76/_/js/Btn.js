@@ -24,7 +24,20 @@ var Btn = function() {
 		});
 
 		$(document).keyup(function(e) {
+			console.log(e.keyCode);
 			if (e.keyCode == 27) $('#modal_close').click();   // esc
+			if (e.keyCode == 37) { // left
+			    if( $("#modal").is(":visible") ) $('#modal_prev').click();
+			    else $('.page_prev').click();
+			}
+			if (e.keyCode == 39) { // right
+			    if( $("#modal").is(":visible") ) $('#modal_next').click();
+			    else $('.page_next').click();
+			}
+			if (e.keyCode == 32) {
+				if( $("#modal").is(":visible") )$('.diapo_play').click();
+			}
+			
 		});
 
 		$("html").on("click","#modal_close", function(){
