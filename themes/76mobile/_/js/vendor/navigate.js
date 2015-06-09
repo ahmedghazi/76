@@ -44,8 +44,10 @@ jQuery.refresh = {
 
     };
     $.fn.refresh = function(options){
+
 		var target = $(this);
 		var targetSelector = target.getSelector();
+	//	console.log(targetSelector)
 		if(typeof options == "boolean") {
 			options = {refresh:options};
 			//force refresh : options=true or options.refresh==true
@@ -65,8 +67,13 @@ jQuery.refresh = {
 				customData:null, 
 				timeout:8000
 		},options); 
-		
-
+		/*console.log(options)
+		if(options.url == window.location.href){
+			$("#loader").fadeOut("fast");
+	        $('section').removeClass("section_loading");
+			return;
+		}
+		console.log(options)*/
 		//WE REFRESH OR NOT
 		//----------------------------------------------------------------------
 		//check if we do have to refresh
@@ -92,6 +99,7 @@ jQuery.refresh = {
 				if(refreshUrl) targetUrl = refreshUrl;
 				else targetUrl = window.location.href;
 			}
+			//console.log(target)
 			var myRefreshId = target.attr("data-refresh-id");
 			target.trigger({type:"startrefresh", clickedSelector:options.clickedSelector});
 			
@@ -219,7 +227,7 @@ jQuery.refresh = {
     				});
     			}
 		    };
-
+//console.log(targetUrl)
 			if(!options.html) 
 				currentCall= $.ajax({
 				    type: "GET",
@@ -276,6 +284,7 @@ jQuery.navigate = {
 	discreteLinks : 'a:not(.noAjax)[rel!="external"][target!="_blank"][data-role!="hash"], .ajaxLink',
 	defaultInsertFunction:'defaultRefreshInsert',
 	stateChanged : function(event){ // Note: We are using statechange instead of popstate
+	   	// 	console.log("stateChanged")
 	   	 	var State = History.getState(false, false);
 	   	 	var reverse = History.getState().internal == false;
 			
@@ -359,10 +368,11 @@ jQuery.navigate = {
 	         // This is because we can optionally choose to support HTML4 browsers or not.
 	        return false;
 	    }
-	    console.log($.navigate.ajaxLinks)
+	    //console.log($.navigate.ajaxLinks)
 		//Navigate when click
 	    $("html").on("click",$.navigate.ajaxLinks, function(e) {
 	    	var that = $(this);
+
 	    	return that.navigate();
 	    });
 
@@ -405,13 +415,24 @@ jQuery.navigate = {
 			html:null
 		};
 
+var a = document.createElement('a');
+	a.href = me.attr('href');
 
+if(a.pathname == document.location.pathname){
+	return false;
+}
+
+$('a:not(.btn_popup)[rel!="external"][target!="_blank"][data-role!="hash"]').parent("li").removeClass('current-menu');
+me.parent("li").toggleClass("current-menu");
+
+		$('section').addClass("section_loading");
+		$("#loader").fadeIn("fast");
 		//console.log(me);
 		/* get the href */
 			//cancel if this is a js link only
 			var href=me.attr('data-ajax-href');
 			if(!href) href=me.attr('href');
-			
+
 			if(href =="javascript://") return true;
 			if(!href) href = document.location.href;
 
@@ -456,11 +477,7 @@ jQuery.navigate = {
 			if(!insertFunction) insertFunction=null;
 			baseOptions.insertFunction = insertFunction;
 
-		options = $.extend(baseOptions,options);
-
-		$('section').animate({opacity:0}, 200, function(){
-			//console.log("anime 0")
-		}); 
+		options = $.extend(baseOptions,options); 
 		//console.log(options);
 		History.pushState(
 			{

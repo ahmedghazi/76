@@ -557,7 +557,8 @@ article{
 
 #menu li{cursor: pointer;pointer-events:auto;}
 #menu li a{color: #58585a}
-#menu li:hover a{margin-left: 10px;}
+#menu li:hover a,
+#menu li.current-menu a{margin-left: 10px;}
 
 
 .sous_menu{width: 250px;}
@@ -587,7 +588,8 @@ article{
 	background-size: cover;	
 	margin-left: 11px;
 }
-.sous_menu li:hover .sous_menu_logo_inside{background-position: center bottom;}
+.sous_menu li:hover .sous_menu_logo_inside,
+.sous_menu li.current-menu .sous_menu_logo_inside{background-position: center bottom;}
 .sous_menu li:hover .sous_menu_projets_bande{
 	transform: translateX(0);
   	-ms-transform: translateX(0);
