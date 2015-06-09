@@ -56,7 +56,7 @@ var ScrollController = function() {
 
 		$section = $('section');
 		$projets = $(".projet");
-
+/*
 		$section.scroll(function(){
 			if($("body").hasClass("page-template-page-client")){
 				[].slice.call($projets).forEach(function(el,i){
@@ -66,6 +66,7 @@ var ScrollController = function() {
 			    });
 			}
 		});
+*/
 	};
 
 	this.goToHash = function(){		

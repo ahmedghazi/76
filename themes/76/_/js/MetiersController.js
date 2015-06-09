@@ -10,14 +10,27 @@ var MetiersController = function() {
 	this.bindEvents = function(){
 		
 		$(".map svg > g").mouseenter(function(e){
-			$(".map svg line,.map svg text").attr("class","");
+			//$(".map svg line,.map svg text").attr("class","");
+			$(".map svg > g").attr('class', '')
+			$(this).attr('class', 'rollover')
+			//$(this).find("text,line").attr('class', 'rollover');
 			var id = $(this).data("rel");
-			$(this).find("text,line").attr('class', 'rollover');
 			$("#"+id).attr('class', 'rollover');
-			_this.metierAnimeOut(id);
+			//_this.metierAnimeOut(id);
 
 		}).mouseleave(function(event) {
+			//$(".map svg > g.rollover").attr('class', '')
 			//$(".map svg line,.map svg text").attr("class","");
+		});
+
+		$(".map svg > g").on("click", function(e){
+			$(".map svg > g").attr('class', '')
+			//$(".map svg line,.map svg text").attr("class","");
+			//console.log($(this))
+			//$(this).find("text,line").attr('class', 'current-metier');
+			$(this).attr('class', 'current_metier')
+			var id = $(this).data("rel");
+			_this.metierAnimeOut(id);
 		});
 
 		_this.metierAnimeOut("metier_intro");
