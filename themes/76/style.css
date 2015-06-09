@@ -961,7 +961,8 @@ article{
 	display: block;
 	margin: 0 auto;
 }
-.map svg polygon{cursor: pointer;}
+.map svg polygon,
+.map svg g{cursor: pointer;}
 .map svg line,
 .map svg path,
 .map svg text{
@@ -982,11 +983,11 @@ article{
 	color:white;
 	stroke: currentColor;
 }*/
-.map svg g.rollover text{
+.map svg g:hover text{
 	color:white;
 	fill: currentColor;
 }
-.map svg g.rollover line{
+.map svg g:hover line{
 	color:white;
 	stroke: currentColor;
 }

@@ -11,8 +11,10 @@ var MetiersController = function() {
 		
 		$(".map svg > g").mouseenter(function(e){
 			//$(".map svg line,.map svg text").attr("class","");
-			$(".map svg > g").attr('class', '')
-			$(this).attr('class', 'rollover')
+			//var classs = $(".map svg > g").attr('class');
+			//console.log(classs)
+			//if(classs == "rollover")$(".map svg > g").attr('class', '')
+			//$(this).attr('class', 'rollover')
 			//$(this).find("text,line").attr('class', 'rollover');
 			var id = $(this).data("rel");
 			$("#"+id).attr('class', 'rollover');
