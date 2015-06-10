@@ -28,21 +28,22 @@
 			<div class="stripe5"></div>
 		</div>
 	</div>
-	<div id="modal_next" class="modal_controls">
-		<div class="stripes">
-			<div class="stripe1"></div>
-			<div class="stripe2"></div>
-			<div class="stripe3"></div>
-			<div class="stripe4"></div>
-			<div class="stripe5"></div>
+		<div id="modal_next" class="modal_controls">
+			<div class="stripes">
+				<div class="stripe1"></div>
+				<div class="stripe2"></div>
+				<div class="stripe3"></div>
+				<div class="stripe4"></div>
+				<div class="stripe5"></div>
+			</div>
 		</div>
-	</div>
 
-</div>
+	</div><!-- end modalinner -->
+</div><!-- end modal -->
 
 <div id="loader" class=" ">
 	
-	<div class="stripes">
+	<div class="stripes stripes_loading">
 		<div class="stripe0"></div>
 		<div class="stripe1"></div>
 		<div class="stripe2"></div>
@@ -51,5 +52,5 @@
 		<div class="stripe5"></div>
 		<div class="stripe6"></div>
 	</div>
-</div>
-</div>
+
+</div><!-- end loader -->

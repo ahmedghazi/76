@@ -1,5 +1,8 @@
 <div class="menu_scroll">
 <?php
+
+$current_id = get_the_ID();
+
 	$args = array(
 		"post_type" => "page",
 		"post_parent" => 0,
@@ -18,10 +21,13 @@
 		while ( $q->have_posts() ) : $q->the_post();
 			$template = basename( get_page_template() );
 			$href = get_permalink(geT_the_ID());
+			$class = "";
+			if(get_the_ID() == $current_id)$class = "current-menu";
 			if($template == "page-clients.php")$href = "#";
-			echo "<li class='anime_md l0'><a data-role='ajax' class='anime' href='".$href."'>".get_the_title().'</a></li>';
+			echo "<li class='anime l0 ".$class."'><a data-role='ajax' class='anime ' href='".$href."'>".get_the_title().'</a></li>';
 
 			if($template == "page-clients.php")include(locate_template('_/inc/menu-site-enfant.php'));
+			//if($template == "page-clients.php")include(locate_template('_/inc/menu-site-enfant.php'));
 		
 		endwhile;
 		echo '</ul>';

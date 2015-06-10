@@ -9,7 +9,7 @@ var MetiersController = function() {
 
 	this.bindEvents = function(){
 
-		$(".map svg > g").mouseenter(function(e){
+		/*$(".map svg > g").mouseenter(function(e){
 			$(".map svg line,.map svg text").attr("class","");
 			var id = $(this).data("rel");
 			$(this).find("text,line").attr('class', 'rollover');
@@ -18,6 +18,20 @@ var MetiersController = function() {
 
 		}).mouseleave(function(event) {
 			//$(".map svg line,.map svg text").attr("class","");
+		});
+		*/
+		$(".map svg > g").mouseenter(function(e) {
+			var id = $(this).data("rel");
+			$("#"+id).attr('class', 'rollover');
+		}).mouseleave(function(event) {
+			
+		});
+
+		$(".map svg > g").on("click", function(e) {
+			$(".map svg > g").attr('class', '');
+			$(this).attr('class', 'current_metier');
+			var id = $(this).data("rel");
+			_this.metierAnimeOut(id);
 		});
 
 		_this.metierAnimeOut("brand-design");
@@ -81,6 +95,10 @@ var MetiersController = function() {
 
 	this.metierAnimeIn = function(id){
 		console.log(id)
+		//$(".map svg > g").attr('class', '');
+		//console.log($("g[data-rel='"+id+"']"))
+		$("g[data-rel="+id+"]").attr('class', 'current_metier');
+
 		$("#art-"+id).addClass("show");
 		var d = 0;
 		$("#art-"+id).find("div,h2").addClass('slideBottom');

@@ -21,11 +21,11 @@
 			//$url_thumb = $url_thumb[0];
 			$link = get_permalink(geT_the_ID());
 			//include(locate_template('_/inc/jdb-article.php'));
-			echo "<li class='anime_md l0'>";
+			$class = "";
+			if(get_the_ID() == $current_id)$class = "current-menu";
+			echo "<li class='l0 anime ".$class."'>";
 				echo '<div class="sous_menu_logo"><div class="sous_menu_logo_inside" style="background-image:url('.$url_thumb[0].')"></div></div>';
-				echo '<div class="sous_menu_">';
-					echo "<a data-role='ajax' class='anime' href='".$link."'>".get_the_title().'</a>';
-				echo '</div>';
+				echo "<a data-role='ajax' class='anime ' href='".$link."'>".get_the_title().'</a>';
 				include(locate_template('_/inc/menu-site-enfant-clients.php'));
 			echo "</li>";
 			

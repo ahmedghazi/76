@@ -453,6 +453,10 @@ section{
 	white-space: nowrap;
 	overflow: hidden;
 }
+.section_loading{
+	/*opacity: 0.1;*/
+}
+
 article{
 	display: inline-block; vertical-align: top;
 	width: 100%; height: 100%;
@@ -564,7 +568,7 @@ article{
 #menu .menu > li:first-child{border-top: none;padding-top: 0;}
 
 #menu li{cursor: pointer;pointer-events:auto;}
-#menu li a{color: #58585a}
+#menu li a{color: #58585a; max-width: 100px;}
 #menu li:hover a,
 #menu li.current-menu a{margin-left: 10px;}
 
@@ -858,6 +862,15 @@ article{
 	fill: currentColor;
 }
 .map svg line.rollover{
+	color:white;
+	stroke: currentColor;
+}
+
+.map svg g.current_metier text{
+	color:white;
+	fill: currentColor;
+}
+.map svg g.current_metier line{
 	color:white;
 	stroke: currentColor;
 }

@@ -17,7 +17,7 @@ console.log(options.head)
         $('section').scrollLeft(0);
         $('section').html($("section", options.html).html());
 
-        $("#loader").fadeOut("fast");
+        $("#loader").fadeOut();
         $('section').removeClass("section_loading");
 
         $(this).trigger({type:"finishrefreshinsert"});
