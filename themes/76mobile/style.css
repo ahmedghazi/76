@@ -210,7 +210,8 @@ h1,h2,h3,h4{
 .soustitre,
 .soustitre p,
 .adresse p,
-td span em{font-family: 'TimesNewRomanPS-Italic' !important;}
+td span em,
+#modal_tuto p{font-family: 'TimesNewRomanPS-Italic' !important;}
 
 .EngraversGothicBTn,
 .surtitre,
@@ -1225,6 +1226,28 @@ article{
 }
 
 /*------------------------------------*\
+    MODAL TUTO
+\*------------------------------------*/
+#modal_tuto{
+	width: 100%; height: 100%;
+	position: fixed; top: 0;
+	background-color: #1c1c1c;
+	padding: 53px 21px;
+	color: white;
+	text-align: center;
+	display: none;
+	z-index: 2;
+}
+#modal_tuto_inner{
+	display: table;
+	width: 100%; height: 100%;
+}
+#modal_tuto_inside{
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+/*------------------------------------*\
     The animation code
 \*------------------------------------*/
 @-webkit-keyframes burgerOn {
@@ -1324,7 +1347,7 @@ article{
 	}
 	.article_agence_1 .logo{margin-top: -3px;}
 
-	.metiers_header{position: absolute; left:18px; top: 18px; z-index: 1; max-width: calc(100% - 36px)}
+	.metiers_header{position: absolute; left:18px; top: 18px; z-index: 1; max-width: calc(100% - 36px); width: 100%;}
 	.metiers_header .soustitre{color:rgba(255,255,255,0.2);}
 	#metiers_close{position: absolute;top: 4px;}
 	.article_agence_1 .col{
@@ -1332,7 +1355,7 @@ article{
 		position: relative;
 		margin-bottom: 20px;
 	}
-	.metiers_map{padding-top: 81px;}
+	.metiers_map{padding-top: 81px; padding-top: 37px;}
 	.map{
 		float: none;
 		margin: 0 auto;

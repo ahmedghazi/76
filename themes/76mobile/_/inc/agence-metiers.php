@@ -12,12 +12,10 @@ id="art-<?php echo $slug;?>">
 
 		<div class="logo ">
 			<?php include(locate_template('_/img/logo-soixanteseize-blanc.svg'));?>
-		</div>
-
-		
+		</div>		
 
 		<div class="soustitre anime_md TimesNewRomanPS-Italic">
-			<?php the_content(); ?>
+			<?php //the_content(); ?>
 		</div>
 	</div>
 

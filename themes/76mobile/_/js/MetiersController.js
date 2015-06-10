@@ -34,11 +34,18 @@ var MetiersController = function() {
 			_this.metierAnimeOut(id);
 		});
 
+		$("#modal_tuto").find("button").on("click", function(event) {
+			/* Act on the event */
+			$("#modal_tuto").fadeOut("fast")
+		});
+		
+
 		_this.metierAnimeOut("brand-design");
 	};
 
 	this.animateIn = function(){
-		
+		//$("#modal_tuto").fadeIn('fast');
+
 		$(".page_controls").css({color:"#ffffff"});
 		$(".page_controls .stripes div").css({"background-color":"#ffffff"});
 		$("#burger div").css({"background-color":"#ffffff"});
