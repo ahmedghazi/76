@@ -76,15 +76,20 @@ var ScrollController = function() {
 		$("article#art-"+hash).addClass('current');
 
 		var idx = arr_slide.indexOf(hash);
-		console.log(idx);
-		idx>0 ? $(".page_prev").show() : $(".page_prev").hide();
-		idx<arr_slide.length-1 ? $(".page_next").show() : $(".page_next").hide();
+//		console.log(idx);
+//		idx>0 ? $(".page_prev").show() : $(".page_prev").hide();
+//		idx<arr_slide.length-1 ? $(".page_next").show() : $(".page_next").hide();
+
+		idx>0 ? $(".page_prev").removeClass("slideLeft") : $(".page_prev").addClass("slideLeft");
+		idx<arr_slide.length-1 ? $(".page_next").removeClass("slideRight") : $(".page_next").addClass("slideRight");
+
+_this.handleDominanteColor(hash);
 
 		$('section').stop().animate({
 			scrollLeft: $("#art-"+hash).data("pxx")
 		}, 1000, "easeInOutQuint", function(){
 			
-			_this.handleDominanteColor(hash);
+			
 			
 			if($("svg").length && hash == "brand")_MetiersController.animateIn();
 		});

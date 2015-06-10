@@ -404,12 +404,20 @@ a.btn{color: white}
        -moz-transform: translateX(100%);
 		-ms-transform: translateX(100%);
             transform: translateX(100%);
+    opacity: 0;
 }
 .slideBottom{
 	-webkit-transform: translateY(400%);
        -moz-transform: translateY(400%);
 		-ms-transform: translateY(400%);
             transform: translateY(400%);
+    opacity: 0;
+}
+.slideLeft{
+	-webkit-transform: translateX(-100%);
+       -moz-transform: translateX(-100%);
+		-ms-transform: translateX(-100%);
+            transform: translateX(-100%);
     opacity: 0;
 }
 /* ==============================================================================
@@ -719,7 +727,7 @@ article{
 }
 .page_controls .stripes div:last-child{margin-bottom: 0;}
 
-.page_prev{display: none}
+.page_prev{display: block}
 .page_prev .stripes{
 	text-align: right;
 	-webkit-transform: rotate(-180deg);
@@ -1362,13 +1370,18 @@ article.agence_intro .logo svg{width: 100%; height: 100%;}
 	#modal_slider,
 	#modal_footer{position: absolute; width: calc(100% - 42px);}
 	#modal_slider{top: 50%; margin-top: -111px;}
-	#modal_footer{bottom: 23px;}
+	#modal_footer{bottom: 21px;}
+	#modal_footer svg{width: 88px; height: 14px;}
 	.modal_controls{
 		top: auto;
 		bottom: 23px;
+		height: 17px;
 	}
-	#modal_prev{left: 23px}
-	#modal_next{right: 23px}
+	.modal_controls .stripes div{margin-bottom: 3px;}
+	#modal_prev .stripes div{margin-top: 3px; margin-bottom: 0}
+
+	#modal_prev{left: 21px}
+	#modal_next{right: 21px}
 	#modal_slider{height: 222px;}
 	.diapo_item{max-height: 200px;}
 	.page_controls{bottom: 23px; left: 23px; width: calc(100% - 46px)}

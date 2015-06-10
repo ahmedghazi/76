@@ -113,7 +113,7 @@ var Btn = function() {
 			type:'POST',
 			data: o,
 			success: function(html){
-				console.log(html)
+				//console.log(html)
 				$("#modal_slider").html(html);
 				$("#modal_surtitre").text(o.surtitre);
 				$("#modal_titre").text(o.titre);

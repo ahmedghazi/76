@@ -425,6 +425,7 @@ a.btn{color: white}
        -moz-transform: translateX(100%);
 		-ms-transform: translateX(100%);
             transform: translateX(100%);
+    opacity: 0;
 }
 .slideBottom{
 	opacity: 0;
@@ -433,6 +434,14 @@ a.btn{color: white}
 		-ms-transform: translateY(400%);
             transform: translateY(400%);
 }
+.slideLeft{
+	-webkit-transform: translateX(-100%);
+       -moz-transform: translateX(-100%);
+		-ms-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0;
+}
+
 .logo{
 	/*-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
@@ -838,7 +847,7 @@ article{
 }
 .page_controls .stripes div{margin-bottom: 3px}
 
-.page_prev{display: none}
+.page_prev{display: block}
 .page_prev .stripes{
 	text-align: right;
 	-webkit-transform: rotate(-180deg);

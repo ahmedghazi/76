@@ -77,8 +77,16 @@ var ScrollController = function() {
 			
 			var idx = arr_slide.indexOf(hash);
 			//console.log(idx);
-			idx>0 ? $(".page_prev").show() : $(".page_prev").hide();
-			idx<arr_slide.length-1 ? $(".page_next").show() : $(".page_next").hide();
+//			idx>0 ? $(".page_prev").removeClass('slideLeft') : $(".page_prev").addClass("slideLeft");
+//			idx<arr_slide.length-1 ? $(".page_next").removeClass('slideRight') : $(".page_next").addClass('slideRight');
+
+			//idx>0 ? $(".page_prev").fadeIn('fast') : $(".page_prev").fadeOut("fast");
+			//idx<arr_slide.length-1 ? $(".page_next").fadeIn('fast') : $(".page_next").fadeOut('fast');
+			idx>0 ? $(".page_prev").removeClass("slideLeft") : $(".page_prev").addClass("slideLeft");
+			idx<arr_slide.length-1 ? $(".page_next").removeClass("slideRight") : $(".page_next").addClass("slideRight");
+
+//_this.handleDominanteColor(hash);
+
 
 			if($("svg").length && hash == "brand")
 				_MetiersController.animateIn();

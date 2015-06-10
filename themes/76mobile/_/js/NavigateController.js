@@ -19,6 +19,7 @@
         $('section').html($("section", options.html).html());
         $('section').animate({opacity:1},400, function(){
             //console.log("anime end")
+            $("#loader").fadeOut("fast");
         });
 
         handle_anime();

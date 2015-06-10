@@ -2,7 +2,7 @@
 //echo "c : ".$c;
 if($c>0){ ?>
 <div class="page_controls">
-	<div class="page_control page_prev float_left">
+	<div class="page_control page_prev float_left slideLeft anime">
 		<div class="stripes">
 			<div class="stripe1 anime"></div>
 			<div class="stripe2 anime"></div>
@@ -12,7 +12,7 @@ if($c>0){ ?>
 		</div>
 		<span class="anime EngraversGothicBTn">PRÉCÉDENT</span>
 	</div>
-	<div class="page_control page_next float_right">
+	<div class="page_control page_next float_right slideRight anime">
 		<span class="anime EngraversGothicBTn">SUIVANT</span>
 		<div class="stripes">
 			<div class="stripe1 anime"></div>
