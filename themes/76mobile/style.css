@@ -580,7 +580,7 @@ article{
 }
 
 #menu li{cursor: pointer;pointer-events:auto;}
-#menu li a{color: #B0B0B0; max-width: 100px; letter-spacing: 3px;}
+#menu li a{color: #B0B0B0; max-width: 100px; letter-spacing: 3px; text-transform: uppercase;}
 #menu li:hover a,
 #menu li.current-menu a{margin-left: 10px;}
 
@@ -1181,7 +1181,15 @@ article{
 }
 .diapo_item .diapo_item_image,
 .diapo_item .diapo_play,
+.diapo_item .diapo_description,
 .diapo_item iframe{position: absolute; left: 0;}
+
+.diapo_description{
+	text-align: center;
+	bottom: 0px;
+	color: white;
+	width: 100%;
+}
 
 .diapo_item .diapo_play{
 	left: 50%; top: 50%;

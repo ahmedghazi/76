@@ -1331,15 +1331,22 @@ article{
 	position: relative;
 }
 .diapo_item_image{
-	width: 100%; height: 100%;
+	width: 100%; height: 90%;
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
 }
 .diapo_item .diapo_item_image,
 .diapo_item .diapo_play,
+.diapo_item .diapo_description,
 .diapo_item iframe{position: absolute; left: 0;}
 
+.diapo_description{
+	text-align: center;
+	bottom: 0px;
+	color: white;
+	width: 100%;
+}
 .diapo_item .diapo_play{
 	left: 50%; top: 50%;
 	margin-left: -36px; margin-top: -36px;
