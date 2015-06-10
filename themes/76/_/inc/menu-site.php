@@ -8,7 +8,7 @@ $current_id = get_the_ID();
 		"post_parent" => 0,
 		"post_status" => "publish",
 		"orderby" => "menu_order",
-		'post__not_in' => array( 48 )
+		'post__not_in' => array( 48 ),
 		"order" => "DESC",
 		//'posts_per_page' => -1,
 	);
