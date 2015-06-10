@@ -22,7 +22,7 @@ var MetiersController = function() {
 		*/
 		$(".map svg > g").mouseenter(function(e) {
 			var id = $(this).data("rel");
-			$("#"+id).attr('class', 'rollover');
+			//$("#"+id).attr('class', 'rollover');
 		}).mouseleave(function(event) {
 			
 		});
