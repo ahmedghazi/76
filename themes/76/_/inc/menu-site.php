@@ -9,7 +9,7 @@ $current_id = get_the_ID();
 		"post_status" => "publish",
 		"orderby" => "menu_order",
 		'post__not_in' => array( 48 ),
-		"order" => "DESC",
+		"order" => "ASC",
 		//'posts_per_page' => -1,
 	);
 
