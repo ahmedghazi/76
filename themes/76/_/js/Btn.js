@@ -200,8 +200,10 @@ var Btn = function() {
 			$('.diapo').cycle({ 
 				fx:     'scrollHorz', 
 //				fx: 	'scrollHorzZoom',
-				containerResize: 1,
-    			width: 'fit',
+				slideResize: true,
+				containerResize: true,
+				//width: '100%',
+				fit: 1,
 				speed:   600, 
 				//timeout: 0,
 				//pause:   1,

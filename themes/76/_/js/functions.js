@@ -7,6 +7,7 @@ var dw,dh,ww,wh,
 	_ScrollController,
 	_NavigateController,
 	_MetiersController,
+	_AnimeController,
 	timer,
 	arr_slide = [];
 
@@ -72,6 +73,8 @@ function init_objects(){
 	_MetiersController = new MetiersController();
 	_MetiersController.init();
 	
+	_AnimeController = new AnimeController();
+	_AnimeController.init()
 }
 
 /**********************
@@ -84,6 +87,7 @@ function handle_anime(){
 		$(".contact_content").removeClass("slideBottom");
 		var sourceImage = $("article").eq(0).css("background-image").slice(4,$("article").eq(0).css("background-image").length-1);
 		_ScrollController.handleDominanteColorByUrl(sourceImage);
+		//_AnimeController.animateBgByMouse($("article"));
 		break;
 
 		case "/agence/":

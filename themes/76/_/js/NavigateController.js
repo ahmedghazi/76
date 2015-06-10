@@ -12,7 +12,7 @@
 
         _MetiersController.reset();
         
-
+console.log(options.head)
         $('head').html($("head", options.head).html());
         $('section').scrollLeft(0);
         $('section').html($("section", options.html).html());

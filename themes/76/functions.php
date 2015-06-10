@@ -60,12 +60,19 @@
 	
 	add_post_type_support( 'page', 'excerpt' );
 	
+	function remove_pingback_url( $output, $show ) {
+	    if ( $show == 'pingback_url' ) $output = '';
+	    return $output;
+	}
+	add_filter( 'bloginfo_url', 'remove_pingback_url', 10, 2 );
 	
 	// Load jQuery
 	//////////////////////////////////////////////////////////////
 	add_action('wp_enqueue_scripts', 'my_scripts_method', 200);
 	function my_scripts_method() {
 		$templatedir = get_stylesheet_directory_uri();
+
+		wp_deregister_script( 'comment-reply' );
 
 	   	wp_deregister_script('jquery');
 	   	wp_register_script('jquery', ("http://code.jquery.com/jquery-latest.min.js"), false);
@@ -99,6 +106,10 @@
 
 	   	wp_register_script('ScrollController', ($templatedir."/_/js/ScrollController.js"), false);
 	   	wp_enqueue_script('ScrollController');
+
+	   	wp_register_script('AnimeController', ($templatedir."/_/js/AnimeController.js"), false);
+	   	wp_enqueue_script('AnimeController');
+	   	
 
 	   	wp_register_script('functions', ($templatedir."/_/js/functions.js"), false);
 	   	wp_enqueue_script('functions');

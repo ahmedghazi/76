@@ -507,6 +507,7 @@ article{
 	width: 100%; height: 100%;
 	background-size: cover;
 	background-position: center;
+	background-repeat: no-repeat;
 	color: white;
 }
 
@@ -760,6 +761,7 @@ article{
 	width: 100%;
 	margin-left: 0 !important;
 	display: block;
+	padding: 0 !important;
 }
 
 
@@ -1261,7 +1263,7 @@ article{
 	position: relative;
 }
 .diapo_item{
-	width: 100% ; height: 100%;
+	width: 100% !important; height: 100%;
 	position: relative;
 }
 .diapo_item_image{
