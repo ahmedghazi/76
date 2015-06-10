@@ -23,6 +23,20 @@ var Btn = function() {
 			},100);
 		});
 
+		$('#burger').on("mouseenter", function(){
+			$(this).toggleClass('toggled');
+			$("#menu").toggleClass("toggled");
+			$("section").toggleClass("toggled");
+			
+			setTimeout(function(){
+				if($("#menu").hasClass("toggled")){
+					_this.animateOut();
+				}else{
+					_this.animateIn();
+				}
+			},100);
+		});
+
 		$(document).keyup(function(e) {
 			console.log(e.keyCode);
 			if (e.keyCode == 27) $('#modal_close').click();   // esc
@@ -199,6 +213,7 @@ var Btn = function() {
 
 			$('.diapo').cycle({ 
 				fx:     'scrollHorz', 
+				pause: 1,
 //				fx: 	'scrollHorzZoom',
 				slideResize: true,
 				containerResize: true,
@@ -208,7 +223,7 @@ var Btn = function() {
 				//timeout: 0,
 				//pause:   1,
 				easing:  'easeInOutQuint',
-				//timeout: 2500, 
+				timeout: 6000, 
 				next:   '#modal_next', 
 				prev:   '#modal_prev',
 				before:function(el_in,el_out,opt){

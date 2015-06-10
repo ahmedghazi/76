@@ -31,7 +31,7 @@ Template Name: CONTACTS
 					$link = get_field("email");
 					if(!$link)$link = "adam.dupuis@soixanteseize.com";
 					?>
-					<a class="outline " target="" rel="external" href="mailto:<?php echo $link;?>" class="align_right">
+					<a class="btn " target="" rel="external" href="mailto:<?php echo $link;?>" class="align_right">
 						<span class="anime">E-MAIL</span>
 					</a>
 				</div>

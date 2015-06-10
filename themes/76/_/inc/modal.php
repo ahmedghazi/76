@@ -41,9 +41,9 @@
 	</div><!-- end modalinner -->
 </div><!-- end modal -->
 
-<div id="loader" class=" ">
+<div id="loader" class=" stripes_loading">
 	
-	<div class="stripes stripes_loading">
+	<div class="stripes ">
 		<div class="stripe0"></div>
 		<div class="stripe1"></div>
 		<div class="stripe2"></div>

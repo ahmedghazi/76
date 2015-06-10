@@ -191,11 +191,17 @@ var Btn = function() {
 
 			$('.diapo').cycle({ 
 				fx:     'scrollHorz', 
+				pause: 1,
+//				fx: 	'scrollHorzZoom',
+				slideResize: true,
+				containerResize: true,
+				//width: '100%',
+				fit: 1,
 				speed:   600, 
 				//timeout: 0,
 				//pause:   1,
 				easing:  'easeInOutQuint',
-				//timeout: 2500, 
+				timeout: 6000, 
 				next:   '#modal_next', 
 				prev:   '#modal_prev',
 				before:function(el_in,el_out,opt){

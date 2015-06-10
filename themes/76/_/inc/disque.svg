@@ -15,7 +15,7 @@
 		</g>
 	</g>
 	<g data-rel="acquisition">
-		<text transform="matrix(1 0 0 1 65.5293 181.6582)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="15.1008" id="acquisition" class="map_item">ACQUISITION</text>
+		<text transform="matrix(1 0 0 1 59.5293 181.6582)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="15.1008" id="acquisition" class="map_item">ACQUISITION</text>
 		<polygon fill="transparent" points="134.462,224.451 55.285,203.227 109.481,109.425 167.426,167.382 	" data-rel="acquisition"/>
 		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="55.285" y1="203.227" x2="134.462" y2="224.451"  data-rel="acquisition"/>
 		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="167.426" y1="167.382" x2="109.481" y2="109.425"  data-rel="acquisition"/>
@@ -28,7 +28,7 @@
 		</g>
 	</g>
 	<g data-rel="social">
-		<text transform="matrix(1 0 0 1 70.6943 260.7754)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="15.1008" id="social" class="map_item">SOCIAL</text>
+		<text transform="matrix(1 0 0 1 64.6943 260.7754)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="15.1008" id="social" class="map_item">SOCIAL</text>
 		<polygon fill="transparent" points="134.455,290.356 55.299,311.558 55.285,203.227 134.462,224.451 	" data-rel="social"/>
 		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="55.285" y1="203.227" x2="134.462" y2="224.451"  data-rel="social"/>
 		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="134.455" y1="290.356" x2="55.299" y2="311.558"  data-rel="social"/>
@@ -41,7 +41,7 @@
 		</g>
 	</g>
 	<g data-rel="interactive">
-		<text transform="matrix(1 0 0 1 67.9912 341.2441)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="15.1008" id="interactive" class="map_item">INTERACTIVE</text>
+		<text transform="matrix(1 0 0 1 61.9912 341.2441)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="15.1008" id="interactive" class="map_item">INTERACTIVE</text>
 		<polygon fill="transparent" points="55.299,311.558 134.455,290.356 167.408,347.434 109.451,405.378 	" data-rel="interactive"/>
 		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="109.452" y1="405.378" x2="167.409" y2="347.43"  data-rel="interactive"/>
 		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="134.455" y1="290.356" x2="55.299" y2="311.558"  data-rel="interactive"/>
@@ -54,7 +54,7 @@
 		</g>
 	</g>
 	<g data-rel="gaming">
-		<text transform="matrix(1 0 0 1 145.8506 405.4062)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="15.1008" id="gaming" class="map_item">GAMING</text>
+		<text transform="matrix(1 0 0 1 139.8506 405.4062)" fill="#595959" font-family="'EngraversGothicBT-Regular'" font-size="15.1008" id="gaming" class="map_item">GAMING</text>
 		<polygon fill="transparent" points="109.452,405.378 167.409,347.43 224.478,380.396 203.253,459.572 	" data-rel="gaming"/>
 		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="224.478" y1="380.396" x2="203.253" y2="459.572"  data-rel="gaming"/>
 		<line fill="none" stroke="#595959" stroke-width="0.5" stroke-miterlimit="10" x1="109.452" y1="405.378" x2="167.409" y2="347.43"  data-rel="gaming"/>

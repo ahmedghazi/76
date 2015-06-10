@@ -209,7 +209,8 @@ h1,h2,h3,h4{
 .contenu p,
 .soustitre,
 .soustitre p,
-.adresse p{font-family: 'TimesNewRomanPS-Italic' !important;}
+.adresse p,
+td span em{font-family: 'TimesNewRomanPS-Italic' !important;}
 
 .EngraversGothicBTn,
 .surtitre,
@@ -220,12 +221,16 @@ h1,h2,h3,h4{
 	ASSETS
    ============================================================================== */
 
-h2{font-size: 1.857em;margin-bottom: 21px;}
+h2{font-size: 1.857em;margin-bottom: 21px; letter-spacing: 5px;}
 .surtitre{
+	margin-bottom: 4px;
 	font-size: 0.786em;
 	/*font-size: 0.643em;*/
-	margin-bottom: 4px;
+	font-size: 11px;
+	-webkit-font-smoothing: subpixel-antialiased;
+	
 	text-transform: uppercase;
+	letter-spacing: 3px;
 }
 .soustitre{
 	margin-bottom: 21px;
@@ -242,13 +247,17 @@ h2{font-size: 1.857em;margin-bottom: 21px;}
     word-wrap: break-word; /* Internet Explorer 5.5+ */
     margin-bottom: 13px;
     letter-spacing: 0;
+    font-size: 14px;
 }
 
 .contenu_en p{
 	font-size: 0.643em;
 	/*font-size: 0.786em;*/
-	color:#747474;
-	font-family: arial;
+	color:#5E5E5E;
+	font-family: arial !important;
+	-webkit-font-smoothing: subpixel-antialiased;
+	font-style: italic;
+	margin-bottom: 18px;
 }
 
 .btn{
@@ -267,7 +276,7 @@ h2{font-size: 1.857em;margin-bottom: 21px;}
 	letter-spacing: 2px;
 }
 a.btn{color: white}
-.btn span{z-index: 1; position: relative;}
+.btn span{z-index: 1; position: relative; padding-left: 2px;}
 .btn:before,
 .btn:after{
 	position: absolute;
@@ -493,7 +502,7 @@ article{
 
 .burgx1, .burgx2, .burgx3 {
 	/* margin-top: 3px; */
-	background: #737375;
+	background: #B0B0B0;
 	width: 100%;
 	height: 1px;
 	position: absolute;
@@ -551,7 +560,7 @@ article{
             transform: translateX(-410px);
 }
 #burger.toggled div{
-	background-color: #1c1c1c !important;
+	background-color: #B0B0B0 !important;
 }
 
 .menu_scroll{
@@ -566,9 +575,12 @@ article{
 	color: rgba(88, 88, 90, 0.2);
 }
 #menu .menu > li:first-child{border-top: none;padding-top: 0;}
+#menu .menu > li:last-child{
+	background-color: red;
+}
 
 #menu li{cursor: pointer;pointer-events:auto;}
-#menu li a{color: #58585a; max-width: 100px;}
+#menu li a{color: #B0B0B0; max-width: 100px; letter-spacing: 3px;}
 #menu li:hover a,
 #menu li.current-menu a{margin-left: 10px;}
 
@@ -590,7 +602,7 @@ article{
 	content:"";
     position:absolute;
     width: 100%; height: 1px;
-    background-color: rgba(88, 88, 90, 0.2);
+    background-color: #B0B0B0;
 }
 .sous_menu .sous_menu_logo:before{top: 0}
 .sous_menu .sous_menu_logo:after{bottom: 0;opacity: 0;}
@@ -621,6 +633,7 @@ article{
 .sous_menu_projets{
 	width: 100%; 
 	padding-left: 1px;
+	padding-right: 1px;
 	position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -633,8 +646,9 @@ article{
 	position: relative;
 	line-height: 85px;
 	overflow: hidden;
+	margin-bottom: 1px;
 }
-.sous_menu_projets li:hover .sous_menu_projets_thumbnail{opacity: 0.8;background-size: 152px 95px;}
+.sous_menu_projets li:hover .sous_menu_projets_thumbnail{opacity: 0.2;background-size: 152px 95px;}
 .sous_menu_projets li:hover a{opacity: 1; }
 .sous_menu_projets li .sous_menu_projets_thumbnail{
 	width: 100%; height: 100%;
@@ -655,6 +669,7 @@ article{
 	opacity: 0;
 	margin: 0;
 	width: 100%;
+	max-width: 100% !important;
 	margin-left: 0 !important;
 	display: block;
 }
@@ -727,7 +742,7 @@ article{
 .page_controls span{
 	vertical-align: top;
 	line-height: 18px;
-  	font-size: 12px;
+  	font-size: 11px;
 }
 .page_controls .stripes div:last-child{margin-bottom: 0;}
 
@@ -1259,9 +1274,7 @@ article{
     RESPONSIVE
 \*------------------------------------*/
 
-@media only screen and (max-width:320px) {
-	
-}
+
 @media only screen and (max-width:480px) {
 	header{
 		width: 248px;
@@ -1289,7 +1302,7 @@ article{
 	.sous_menu_projets_bande{left: 215px;}
 
 	article{white-space: initial}
-	.page-template-page-agence .agence_content{margin:21px; margin-top: 76px;}
+	.page-template-page-agence .agence_content{margin:21px; margin-top: 60px;}
 	.page-template-page-agence .contenu,
 	.page-template-page-agence .contenu_en{
 		max-width: 70%;
@@ -1352,7 +1365,17 @@ article.agence_intro .logo svg{width: 100%; height: 100%;}
 	.agence_metier .actionsBtn{margin-bottom: 21px;}
 	.abtn{margin-bottom: 20px;}
 	
-	.page-template-page-creations .creation_content{padding: 23px 34px 0 23px; left: 0; bottom: 34px; color: black}
+	.page-template-page-creations .creation_content{
+		padding: 23px 34px 0 34px; 
+		left: 0; bottom: 34px; 
+		color: black;
+		width: 100%;
+	}
+	.creation_content .contenu{
+		width: 289px;
+		margin:0 auto;
+	}
+	.creation_content .contenu p{line-height: 15px;}
 	.page-template-page-creations .creation_content svg path{
 		color: black;
 	  	fill: currentColor;
@@ -1374,10 +1397,10 @@ article.agence_intro .logo svg{width: 100%; height: 100%;}
 	.projet_content p{margin-bottom: 24px;}
 	.projet_content .actionsBtn{display: block; margin: 0 auto}
 	.projet_content .actionsBtn .btn{margin: 0; margin-bottom: 10px; z-index: 0;}
-	.projet_content .actionsBtn .btn:nth-child(even){float: left; margin-left: 8px;}
-	.projet_content .actionsBtn .btn:nth-child(odd){float: right; margin-right: 8px;}
+	.projet_content .actionsBtn .btn:nth-child(even){ margin-left: 8px;}
+	.projet_content .actionsBtn .btn:nth-child(odd){ margin-right: 8px;}
 
-	#modal{padding: 23px 21px}
+	#modal{padding: 23px 21px; z-index: 1;}
 	#modal_inside{width: auto;}
 	#modal_header,
 	#modal_slider,
@@ -1391,12 +1414,22 @@ article.agence_intro .logo svg{width: 100%; height: 100%;}
 		height: 17px;
 	}
 	.modal_controls .stripes div{margin-bottom: 3px;}
-	#modal_prev .stripes div{margin-top: 3px; margin-bottom: 0}
+	#modal_prev .stripes div{}
 
 	#modal_prev{left: 21px}
 	#modal_next{right: 21px}
-	#modal_slider{height: 222px;}
-	.diapo_item{max-height: 200px;}
+	#modal_slider{
+		width: 100%;
+		height: 60%;
+		/*top: 50%;
+		margin-top: -211px;
+		margin-top:0;*/
+		/*left: 60px;*/
+		left:0;
+		top:calc(100%/2 - 60%/2);
+		margin: 0;
+	}
+	.diapo_item{max-height: 100%;}
 	.page_controls{bottom: 23px; left: 23px; width: calc(100% - 46px)}
 
 	.creation_intro .logo{margin-bottom: 0;}
@@ -1437,6 +1470,14 @@ article.agence_intro .logo svg{width: 100%; height: 100%;}
 
 @media all and (orientation: landscape) {
 	
+}
+
+@media only screen and (max-width:320px) {
+	.creation_content{width: 100%;padding: 23px 34px 0 34px;}
+	.contenu{
+		width: 253px;
+		margin: 0 auto;
+	}
 }
 
 /*------------------------------------*\

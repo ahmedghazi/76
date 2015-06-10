@@ -86,7 +86,7 @@ var MetiersController = function() {
 			setTimeout(function(){
 				$(el).addClass('slideRight');
 			},d);
-			d += delay*2;
+			d += delay*4;
 			//console.log(d);
 		});
 

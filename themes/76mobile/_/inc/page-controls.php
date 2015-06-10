@@ -12,7 +12,7 @@ if($c>0){ ?>
 		</div>
 		<span class="anime EngraversGothicBTn">PRÉCÉDENT</span>
 	</div>
-	<div class="page_control page_next float_right slideRight anime">
+	<div class="page_control page_next float_right  anime">
 		<span class="anime EngraversGothicBTn">SUIVANT</span>
 		<div class="stripes">
 			<div class="stripe1 anime"></div>

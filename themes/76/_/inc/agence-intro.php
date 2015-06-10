@@ -18,7 +18,10 @@ id="art-<?php echo $slug;?>">
 			<?php $redirect_label = get_field("redirect_label");?>
 			<div class="actionsBtn">
 				<a class="btn" data-role="hash" href="<?php echo $redirect; ?>">
-					<span class="anime"><?php echo $redirect_label; ?></span>
+					
+					<span class="anime">
+						<?php echo $redirect_label;?>
+					</span>
 				</a>
 			</div>
 			
@@ -27,7 +30,7 @@ id="art-<?php echo $slug;?>">
 		<div class="contenu_en">
 			<?php echo get_field("contenu_en"); ?>
 		</div>
-		<div class="sep_9"></div>
+		
 
 		<div class="clear"></div>
 		<div class="logo ">
