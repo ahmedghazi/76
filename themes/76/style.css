@@ -733,7 +733,7 @@ article{
 	display: inline-block;
 	vertical-align: middle;
 }
-.sous_menu > li > a:hover,
+.sous_menu > li:hover > a,
 .sous_menu > li.current-menu > a{
 	margin-left: 10px;
 }
