@@ -585,6 +585,10 @@ article{
 #menu li:hover a,
 #menu li.current-menu a{margin-left: 10px;}
 
+.sous_menu > li > a:hover,
+.sous_menu > li.current-menu > a{
+	margin-left: 10px;
+}
 
 .sous_menu{width: 250px;}
 .sous_menu .sous_menu_logo,
