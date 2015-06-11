@@ -735,7 +735,7 @@ article{
 }
 .sous_menu > li:hover > a,
 .sous_menu > li.current-menu > a{
-	margin-left: 10px;
+	margin-left: 10px !important;
 }
 .sous_menu .sous_menu_logo{
 	position: relative;
