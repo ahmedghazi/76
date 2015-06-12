@@ -582,7 +582,7 @@ article{
 }
 
 #menu li{cursor: pointer;pointer-events:auto;}
-#menu li a{color: #B0B0B0; max-width: 100px; letter-spacing: 3px; text-transform: uppercase;}
+#menu li a{color: #B0B0B0; letter-spacing: 3px; text-transform: uppercase;}
 #menu li:hover a,
 #menu li.current-menu a{margin-left: 10px;}
 
@@ -592,8 +592,12 @@ article{
 }
 
 .sous_menu{width: 250px;}
+.sous_menu_{
+	max-width: 106px;
+	white-space: initial;
+}
 .sous_menu .sous_menu_logo,
-.sous_menu > li > a{
+.sous_menu .sous_menu_{
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -1554,6 +1558,7 @@ article.agence_intro .logo svg{width: 100%; height: 100%;}
 .menu_scroll{
 	height: 100%;
 	overflow:auto;
+	overflow-x:hidden;
 	-webkit-overflow-scrolling: touch;
 }
 /*------------------------------------*\

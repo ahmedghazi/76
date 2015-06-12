@@ -727,9 +727,13 @@ article{
 }
 
 .sous_menu{width: 250px;}
+.sous_menu_{
+	max-width: 106px;
+	white-space: initial;
+}
 
 .sous_menu .sous_menu_logo,
-.sous_menu > li > a{
+.sous_menu .sous_menu_{
 	display: inline-block;
 	vertical-align: middle;
 }
