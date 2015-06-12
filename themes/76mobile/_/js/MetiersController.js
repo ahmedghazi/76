@@ -36,6 +36,7 @@ var MetiersController = function() {
 
 		$("#modal_tuto").find("button").on("click", function(event) {
 			/* Act on the event */
+			console.log(event);
 			$("#modal_tuto").fadeOut("fast")
 		});
 		

@@ -24,6 +24,8 @@ $(document).ready(function (){
 $(window).load(function() {
 	//FastClick.attach(document.body);
 	
+
+
 	format();
 	init_app();
 });
@@ -51,7 +53,8 @@ function init_app(){
 
 **********************/
 function init_vendors(){
-
+	var scrollingContent = document.querySelector(".menu_scroll");
+    new ScrollFix(scrollingContent);
 }
 
 /**********************
@@ -73,6 +76,7 @@ function init_objects(){
 	_MetiersController = new MetiersController();
 	_MetiersController.init();
 	
+	//$("#burger").click();	
 }
 
 /**********************

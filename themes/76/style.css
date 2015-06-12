@@ -1350,6 +1350,8 @@ article{
 	bottom: 0px;
 	color: white;
 	width: 100%;
+	background-color: rgba(28, 28, 28, 0.85);
+	padding: 10px;
 }
 .diapo_item .diapo_play{
 	left: 50%; top: 50%;

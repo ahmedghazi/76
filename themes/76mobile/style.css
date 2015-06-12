@@ -565,8 +565,9 @@ article{
 }
 
 .menu_scroll{
-	height: 100%;
+	/*height: 100%;
 	overflow: auto;
+	-webkit-backface-visibility:hidden; /*Most Important*/
 }
 
 #menu .menu > li{
@@ -1194,6 +1195,8 @@ article{
 	bottom: 0px;
 	color: white;
 	width: 100%;
+	background-color: rgba(28, 28, 28, 0.85);
+	padding: 10px;
 }
 
 .diapo_item .diapo_play{
@@ -1522,6 +1525,37 @@ article.agence_intro .logo svg{width: 100%; height: 100%;}
 	.projet_content .contenu{width: 273px;}
 }
 
+@media only screen and (max-height:480px) {
+	
+	h2{letter-spacing: 3px; margin-bottom: 11px;}
+	.page-template-page-agence .agence_content{
+		margin: 60px 11px;
+	}
+	.page-template-page-agence .contenu, 
+	.page-template-page-agence .contenu_en{
+		width: 283px;
+	}
+	.contenu p, 
+	.contenu_en p{line-height: 1.2em}
+
+	.projet_banner{height: 176px;}
+	/*.menu_scroll{height: 480px;}*/
+
+	header{
+		top: 0;
+		bottom: 0;
+		height: 100%;
+		pointer-events:none;
+	}
+	#burger,
+	#menu{pointer-events:auto;}
+	
+}
+.menu_scroll{
+	height: 100%;
+	overflow:auto;
+	-webkit-overflow-scrolling: touch;
+}
 /*------------------------------------*\
     MISC
 \*------------------------------------*/
