@@ -63,7 +63,7 @@ var ScrollController = function() {
 
 	this.goToHash = function(){		
 		var hash = window.location.hash.split("#")[1];
-
+//console.log(hash)
 		
 		$(".projet").removeClass('current');
 		$(".projet#art-"+hash).addClass('current');

@@ -1508,11 +1508,18 @@ article.agence_intro .logo svg{width: 100%; height: 100%;}
 }
 
 @media only screen and (max-width:320px) {
+
+	h2{letter-spacing: 4px}
 	.creation_content{width: 100%;padding: 23px 34px 0 34px;}
 	.contenu{
 		width: 253px;
 		margin: 0 auto;
 	}
+	.page-template-page-creations .creation_content{bottom: 24px;}
+	.creation_content .contenu{width: 100%;}
+	.page-template-page-agence .contenu, .page-template-page-agence .contenu_en{max-width: 100%}
+
+	.projet_content .contenu{width: 273px;}
 }
 
 /*------------------------------------*\

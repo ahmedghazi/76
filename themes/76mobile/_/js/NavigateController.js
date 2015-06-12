@@ -42,8 +42,9 @@ var NavigateController = function() {
         if(window.location.hash){
             //$('html,body').animate({ scrollTop: $(window.location.hash).position().top }, 400);
             //console.log("hashchange : "+window.location.hash);
-            clearTimeout(timer);
-            timer = setTimeout(function(){
+            //console.log(timer)
+            //clearTimeout(timer);
+            setTimeout(function(){
                 _ScrollController.goToHash();
             },1000);
         }

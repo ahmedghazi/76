@@ -44,7 +44,7 @@ var MetiersController = function() {
 	};
 
 	this.animateIn = function(){
-		//$("#modal_tuto").fadeIn('fast');
+		$("#modal_tuto").fadeIn('fast');
 
 		$(".page_controls").css({color:"#ffffff"});
 		$(".page_controls .stripes div").css({"background-color":"#ffffff"});

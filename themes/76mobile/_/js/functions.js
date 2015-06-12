@@ -44,7 +44,7 @@ function init_app(){
 	clearTimeout(timer);
     timer = setTimeout(function(){
         handle_anime();
-    },400);
+    },1000);
 }
 
 /**********************
@@ -80,7 +80,7 @@ function init_objects(){
 **********************/
 function handle_anime(){
 	var path = window.location.pathname;
-	console.log(path)
+	//console.log(path)
 	switch(path){
 		case "/contacts/":
 		$(".contact_content").removeClass("slideBottom");
