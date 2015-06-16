@@ -116,7 +116,7 @@ function reset_anime(){
 
 **********************/
 function reveal(){
-	$("#prehome").fadeOut("fast");
+	$("#prehome").fadeOut();
 	$("#wrapper").css({opacity:0});
 	$("#wrapper").removeClass('vhidden').animate({opacity:1});
 }
