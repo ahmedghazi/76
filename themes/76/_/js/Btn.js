@@ -190,6 +190,7 @@ var Btn = function() {
 					src += "?autoplay=1&rel=0";
 
 				$(".diapo_item iframe").attr("src", src);
+				$('.diapo').cycle("pause");
 			}
 		});
 	};

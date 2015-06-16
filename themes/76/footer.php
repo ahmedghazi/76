@@ -6,6 +6,8 @@
 
 	</div><!-- wrapper -->
 
+	<?php include(locate_template('_/inc/prehome.php')); ?>
+	
 	<?php wp_footer(); ?>
 
 

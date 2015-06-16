@@ -14,7 +14,6 @@ var dw,dh,ww,wh,
 /* trigger when page is ready */
 $(document).ready(function (){
 
-	
 	window.addEventListener("orientationchange", function() {
 		format();
 	}, false);
@@ -23,7 +22,13 @@ $(document).ready(function (){
 
 $(window).load(function() {
 	format();
-	init_app();
+	
+	clearTimeout(timer);
+    timer = setTimeout(function(){
+    	init_app();
+    },4000);
+
+	
 });
 
 $(window).resize(function() {
@@ -111,6 +116,7 @@ function reset_anime(){
 
 **********************/
 function reveal(){
+	$("#prehome").fadeOut("fast");
 	$("#wrapper").css({opacity:0});
 	$("#wrapper").removeClass('vhidden').animate({opacity:1});
 }
