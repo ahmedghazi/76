@@ -22,15 +22,13 @@ $(document).ready(function (){
 });
 
 $(window).load(function() {
-	//FastClick.attach(document.body);
-
 	format();
+	
 	init_app();
+	
+	
 
-	clearTimeout(timer);
-    timer = setTimeout(function(){
-    	
-    },4000);
+	
 });
 
 $(window).resize(function() {
@@ -44,12 +42,22 @@ function init_app(){
 	init_vendors();
 	init_objects();
 	
-	reveal();
+	//reveal();
 
 	clearTimeout(timer);
     timer = setTimeout(function(){
-        handle_anime();
-    },1000);
+    	reveal();
+
+		clearTimeout(timer);
+	    timer = setTimeout(function(){
+	        handle_anime();
+	    },1000);
+
+    },2400);
+
+//$('#burger').click();
+
+	
 }
 
 /**********************

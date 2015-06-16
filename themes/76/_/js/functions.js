@@ -25,10 +25,7 @@ $(window).load(function() {
 	
 	init_app();
 	
-	clearTimeout(timer);
-    timer = setTimeout(function(){
-    	
-    },4000);
+	
 
 	
 });
@@ -44,14 +41,22 @@ function init_app(){
 	init_vendors();
 	init_objects();
 	
-	reveal();
-
-//$('#burger').click();
+	//reveal();
 
 	clearTimeout(timer);
     timer = setTimeout(function(){
-        handle_anime();
-    },400);
+    	reveal();
+
+		clearTimeout(timer);
+	    timer = setTimeout(function(){
+	        handle_anime();
+	    },1000);
+
+    },2400);
+
+//$('#burger').click();
+
+	
 }
 
 /**********************
