@@ -103,11 +103,11 @@ _this.handleDominanteColor(hash);
 			if(brightness > midDominante){
 				$(".page_controls").css({color:"#1c1c1c"});
 				$(".page_controls .stripes div").css({"background-color":"#1c1c1c"});
-				$("#burger div").css({"background-color":"#1c1c1c"});
+				$("#burger .anime").css({"background-color":"#1c1c1c"});
 			}else{
 				$(".page_controls").css({color:"#ffffff"});
 				$(".page_controls .stripes div").css({"background-color":"#ffffff"});
-				$("#burger div").css({"background-color":"#ffffff"});
+				$("#burger .anime").css({"background-color":"#ffffff"});
 			}
 		});
 	};
@@ -119,11 +119,11 @@ _this.handleDominanteColor(hash);
 			if(brightness > midDominante){
 				$(".page_controls").css({color:"#1c1c1c"});
 				$(".page_controls .stripes div").css({"background-color":"#1c1c1c"});
-				$("#burger div").css({"background-color":"#1c1c1c"});
+				$("#burger .anime").css({"background-color":"#1c1c1c"});
 			}else{
 				$(".page_controls").css({color:"#ffffff"});
 				$(".page_controls .stripes div").css({"background-color":"#ffffff"});
-				$("#burger div").css({"background-color":"#ffffff"});
+				$("#burger .anime").css({"background-color":"#ffffff"});
 			}
 		});
 	};

@@ -129,4 +129,10 @@
 		echo $scripts;
 	}
 
+	function trace($o){
+		echo '<pre>';
+		print_r($o);
+		echo '</pre>';
+	}
+
 ?>

@@ -41,7 +41,7 @@ var MetiersController = function() {
 	this.animateIn = function(){
 		$(".page_controls").css({color:"#ffffff"});
 		$(".page_controls .stripes div").css({"background-color":"#ffffff"});
-		$("#burger div").css({"background-color":"#ffffff"});
+		$("#burger .anime").css({"background-color":"#ffffff"});
 
 		$(".map svg line").css({opacity:0});
 		$(".map svg path").css({opacity:0});

@@ -36,3 +36,26 @@ if($videos){
 	<?php }?>
 	
 <?php }?>
+
+<?php
+$diaporama = get_field("diaporama");
+if($diaporama){
+	foreach($diaporama as $diapo){
+		$diaporam_titre = $diapo["diaporama_titre"];
+		$diaporam_id = $diapo["diaporama_id"];
+		$video_url = $diapo["video_url"];
+		$video_thumbnail = $diapo["video_thumbnail"]["url"];
+		//trace($diapo);
+		?>
+		<button 
+			type="button" 
+			class="btn btn_diapo_video" 
+			data-diaporama-id="<?php echo $diaporam_id?>" 
+			data-href="<?php echo $video_url?>" 
+			data-thumbnail-video="<?php echo $video_thumbnail?>" 
+			data-surtitre="<?php the_field("surtitre");?>" 
+			data-titre="<?php the_title();?>" 
+			><span class="anime"><?php echo $diaporam_titre?></span></button>
+	<?php }?>
+	
+<?php }?>

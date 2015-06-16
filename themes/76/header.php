@@ -121,10 +121,13 @@
 		<header>
 			<!--h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1-->
 			<div id="burger">
-				<div class="burgx1 anime"></div>
-		      	<div class="burgx2 anime"></div>
-		      	<div class="burgx3 anime"></div>
+				<div id="burger_inner">
+					<div class="burgx1 anime"></div>
+			      	<div class="burgx2 anime"></div>
+			      	<div class="burgx3 anime"></div>
+				</div>
 			</div>
+
 			<div id="menu" class="toggled anime">
 				<?php include(locate_template('_/inc/menu-site.php'));?>
 			</div>

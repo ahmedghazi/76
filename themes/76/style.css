@@ -583,15 +583,22 @@ article{
    ============================================================================== */
 #burger{
     position: absolute;
-    height: 15px;
-  	width: 19px;
+    /*height: 15px;
+  	width: 19px;*/
     display: block;
     cursor: pointer;
-    left: 23px;
-    top: 23px;
+    /*left: 23px;
+    top: 23px;*/
     z-index: 1;
     pointer-events:auto;
 }
+#burger_inner{
+	width: 19px;
+	height: 15px;
+	margin: 23px;
+	position: relative;
+}
+
 #burger:hover div{}
 #burger:hover .burgx2{
 	-webkit-animation-name: burgerOn; /* Chrome, Safari, Opera */
@@ -599,6 +606,11 @@ article{
 	animation-name: burgerOn;
 	animation-duration: 0.4s;
 }
+
+#burger.toggled .anime{
+	background-color: #B0B0B0 !important;
+}
+
 #burger.toggled:hover .burgx2{
 	-webkit-animation-name: none;
 	animation-name: none;
@@ -660,13 +672,12 @@ article{
 	-webkit-transform: translateX(0);
             transform: translateX(0);
 }
+
 #menu.toggled{
 	-webkit-transform: translateX(-410px);
             transform: translateX(-410px);
 }
-#burger.toggled div{
-	background-color: #B0B0B0 !important;
-}
+
 
 .menu_scroll{
 	height: 100%;
@@ -1202,12 +1213,16 @@ article{
 	position: absolute;
 	top: 50%;
 	margin-top: -6.5px;
-	width: 12px;
-	height: 13px;
+	/*width: 12px;
+	height: 13px;*/
 	cursor: pointer;
 	overflow: hidden;
 	z-index: 999;
 }
+.modal_controls .stripes{
+	padding: 10px;
+}
+
 .stripes{
 	overflow: hidden;
 	-webkit-transform-style: preserve-3d;
@@ -1339,7 +1354,7 @@ article{
 	position: relative;
 }
 .diapo_item_image{
-	width: 100%; height: 90%;
+	width: 100%; height: 100%;
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;

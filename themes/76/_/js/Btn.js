@@ -99,6 +99,30 @@ var Btn = function() {
 			_this.renderModalContentVideo(o);
 		});
 
+		$("html").on("click",".btn_diapo_video", function(e){
+			e.preventDefault();
+
+			$("#loader").fadeIn("fast");
+
+			var url_video = $(this).data("href"),
+				thumbnail_video = $(this).data("thumbnail-video"),
+				diaporama_id = $(this).data("diaporama-id"),
+				surtitre = $(this).data("surtitre"),
+				titre = $(this).data("titre");
+				
+			var o = {
+				action: "get_diapo_video_by_id",
+				id: diaporama_id,
+				thumbnail_video: thumbnail_video,
+				url_video: url_video,
+				surtitre: surtitre,
+				titre: titre
+			};
+			console.log(o)
+			_this.loadModalContent(o);
+		});
+
+
 		$("html").on("click", ".diapo_play", function(e){
 			$(this).addClass('stripes_loading');
 			var url_video = $(this).parent().data("video");
@@ -125,7 +149,7 @@ var Btn = function() {
 		var d = 0;
 		$("#menu li").each(function(idx,el){
 			setTimeout(function(){
-				$(el).addClass("l0")
+				$(el).addClass("l0");
 			},d);
 			d+=delay*2;
 		});
@@ -155,11 +179,15 @@ var Btn = function() {
 			data: o,
 			success: function(html){
 				//$(".diapo_play").removeClass('stripes_loading').hide();
-				$(".diapo_item_image").css("background-image","")
+				//$(".diapo_item_image").css("background-image","");
+				$(".diapo_item_image").hide();
 
-				$(".diapo_item").append(html);
+				$(".diapo_item_video").append(html);
 				var src = $(".diapo_item iframe").attr("src");
-					src += "?autoplay=1";
+				if(src.indexOf("dailymotion") != -1)
+					src += "?autoplay=1&related=0&api=";
+				if(src.indexOf("youtube") != -1)
+					src += "?autoplay=1&rel=0";
 
 				$(".diapo_item iframe").attr("src", src);
 			}
@@ -172,7 +200,7 @@ var Btn = function() {
 		var css = 'style="background-image:url('+o.thumbnail_video+')"';
 
 		var html = '<div class="diapo">';
-	        html +=  '<div class="diapo_item" data-video="'+o.url_video+'">';
+	        html +=  '<div class="diapo_item diapo_item_video" data-video="'+o.url_video+'">';
 		        html +=  '<div class="diapo_item_image" '+css+'></div>';
 		        html +=  '<div class="diapo_play ">';
 		        	html +=  '<div class="diapo_play_fond"></div>';
@@ -227,6 +255,12 @@ var Btn = function() {
 				next:   '#modal_next', 
 				prev:   '#modal_prev',
 				before:function(el_in,el_out,opt){
+					if($('.diapo').find("iframe")){
+						$('.diapo').find("iframe").remove();
+						$(".diapo_item_image").show();
+						$(".diapo_play").removeClass('stripes_loading');
+					}
+
 					$(el_in).addClass("scaleIt")
 					$(el_out).removeClass("scaleIt")
 				},
