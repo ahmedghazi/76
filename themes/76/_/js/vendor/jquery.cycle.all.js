@@ -102,6 +102,8 @@ function triggerPause(cont, byHover, onPager) {
 		opts.paused(cont, opts, byHover, onPager);
 	else if (!paused && opts.resumed)
 		opts.resumed(cont, opts, byHover, onPager);
+
+	//console.log(opts)
 }
 
 // process the args that were passed to the plugin fn
@@ -378,10 +380,12 @@ function buildOptions($cont, $slides, els, options, o) {
 	var pauseFlag = false;  // https://github.com/malsup/cycle/issues/44
 	if (opts.pause)
 		$cont.bind('mouseenter.cycle', function(){
+			//console.log("mouseenter",pauseFlag)
 			pauseFlag = true;
 			this.cyclePause++;
 			triggerPause(cont, true);
 		}).bind('mouseleave.cycle', function(){
+				//console.log("mouseleave",pauseFlag)
 				if (pauseFlag)
 					this.cyclePause--;
 				triggerPause(cont, true);

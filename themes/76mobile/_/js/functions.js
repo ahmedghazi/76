@@ -23,11 +23,14 @@ $(document).ready(function (){
 
 $(window).load(function() {
 	//FastClick.attach(document.body);
-	
-
 
 	format();
 	init_app();
+
+	clearTimeout(timer);
+    timer = setTimeout(function(){
+    	
+    },4000);
 });
 
 $(window).resize(function() {
@@ -122,6 +125,8 @@ function reset_anime(){
 function reveal(){
 	$("#wrapper").css({opacity:0});
 	$("#wrapper").removeClass('vhidden').animate({opacity:1});
+
+	$("#prehome").fadeOut();
 }
 
 function format(){

@@ -1600,18 +1600,18 @@ article{
 \*------------------------------------*/
 
 ::selection {
-	background:#04A4CC;
-	color:#FFF;
+	background:#fff;
+	color:#b0b0b0;
 	text-shadow:none;
 }
 ::-webkit-selection {
-	background:#04A4CC;
-	color:#FFF;
+	background:#fff;
+	color:#b0b0b0;
 	text-shadow:none;
 }
 ::-moz-selection {
-	background:#04A4CC;
-	color:#FFF;
+	background:#fff;
+	color:#b0b0b0;
 	text-shadow:none;
 }
 

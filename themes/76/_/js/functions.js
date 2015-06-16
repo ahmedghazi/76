@@ -23,9 +23,11 @@ $(document).ready(function (){
 $(window).load(function() {
 	format();
 	
+	init_app();
+	
 	clearTimeout(timer);
     timer = setTimeout(function(){
-    	init_app();
+    	
     },4000);
 
 	
@@ -116,9 +118,11 @@ function reset_anime(){
 
 **********************/
 function reveal(){
-	$("#prehome").fadeOut();
+	
 	$("#wrapper").css({opacity:0});
 	$("#wrapper").removeClass('vhidden').animate({opacity:1});
+
+	$("#prehome").fadeOut();
 }
 
 function format(){

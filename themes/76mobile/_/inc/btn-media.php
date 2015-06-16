@@ -1,7 +1,6 @@
 <?php
 $photos = get_field("photos");
 if($photos){
-	//print_r($photos);
 	foreach($photos as $photo){
 		$label_photo = $photo["label_photo"];
 		$id_diaporama = $photo["id_diaporama"];
@@ -12,7 +11,7 @@ if($photos){
 			data-href="<?php echo $id_diaporama?>" 
 			data-surtitre="<?php the_field("surtitre");?>" 
 			data-titre="<?php the_title();?>" 
-			><span><?php echo $label_photo?></span></button>
+			><span class="anime"><?php echo $label_photo?></span></button>
 	<?php }?>
 	
 <?php }?>
@@ -33,7 +32,46 @@ if($videos){
 			data-thumbnail-video="<?php echo $thumbnail_video?>" 
 			data-surtitre="<?php the_field("surtitre");?>" 
 			data-titre="<?php the_title();?>" 
-			><span><?php echo $label_video?></span></button>
+			><span class="anime"><?php echo $label_video?></span></button>
+	<?php }?>
+	
+<?php }?>
+
+<?php
+
+$medias = get_field("diaporama");
+if($medias){
+	
+	foreach($medias as $media){
+		$diaporam_titre = $media["diaporama_titre"];
+		
+		$arr_video = array();
+		$arr_diapo = array();
+
+		foreach($media as $mm){
+
+			foreach($mm as $m){
+				if($m["video_url"]){
+					$arr_video[] = $m;
+				}
+				if($m["diaporama_id"]){
+					$arr_diapo[] = $m;
+				}
+			}
+		}
+		
+		$arr_video = json_encode($arr_video);
+		$arr_diapo = json_encode($arr_diapo);
+		
+		?>
+		<button 
+			type="button" 
+			class="btn btn_diapo_video" 
+			data-diaporama='<?php echo $arr_diapo?>' 
+			data-video='<?php echo $arr_video?>' 
+			data-surtitre="<?php the_field("surtitre");?>" 
+			data-titre="<?php the_title();?>" 
+			><span class="anime"><?php echo $diaporam_titre?></span></button>
 	<?php }?>
 	
 <?php }?>

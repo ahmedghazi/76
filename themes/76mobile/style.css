@@ -554,6 +554,7 @@ article{
 	background-color:white;
 	-webkit-transform: translateX(0);
             transform: translateX(0);
+    pointer-events: auto;
     
 }
 #menu.toggled{
@@ -962,7 +963,8 @@ article{
 	MODAL
    ============================================================================== */
 #modal{
-	width: 100%; height: 100%;
+	width: 100%; 
+	height: 568px;
 	position: fixed; top: 0;
 	background-color: #1c1c1c;
 	padding: 60px;
@@ -984,8 +986,9 @@ article{
 	width: 80%; 
 	margin: 0 auto;
 	text-align: center;
+	/* margin-top: 23px; */
 }
-#modal_header{margin-bottom: 68px;}
+#modal_header{/* margin-bottom: 68px; */margin-top: 23px;}
 
 #modal_close{
 	cursor: pointer;
@@ -1258,6 +1261,20 @@ article{
 	text-align: center;
 	vertical-align: middle;
 }
+
+/*------------------------------------*\
+	PREHOME
+\*------------------------------------*/
+#prehome{
+	width: 100%; height: 100%;
+	position: fixed;
+	top: 0; left: 0;
+	background-color: white;
+	background-image: url(_/img/logo-soixanteseize-anime.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 /*------------------------------------*\
     The animation code
 \*------------------------------------*/
@@ -1442,12 +1459,12 @@ article.agence_intro .logo svg{width: 100%; height: 100%;}
 	.projet_content .actionsBtn .btn:nth-child(even){ margin-left: 8px;}
 	.projet_content .actionsBtn .btn:nth-child(odd){ margin-right: 8px;}
 
-	#modal{padding: 23px 21px; z-index: 1;}
+	#modal{padding: 0; z-index: 1;}
 	#modal_inside{width: auto;}
 	#modal_header,
 	#modal_slider,
-	#modal_footer{position: absolute; width: calc(100% - 42px);}
-	#modal_slider{top: 50%; margin-top: -111px;}
+	#modal_footer{position: absolute; width: calc(100%);}
+	#modal_slider{/* top: 50%; */ margin-top: -111px;}
 	#modal_footer{bottom: 21px;}
 	#modal_footer svg{width: 88px; height: 14px;}
 	.modal_controls{
@@ -1466,7 +1483,7 @@ article.agence_intro .logo svg{width: 100%; height: 100%;}
 		/*top: 50%;
 		margin-top: -211px;
 		margin-top:0;*/
-		/*left: 60px;*/
+		/* left: 60px; */
 		left:0;
 		top:calc(100%/2 - 60%/2);
 		margin: 0;
@@ -1487,6 +1504,8 @@ article.agence_intro .logo svg{width: 100%; height: 100%;}
 		margin: 0 auto;
 		margin-bottom: 16px;
 	}
+
+	#modal{width: 480px;}
 }
 
 @media only screen and (max-width:768px) {
@@ -1527,10 +1546,13 @@ article.agence_intro .logo svg{width: 100%; height: 100%;}
 	.page-template-page-agence .contenu, .page-template-page-agence .contenu_en{max-width: 100%}
 
 	.projet_content .contenu{width: 273px;}
+
+	#modal{width: 320px;}
 }
 
 @media only screen and (max-height:480px) {
 	
+
 	h2{letter-spacing: 3px; margin-bottom: 11px;}
 	.page-template-page-agence .agence_content{
 		margin: 60px 11px;

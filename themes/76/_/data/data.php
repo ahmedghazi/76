@@ -33,43 +33,48 @@ add_action( 'wp_ajax_nopriv_get_diapo_video_by_id', 'handle_get_diapo_video_by_i
 
 function handle_get_diapo_video_by_id() {
     $id = $_REQUEST['id'];
-//trace($_REQUEST);
-    global $wp_photo_gallery;
-    $gallery = new WPPGPhotoGallery($id);
-    $gallery_items = WPPGPhotoGallery::getGalleryItems($id);
+//trace($_REQUEST);  
     //print_r($gallery_items);
     $html = '<div class="diapo">';
 
-    $css = 'style="background-image:url('.$_REQUEST['thumbnail_video'].')"';
-        
-        $html .=  '<div class="diapo_item diapo_item_video" data-video="'.$_REQUEST['url_video'].'">';
-            $html .=  '<div class="diapo_item_image" '.$css.'></div>';
-            $html .=  '<div class="diapo_play ">';
-                $html .=  '<div class="diapo_play_fond"></div>';
-                $html .=  '<div class="stripes">';
-                    $html .=  '<div class="stripe0 anime"></div>';
-                    $html .=  '<div class="stripe1 anime"></div>';
-                    $html .=  '<div class="stripe2 anime"></div>';
-                    $html .=  '<div class="stripe3 anime"></div>';
-                    $html .=  '<div class="stripe4 anime"></div>';
-                    $html .=  '<div class="stripe5 anime"></div>';
-                    $html .=  '<div class="stripe6 anime"></div>';
+        foreach($_REQUEST['video'] as $video){
+            $css = 'style="background-image:url('.$video['video_thumbnail'].')"';
+                    
+            $html .=  '<div class="diapo_item diapo_item_video" data-video="'.$video['video_url'].'">';
+                $html .=  '<div class="diapo_item_image" '.$css.'></div>';
+                $html .=  '<div class="diapo_play ">';
+                    $html .=  '<div class="diapo_play_fond"></div>';
+                    $html .=  '<div class="stripes">';
+                        $html .=  '<div class="stripe0 anime"></div>';
+                        $html .=  '<div class="stripe1 anime"></div>';
+                        $html .=  '<div class="stripe2 anime"></div>';
+                        $html .=  '<div class="stripe3 anime"></div>';
+                        $html .=  '<div class="stripe4 anime"></div>';
+                        $html .=  '<div class="stripe5 anime"></div>';
+                        $html .=  '<div class="stripe6 anime"></div>';
+                    $html .=  '</div>';
                 $html .=  '</div>';
             $html .=  '</div>';
-        $html .=  '</div>';
+        }
 
-    foreach($gallery_items as $item){
-        $css = 'style="background-image:url('.$item["image_url"].')"';
-        $html .= '<div class="diapo_item">';
-        $html .= '<div class="diapo_item_image" '.$css.'></div>';
-        
-        $desc = $item["description"];
-        if($desc == "")$desc = "desciption de l'image";
-        $desc = str_replace("_", " ", $item["alt_text"]);
-        $html .= '<div class="diapo_description">'.$desc.'</div>';
-        
-        $html .= '</div>';
+    global $wp_photo_gallery;
+    foreach($_REQUEST['diaporama'] as $diaporama){
+        $gallery = new WPPGPhotoGallery($diaporama["diaporama_id"]);
+        $gallery_items = WPPGPhotoGallery::getGalleryItems($diaporama["diaporama_id"]);
+        foreach($gallery_items as $item){
+            $css = 'style="background-image:url('.$item["image_url"].')"';
+            $html .= '<div class="diapo_item">';
+            $html .= '<div class="diapo_item_image" '.$css.'></div>';
+            
+            $desc = $item["description"];
+            if($desc == "")$desc = "desciption de l'image";
+            $desc = str_replace("_", " ", $item["alt_text"]);
+            $html .= '<div class="diapo_description">'.$desc.'</div>';
+            
+            $html .= '</div>';
+        }
     }
+   
     $html .= '</div>';
     echo $html;
     die();
