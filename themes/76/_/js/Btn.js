@@ -190,6 +190,8 @@ var Btn = function() {
 					src += "?autoplay=1&related=0";
 				if(src.indexOf("youtube") != -1)
 					src += "?autoplay=1&rel=0";
+				if(src.indexOf("vimeo") != -1)
+					src += "?autoplay=1";
 
 				$el.find("iframe").attr("src", src);
 				

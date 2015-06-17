@@ -42,7 +42,7 @@ function init_app(){
 	init_objects();
 	
 	//reveal();
-
+return;
 	clearTimeout(timer);
     timer = setTimeout(function(){
     	reveal();

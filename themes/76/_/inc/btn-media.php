@@ -1,5 +1,5 @@
 <?php
-$photos = get_field("photos");
+/*$photos = get_field("photos");
 if($photos){
 	foreach($photos as $photo){
 		$label_photo = $photo["label_photo"];
@@ -35,7 +35,7 @@ if($videos){
 			><span class="anime"><?php echo $label_video?></span></button>
 	<?php }?>
 	
-<?php }?>
+<?php }*/?>
 
 <?php
 

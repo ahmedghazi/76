@@ -1426,11 +1426,19 @@ article{
 	position: fixed;
 	top: 0; left: 0;
 	background-color: white;
-	background-image: url(_/img/logo-soixanteseize-anime.gif);
+	
 	background-repeat: no-repeat;
 	background-position: center;
 }
-
+#prehomeAnime{
+	width: 250px;
+	height: 40.7px;
+	background-image: url(_/img/logo-soixanteseize-anime-2.gif);
+	background-size: contain;
+	position: absolute;
+	left: 50%; margin-left: -125px;
+	top: 50%; margin-top: -20.34543325526932px;
+}
 /*------------------------------------*\
     The animation code
 \*------------------------------------*/
