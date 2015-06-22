@@ -79,7 +79,7 @@ $.fn.removeClassSVG = function(className){
     return this;
 };
 
-
+/*
 //imagePanning fn
     $.fn.imagePanning=function(){
       var init="center",
@@ -177,3 +177,33 @@ $.fn.removeClassSVG = function(className){
         },16.6);
       });
     }
+
+
+
+    */
+
+(function () {
+    var canvas = document.createElement('canvas'),
+      ctx,
+      img = document.createElement('img'),
+      link = document.getElementById('favicon').cloneNode(true),
+      day = (new Date).getDate() + '';
+
+    if (canvas.getContext) {
+        canvas.height = canvas.width = 16; // set the size
+        ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        img.onload = function () { // once the image has loaded
+            ctx.drawImage(this, 0, 0);
+            ctx.font = 'bold 10px "helvetica", sans-serif';
+            ctx.fillStyle = '#ff0000';
+            if (day.length == 1) day = '0' + day;
+            console.log(link)
+            ctx.fillText(day, 2, 12);
+            link.href = canvas.toDataURL('image/png');
+            document.body.appendChild(link);
+        };
+        img.src = '/favicon.ico';
+    }
+
+})();

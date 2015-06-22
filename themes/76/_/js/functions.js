@@ -22,12 +22,7 @@ $(document).ready(function (){
 
 $(window).load(function() {
 	format();
-	
 	init_app();
-	
-	
-
-	
 });
 
 $(window).resize(function() {
@@ -42,8 +37,11 @@ function init_app(){
 	init_objects();
 	
 	//reveal();
-return;
+//return;
 	clearTimeout(timer);
+
+	
+	$("#prehomeAnime").css({"background-image": "url("+templateDir+"/_/img/logo-soixanteseize-anime.gif)"});
     timer = setTimeout(function(){
     	reveal();
 
@@ -54,9 +52,7 @@ return;
 
     },2400);
 
-//$('#burger').click();
-
-	
+//$('#burger').click();	
 }
 
 /**********************
@@ -64,6 +60,16 @@ return;
 **********************/
 function init_vendors(){
 
+}
+
+/**********************
+
+**********************/
+function reveal(){
+	$("#prehome").fadeOut();
+
+	$("#wrapper").css({opacity:0});
+	$("#wrapper").removeClass('vhidden').animate({opacity:1});
 }
 
 /**********************
@@ -119,16 +125,7 @@ function reset_anime(){
 	}
 }
 
-/**********************
 
-**********************/
-function reveal(){
-	
-	$("#wrapper").css({opacity:0});
-	$("#wrapper").removeClass('vhidden').animate({opacity:1});
-
-	$("#prehome").fadeOut();
-}
 
 function format(){
 	dw = $(document).width();

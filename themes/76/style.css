@@ -486,7 +486,7 @@ a.btn{color: white}
 
    ============================================================================== */
 html,body{
-	background-color: black;
+	background-color: white;
 	font-size: 14px;
 	line-height: 15px;
 	font-family: 'EngraversGothicBT-Regular';
@@ -1433,8 +1433,9 @@ article{
 #prehomeAnime{
 	width: 250px;
 	height: 40.7px;
-	background-image: url(_/img/logo-soixanteseize-anime-2.gif);
+	/*background-image: url(_/img/logo-soixanteseize-anime.gif);*/
 	background-size: contain;
+	background-repeat: no-repeat;
 	position: absolute;
 	left: 50%; margin-left: -125px;
 	top: 50%; margin-top: -20.34543325526932px;

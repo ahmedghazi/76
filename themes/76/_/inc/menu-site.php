@@ -24,8 +24,9 @@ $current_id = get_the_ID();
 			$class = "";
 			if(get_the_ID() == $current_id)$class = "current-menu";
 			if($template == "page-clients.php")$href = "#";
-			echo "<li class='anime l0 ".$class."'><a data-role='ajax' class='anime ' href='".$href."'>".get_the_title().'</a></li>';
-
+			echo "<li class='anime l0 ".$class."'>";
+			echo "<a data-role='ajax' class='anime ' title='".get_the_title()."' href='".$href."'>".get_the_title().'</a>';
+			echo "</li>";
 			if($template == "page-clients.php")include(locate_template('_/inc/menu-site-enfant.php'));
 			//if($template == "page-clients.php")include(locate_template('_/inc/menu-site-enfant.php'));
 		

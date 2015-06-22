@@ -460,6 +460,7 @@ me.parent("li").toggleClass("current-menu");
 		/* get the title */
 			var title = me.attr('title');
 			if(!title) title=document.title;
+			console.log(title)
 			baseOptions.title = title;
 		
 		/* get the status */
