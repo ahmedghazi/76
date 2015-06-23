@@ -24,7 +24,7 @@
         
         clearTimeout(timer);
         timer = setTimeout(function(){
-            $('#burger').click();
+            if($('#burger').hasClass("toggled"))$('#burger').click();
             _ScrollController.handleArrArticles();
             handle_anime();
         },400);
