@@ -191,7 +191,7 @@ var Btn = function() {
 				if(src.indexOf("youtube") != -1)
 					src += "?autoplay=1&rel=0";
 				if(src.indexOf("vimeo") != -1)
-					src += "?autoplay=1";
+					src += "?autoplay=1&rel=0";
 
 				$el.find("iframe").attr("src", src);
 				
