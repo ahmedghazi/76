@@ -555,7 +555,7 @@ article{
 	-webkit-transform: translateX(0);
             transform: translateX(0);
     pointer-events: auto;
-    
+    max-width: 248px;
 }
 #menu.toggled{
 	-webkit-transform: translateX(-410px);
@@ -1370,7 +1370,7 @@ article{
 		display: block;
 	}
 	.sous_menu{width: auto;}
-	.sous_menu_projets_bande{left: 215px;}
+	.sous_menu_projets_bande{left: 248px;}
 
 	article{white-space: initial}
 	.page-template-page-agence .agence_content{margin:21px; margin-top: 60px;}
