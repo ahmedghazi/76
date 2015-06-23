@@ -747,6 +747,7 @@ article{
 	width: calc(100% - 120px);
 	color: white;
 	cursor: pointer;
+	overflow: hidden;
 }
 .page_controls span,
 .page_controls .stripes{display: inline-block;vertical-align: middle;}
