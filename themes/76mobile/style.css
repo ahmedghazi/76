@@ -695,8 +695,8 @@ article{
    ============================================================================== */
 .page-template-page-client{
 	width: 100%; height: 100%;
-	white-space: nowrap;
-	overflow: auto;
+	/*white-space: nowrap;
+	overflow: auto;*/
 }
 .projet{
 	display: inline-block; vertical-align: top;
@@ -1271,9 +1271,19 @@ article{
 	position: fixed;
 	top: 0; left: 0;
 	background-color: white;
-	background-image: url(_/img/logo-soixanteseize-anime.gif);
+	
 	background-repeat: no-repeat;
 	background-position: center;
+}
+#prehomeAnime{
+	width: 250px;
+	height: 50px;
+	/*background-image: url(_/img/logo-soixanteseize-anime.gif);*/
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 50%; margin-left: -125px;
+	top: 50%; margin-top: -25px;
 }
 
 /*------------------------------------*\
@@ -1491,6 +1501,7 @@ article.agence_intro .logo svg{width: 100%; height: 100%;}
 	}
 	.diapo_item{max-height: 100%;}
 	.page_controls{bottom: 23px; left: 23px; width: calc(100% - 46px)}
+	.page_controls{overflow: hidden;}
 
 	.creation_intro .logo{margin-bottom: 0;}
 
@@ -1507,6 +1518,7 @@ article.agence_intro .logo svg{width: 100%; height: 100%;}
 	}
 
 	#modal{width: 480px;}
+	#modal{width: 100%; height: 100%;}
 }
 
 @media only screen and (max-width:768px) {

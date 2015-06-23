@@ -45,6 +45,8 @@ function init_app(){
 	//reveal();
 
 	clearTimeout(timer);
+
+	$("#prehomeAnime").css({"background-image": "url("+templateDir+"/_/img/logo-soixanteseize-anime.gif)"});
     timer = setTimeout(function(){
     	reveal();
 
@@ -90,6 +92,17 @@ function init_objects(){
 	//$("#burger").click();	
 }
 
+
+/**********************
+
+**********************/
+function reveal(){
+	$("#wrapper").css({opacity:0});
+	$("#wrapper").removeClass('vhidden').animate({opacity:1});
+
+	$("#prehome").fadeOut();
+}
+
 /**********************
 
 **********************/
@@ -127,15 +140,6 @@ function reset_anime(){
 	}
 }
 
-/**********************
-
-**********************/
-function reveal(){
-	$("#wrapper").css({opacity:0});
-	$("#wrapper").removeClass('vhidden').animate({opacity:1});
-
-	$("#prehome").fadeOut();
-}
 
 function format(){
 	dw = $(document).width();
@@ -144,11 +148,14 @@ function format(){
 	ww = $(window).width();
 	wh = $(window).height();
 
+	$("body,#wrapper").css({width:ww})
+/*
 	clearTimeout($.data(this, 'formatTimer'));
     $.data(this, 'formatTimer', setTimeout(function() {
     	//console.log("end resize");
     	//if(window.location.hash && _ScrollController)_ScrollController.goToHash();
     }, 50));
+*/
 }
 
 

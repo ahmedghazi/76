@@ -1,11 +1,12 @@
 
 
-		<?php include(locate_template('_/inc/modal.php')); ?>
+		
 		
 		
 
 	</div><!-- wrapper -->
 	
+	<?php include(locate_template('_/inc/modal.php')); ?>
 	<?php include(locate_template('_/inc/prehome.php')); ?>
 
 	<?php wp_footer(); ?>
