@@ -709,7 +709,7 @@ article{
 }
 #menu .menu > li:first-child{padding-top: 0; margin-top: 1px;}
 
-#menu .menu > li:nth-child(4){color:green;}
+#menu .menu > li:nth-child(4){}
 #menu .menu > li:nth-child(4):after{width: 62px;}
 
 #menu .menu li.l0{
@@ -736,6 +736,15 @@ article{
     animation-name: kittmenu;
     animation-duration: .6s;
 }
+
+#menu li:nth-child(4):hover a{margin-left: 0px;}
+#menu li:hover:after{
+    -webkit-animation-name: none;
+	-webkit-animation-duration: .6s;
+    animation-name: none;
+    animation-duration: .6s;
+}
+
 
 .sous_menu{width: 250px;}
 .sous_menu_{
