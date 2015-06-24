@@ -7,7 +7,7 @@
         //switch elements
 //console.log(options)
         //var bdc = $("#bdc", options.html).attr("class");
-
+        $("#modal_close").click();
         reset_anime();
 
         $("body").attr("class", options.class);

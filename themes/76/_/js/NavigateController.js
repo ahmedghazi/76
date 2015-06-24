@@ -5,7 +5,7 @@
     $.fn.insertPageHtml = function(options) {
         //the option is an array : {html:the ajax html, scripts: the scripts that already are in the html, customData:any data you associated to this state during navigate} 
 //console.log(options)
-        
+        $("#modal_close").click();
         reset_anime();
 
         $("body").attr("class", options.class);
