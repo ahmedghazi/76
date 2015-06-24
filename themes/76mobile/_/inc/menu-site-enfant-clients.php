@@ -22,13 +22,27 @@
 			//$url_thumb = $url_thumb[0];
 
 			$slug = $link."#".basename(get_permalink());
+			$title = get_the_title();
+			$is2l = explode(" ",$title);
+			//trace($is2l);
+			if(count($is2l)>0){
+				$title = $is2l[0]."\n";
+				$title .= $is2l[1]."";
+			}
+			
 			//include(locate_template('_/inc/jdb-article.php'));
 			echo "<li>";
 				echo '<div class="sous_menu_projets_thumbnail anime" style="background-image:url('.$url_thumb[0].')"></div>';
 			
-				echo "<a data-role='hash' class='anime' href='".$slug."'>".get_the_title().'</a>';
+				//echo "<a data-role='hash' class='anime' href='".$slug."'>".get_the_title().'</a>';
 			
+				echo "<a data-role='hash' class='anime' title='".get_the_title()."' href='".$slug."'>";
+					echo '<span>'.$title.'</span>';
+				echo '</a>';
+		
 			echo "</li>";
+
+
 			
 		endwhile;
 		echo '</ul>';

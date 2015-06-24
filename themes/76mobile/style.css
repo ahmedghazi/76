@@ -677,12 +677,21 @@ article{
 	position: absolute;
 	text-align: center;
 	color: white;
+	display: block;
 	opacity: 0;
 	margin: 0;
 	width: 100%;
-	max-width: 100% !important;
 	margin-left: 0 !important;
-	display: block;
+	padding: 0 !important;
+	white-space: initial;
+}
+.sous_menu_projets li a span{
+	display: inline-block;
+	vertical-align: middle;
+	
+	height: 100%;
+	line-height: 13px;
+	white-space: pre;
 }
 
 .l0{
@@ -930,6 +939,7 @@ article{
 .page-template-page-creations .creation_content .btn{
 	margin: 0;
 	color: black;
+	z-index: 0;
 }
 .page-template-page-creations .creation_content .btn:before,
 .page-template-page-creations .creation_content .btn:after{
@@ -1379,7 +1389,7 @@ article{
 		display: block;
 	}
 	.sous_menu{width: auto;}
-	.sous_menu_projets_bande{left: 248px;}
+	.sous_menu_projets_bande{left: 248px;width: 127px;}
 
 	article{white-space: initial}
 	.page-template-page-agence .agence_content{margin:21px; margin-top: 60px;}
