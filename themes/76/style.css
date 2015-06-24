@@ -61,6 +61,7 @@ hr{margin:10px 0;}
 	opacity: 0;
 	visibility: hidden;
 }
+
 *,
 *:after,
 *:before {
@@ -965,6 +966,7 @@ article{
     animation-duration: .7s;
 }
 
+.page_control.page_next span{margin-right: 6px;}
 
 /* ==============================================================================
 	AGENCE

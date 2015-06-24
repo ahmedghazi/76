@@ -113,7 +113,7 @@ var MetiersController = function() {
 	};
 
 	this.reset = function(){
-		console.log("reset")
+		//console.log("reset")
 		$(".map svg line").css({opacity:0}).removeClass("rollover");
 		$(".map svg path").css({opacity:0}).removeClass("rollover");
 		$(".map svg text").css({opacity:0}).removeClass("rollover");

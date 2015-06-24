@@ -141,7 +141,7 @@ function format(){
 
 	clearTimeout($.data(this, 'formatTimer'));
     $.data(this, 'formatTimer', setTimeout(function() {
-    	console.log("end resize");
+    	//console.log("end resize");
     	if(window.location.hash && _ScrollController){
     		_ScrollController.handleArrArticles();
     		_ScrollController.goToHash();
