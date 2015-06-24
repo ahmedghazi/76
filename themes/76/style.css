@@ -851,15 +851,14 @@ article{
 	width: 100%;
 	margin-left: 0 !important;
 	padding: 0 !important;
+	white-space: initial;
 }
 .sous_menu_projets li a span{
 	display: inline-block;
 	vertical-align: middle;
-	max-width: 90%;
-	word-break: break-all;
+	max-width: 100px;
 	height: 100%;
 	line-height: 13px;
-
 }
 
 
