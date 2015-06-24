@@ -25,7 +25,9 @@
 			//include(locate_template('_/inc/jdb-article.php'));
 			echo "<li>";
 			echo '<div class="sous_menu_projets_thumbnail " style="background-image:url('.$url_thumb[0].')"></div>';
-			echo "<a data-role='hash' class='anime' title='".get_the_title()."' href='".$slug."'>".get_the_title().'</a>';
+			echo "<a data-role='hash' class='anime' title='".get_the_title()."' href='".$slug."'>";
+				echo '<span>'.get_the_title().'</span>';
+			echo '</a>';
 			echo "</li>";
 			
 		endwhile;

@@ -729,9 +729,7 @@ article{
 	letter-spacing: 3px; 
 	font-size: 13.6px;
 	text-transform: uppercase;
-	max-width: 106px;
-	white-space: initial;
-	display: inline-block;
+
 }
 #menu li:hover a,
 #menu li.current-menu a{margin-left: 20px;}
@@ -825,7 +823,6 @@ article{
 	line-height: 85px;
 	overflow: hidden;
 	margin-bottom: 1px;
-	display: flex;
 	width: 100%;
 }
 
@@ -853,6 +850,10 @@ article{
 	width: 100%;
 	margin-left: 0 !important;
 	padding: 0 !important;
+}
+.sous_menu_projets li a span{
+	display: inline-block;
+	vertical-align: middle;
 }
 
 
