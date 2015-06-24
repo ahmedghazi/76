@@ -14,7 +14,21 @@ id="art-<?php echo $slug;?>">
 		<div class="contenu">
 			<?php the_content(); ?>
 		</div>
-	
+		
+		<?php $redirect = get_field("redirect");?>
+		<?php if($redirect){?>
+			<?php $redirect_label = get_field("redirect_label");?>
+			<div class="actionsBtn">
+				<a class="btn" data-role="hash" href="<?php echo $redirect; ?>">
+					
+					<span class="anime">
+						<?php echo $redirect_label;?>
+					</span>
+				</a>
+			</div>
+			
+		<?php } ?>
+		
 		<div class="logo ">
 			<?php include(locate_template('_/img/logo-soixanteseize-blanc.svg'));?>
 		</div>

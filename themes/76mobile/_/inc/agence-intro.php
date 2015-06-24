@@ -16,6 +16,8 @@ id="art-<?php echo $slug;?>">
 		<div class="contenu">
 			<?php echo get_the_content(); ?>
 		</div>
+
+		
 		
 		
 		<div class="logo ">

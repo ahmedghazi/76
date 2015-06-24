@@ -785,7 +785,7 @@ article{
 	-webkit-animation-duration: .7s;
     animation-duration: .7s;
 }
-.page_control.page_next span{margin-right: 6px;}
+.page_control.page_next span{margin-right: 0px;}
 
 /* ==============================================================================
 	AGENCE
@@ -925,6 +925,15 @@ article{
 }
 .page-template-page-creations .contenu_en{
 
+}
+
+.page-template-page-creations .creation_content .btn{
+	margin: 0;
+	color: black;
+}
+.page-template-page-creations .creation_content .btn:before,
+.page-template-page-creations .creation_content .btn:after{
+	background-color: black;
 }
 
 /* ==============================================================================
@@ -1277,14 +1286,14 @@ article{
 	background-position: center;
 }
 #prehomeAnime{
-	width: 250px;
-	height: 50px;
+	width: 125px;
+	height: 25px;
 	/*background-image: url(_/img/logo-soixanteseize-anime.gif);*/
 	background-size: contain;
 	background-repeat: no-repeat;
 	position: absolute;
-	left: 50%; margin-left: -125px;
-	top: 50%; margin-top: -25px;
+	left: 50%; margin-left: -62.5px;
+	top: 50%; margin-top: -12.5px;
 }
 
 /*------------------------------------*\
