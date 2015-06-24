@@ -785,7 +785,7 @@ article{
 	-webkit-animation-duration: .7s;
     animation-duration: .7s;
 }
-
+.page_control.page_next span{margin-right: 6px;}
 
 /* ==============================================================================
 	AGENCE
