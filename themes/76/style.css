@@ -729,6 +729,9 @@ article{
 	letter-spacing: 3px; 
 	font-size: 13.6px;
 	text-transform: uppercase;
+	max-width: 106px;
+	white-space: initial;
+	display: inline-block;
 }
 #menu li:hover a,
 #menu li.current-menu a{margin-left: 20px;}
