@@ -28,8 +28,10 @@
 			//trace($is2l);
 			if(count($is2l)>0){
 				$title = $is2l[0]."\n";
-				$title .= $is2l[1];
+				$title .= $is2l[1]."";
 			}
+
+
 
 			echo "<li>";
 			echo '<div class="sous_menu_projets_thumbnail " style="background-image:url('.$url_thumb[0].')"></div>';
