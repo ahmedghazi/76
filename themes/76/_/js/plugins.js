@@ -181,7 +181,7 @@ $.fn.removeClassSVG = function(className){
 
 
     */
-
+/*
 (function () {
     var canvas = document.createElement('canvas'),
       ctx,
@@ -207,3 +207,4 @@ $.fn.removeClassSVG = function(className){
     }
 
 })();
+*/

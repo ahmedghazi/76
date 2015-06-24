@@ -5,37 +5,63 @@ var Btn = function() {
 	this.bindEvents = function(){
 		var toggled = 0;
 
-		$('header').mouseenter(function(e){
+		/*$('header').mouseenter(function(e){
 			clearTimeout(timer)
+		});*/
+	
+		$('#burger').on("mouseenter", function(e){
+			e.stopPropagation();
+			if(!$(this).hasClass('toggled')){
+				$(this).toggleClass('toggled');
+				$("#menu").toggleClass("toggled");
+				$("section").toggleClass("toggled");
+				
+				setTimeout(function(){
+					if($("#menu").hasClass("toggled")){
+						_this.animateOut();
+					}else{
+						_this.animateIn();
+					}
+				},100);
+			}
 		});
 
 		$('#burger').click(function(){
-			$(this).toggleClass('toggled');
-			$("#menu").toggleClass("toggled");
-			$("section").toggleClass("toggled");
-			
-			setTimeout(function(){
-				if($("#menu").hasClass("toggled")){
-					_this.animateOut();
-				}else{
-					_this.animateIn();
-				}
-			},100);
+			if($(this).hasClass('toggled')){
+				$(this).toggleClass('toggled');
+				$("#menu").toggleClass("toggled");
+				$("section").toggleClass("toggled");
+				
+				setTimeout(function(){
+					if($("#menu").hasClass("toggled")){
+						_this.animateOut();
+					}else{
+						_this.animateIn();
+					}
+				},100);
+			}
 		});
 
-		$('#burger').on("mouseenter", function(){
-			$(this).toggleClass('toggled');
-			$("#menu").toggleClass("toggled");
-			$("section").toggleClass("toggled");
-			
-			setTimeout(function(){
-				if($("#menu").hasClass("toggled")){
-					_this.animateOut();
-				}else{
-					_this.animateIn();
-				}
-			},100);
+		$('#menu').on("mouseleave", function(e){
+			e.stopPropagation();
+			console.log(e.timeStamp)
+			console.log("mouseleave")
+			if($('#burger').hasClass('toggled')){
+				$('#burger').toggleClass('toggled');
+				$("#menu").toggleClass("toggled");
+				$("section").toggleClass("toggled");
+				
+				setTimeout(function(){
+					if($("#menu").hasClass("toggled")){
+						_this.animateOut();
+					}else{
+						_this.animateIn();
+					}
+				},100);
+			}
 		});
+		
+		
 
 		$(document).keyup(function(e) {
 			console.log(e.keyCode);
@@ -60,45 +86,6 @@ var Btn = function() {
 			});
 		});
 
-		/*$("html").on("click",".btn_diapo", function(e){
-			e.preventDefault();
-
-			$("#loader").fadeIn("fast");
-
-			var id = $(this).data("href"),
-				surtitre = $(this).data("surtitre"),
-				titre = $(this).data("titre");
-				
-			var o = {
-				action: "get_diapo_by_id",
-				id: id,
-				surtitre: surtitre,
-				titre: titre
-			}
-			
-			_this.loadModalContent(o);
-		});
-
-		$("html").on("click", ".btn_video", function(e){
-			e.preventDefault();
-
-			$("#loader").fadeIn("fast");
-
-			var thumbnail_video = $(this).data("thumbnail-video"),
-				url_video = $(this).data("href"),
-				surtitre = $(this).data("surtitre"),
-				titre = $(this).data("titre");
-			
-			var o = {
-				thumbnail_video: thumbnail_video,
-				url_video: url_video,
-				surtitre: surtitre,
-				titre: titre
-			}
-
-			_this.renderModalContentVideo(o);
-		});
-*/
 
 		$("html").on("click",".btn_diapo_video", function(e){
 			e.preventDefault();

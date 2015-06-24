@@ -666,11 +666,12 @@ article{
 	MENU
    ============================================================================== */
 #menu{
-	padding:22px 0 23px 60px;
+	/*padding:22px 0 23px 60px;*/
 	height: 100%;
 	background-color:white;
 	-webkit-transform: translateX(0);
             transform: translateX(0);
+    pointer-events:auto;
 }
 
 #menu.toggled{
@@ -678,12 +679,13 @@ article{
             transform: translateX(-410px);
 }
 
-
 .menu_scroll{
 	height: 100%;
 	overflow: auto;
 }
-
+#menu .menu{
+	padding:22px 0 23px 60px;
+}
 #menu li{cursor: pointer;pointer-events:auto;}
 #menu .menu > li{
 	padding-top: 22px;
@@ -1033,11 +1035,12 @@ article{
 	color: #595959;
 	margin: 0 30px 30px 0;
 	max-width: 170px;
+	max-width: 300px;
 	table-layout: fixed;
 }
 .agence_metier_content table:nth-child(3){margin-right: 0; clear: left;}
 .agence_metier_content table tr:first-child td{padding-bottom: 17px;font-size: 18px;}
-.agence_metier_content table tr td{padding-left: 10px; max-width: 170px;}
+.agence_metier_content table tr td{padding-left: 10px; max-width: 170px;max-width: 300px;}
 .agence_metier_content table tr td p{margin-bottom: 0;white-space: pre-wrap}
 .map{
 	position: relative;
