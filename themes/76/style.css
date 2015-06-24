@@ -854,6 +854,11 @@ article{
 .sous_menu_projets li a span{
 	display: inline-block;
 	vertical-align: middle;
+	max-width: 90%;
+	word-break: break-all;
+	height: 100%;
+	line-height: 13px;
+
 }
 
 
