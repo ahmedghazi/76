@@ -51,6 +51,8 @@ var NavigateController = function() {
     };
 
     this.bindEvents = function(){
+
+        //
         $.navigate.init({
             //ajaxLinks:'a:not(.btn_popup)[rel!="external"][target!="_blank"][data-role!="hash"], .ajaxLink',
             ajaxLinks:'a:not(.btn_popup)[rel!="external"][target!="_blank"][data-role!="hash"][data-role!="internal"]',
