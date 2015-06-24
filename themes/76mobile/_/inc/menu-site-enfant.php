@@ -26,7 +26,7 @@
 			echo "<li class='l0 anime ".$class."'>";
 				echo '<div class="sous_menu_logo"><div class="sous_menu_logo_inside" style="background-image:url('.$url_thumb[0].')"></div></div>';
 				echo '<div class="sous_menu_">';
-					echo "<a data-role='internal' class='anime ' href='".$link."'>".get_the_title().'</a>';
+					echo "<a data-role='ajax' class='anime ' href='".$link."'>".get_the_title().'</a>';
 				echo '</div>';
 				include(locate_template('_/inc/menu-site-enfant-clients.php'));
 			echo "</li>";

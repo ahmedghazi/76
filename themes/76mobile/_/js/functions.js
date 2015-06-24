@@ -13,7 +13,7 @@ var dw,dh,ww,wh,
 /* trigger when page is ready */
 $(document).ready(function (){
 
-	
+	setTimeout(function() { window.scrollTo(0, 1) }, 100);
 	
 	window.addEventListener("orientationchange", function() {
 		format();
