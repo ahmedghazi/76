@@ -119,8 +119,11 @@ function handle_anime(){
 
 		case "/agence/":
 		case "/":
-		var sourceImage = $("article").eq(0).css("background-image").slice(4,$("article").eq(0).css("background-image").length-1);
-		_ScrollController.handleDominanteColorByUrl(sourceImage);
+		if($("article")){
+			var sourceImage = $("article").eq(0).css("background-image").slice(4,$("article").eq(0).css("background-image").length-1);
+			_ScrollController.handleDominanteColorByUrl(sourceImage);
+		}
+		
 		break;
 
 	}
