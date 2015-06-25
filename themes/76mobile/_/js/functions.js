@@ -13,7 +13,7 @@ var dw,dh,ww,wh,
 /* trigger when page is ready */
 $(document).ready(function (){
 
-	FastClick.attach(document.body);
+	//FastClick.attach(document.body);
 	
 	setTimeout(function() { window.scrollTo(0, 1) }, 100);
 	
@@ -37,7 +37,7 @@ $(window).resize(function() {
 
 **********************/
 function init_app(){
-	init_vendors();
+	//init_vendors();
 	init_objects();
 	
 	//reveal();
@@ -111,7 +111,7 @@ function reveal(){
 **********************/
 function handle_anime(){
 	var path = window.location.pathname;
-	console.log(path)
+	//console.log(path)
 	switch(path){
 		case "/contacts/":
 		$(".contact_content").removeClass("slideBottom");
