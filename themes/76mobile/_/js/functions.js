@@ -188,12 +188,12 @@ function format(){
 
 	ww = $(window).width();
 	wh = $(window).height();
-
+alert(wh)
 //console.log(wh)
 	$("body,#wrapper").css({width:ww})
-	if(wh == 480){
+	if(wh <= 480){
 		$("body,#wrapper").css({height:wh+100})
-		setTimeout(function() { window.scrollTo(0, 1) }, 1000);
+		//setTimeout(function() { window.scrollTo(0, 1) }, 1000);
 	}
 /*
 	clearTimeout($.data(this, 'formatTimer'));
