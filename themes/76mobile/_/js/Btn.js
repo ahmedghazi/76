@@ -60,46 +60,6 @@ var Btn = function() {
 			});
 		});
 
-		/*$("html").on("click",".btn_diapo", function(e){
-			e.preventDefault();
-
-			$("#loader").fadeIn("fast");
-
-			var id = $(this).data("href"),
-				surtitre = $(this).data("surtitre"),
-				titre = $(this).data("titre");
-				
-			var o = {
-				action: "get_diapo_by_id",
-				id: id,
-				surtitre: surtitre,
-				titre: titre
-			}
-			
-			_this.loadModalContent(o);
-		});
-
-		$("html").on("click", ".btn_video", function(e){
-			e.preventDefault();
-
-			$("#loader").fadeIn("fast");
-
-			var thumbnail_video = $(this).data("thumbnail-video"),
-				url_video = $(this).data("href"),
-				surtitre = $(this).data("surtitre"),
-				titre = $(this).data("titre");
-			
-			var o = {
-				thumbnail_video: thumbnail_video,
-				url_video: url_video,
-				surtitre: surtitre,
-				titre: titre
-			}
-
-			_this.renderModalContentVideo(o);
-		});
-*/
-
 		$("html").on("click",".btn_diapo_video", function(e){
 			e.preventDefault();
 

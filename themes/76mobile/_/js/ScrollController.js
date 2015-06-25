@@ -63,7 +63,7 @@ var ScrollController = function() {
 
 	this.goToHash = function(){		
 		var hash = window.location.hash.split("#")[1];
-//console.log(hash)
+console.log(hash)
 		
 		$(".projet").removeClass('current');
 		$(".projet#art-"+hash).addClass('current');
@@ -99,7 +99,7 @@ var ScrollController = function() {
 		console.log(hash)
 		console.log($("#art-"+hash).attr("style"))
 		var style = $("#art-"+hash).attr("style");
-		if(!style){
+		if(style == undefined){
 			$(".page_controls").css({color:"#ffffff"});
 			$(".page_controls .stripes div").css({"background-color":"#ffffff"});
 			$("#burger div").css({"background-color":"#ffffff"});

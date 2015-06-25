@@ -2,6 +2,8 @@
 <?php
 
 $current_id = get_the_ID();
+$current_url = $_SERVER["REQUEST_URI"];
+//trace($current_url);
 
 	$args = array(
 		"post_type" => "page",
@@ -20,7 +22,7 @@ $current_id = get_the_ID();
 		echo '<ul class="menu">';
 		while ( $q->have_posts() ) : $q->the_post();
 			$template = basename( get_page_template() );
-			$href = get_permalink(geT_the_ID());
+			$href = get_permalink(get_the_ID());
 			$class = "";
 			if(get_the_ID() == $current_id)$class = "current-menu";
 			if($template == "page-clients.php")$href = "#";

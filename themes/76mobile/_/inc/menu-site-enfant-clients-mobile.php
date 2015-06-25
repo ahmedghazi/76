@@ -1,33 +1,35 @@
 <?php
-	$argss = array(
+//var_dump($client_id);
+//wp_reset_postdata();
+	$argsa = array(
 		"post_type" => "page",
-		"post_parent" => get_the_id(),
+		"post_parent" => $client_id,
 		"post_status" => "publish",
 		"orderby" => "menu_order", 
-		//"order" => "DESC",
-		//'posts_per_page' => -1,
 	);
 
-	$qqq = new WP_Query( $argss );
+	$qqs = new WP_Query( $argsa );
 //trace($q->max_num_pages);
 //$max = $q->max_num_pages;
-	if ( $qqq->have_posts() ) :
-		echo '<div class="sous_menu_projets_bande anime">';
-		echo '<ul class="sous_menu_projets">';
-		while ( $qqq->have_posts() ) : $qqq->the_post();
+	if ( $qqs->have_posts() ) :
 
+		echo '<div class="sous_menu_projets_bande anime" id="bande-'.$client_id.'">';
+		echo '<ul class="sous_menu_projets">';
+
+		while ( $qqs->have_posts() ) : $qqs->the_post();
+
+			//$arr_bande[] = get_the_ID();
 			$url_thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), "full");
 			if(!$url_thumb)
 				$url_thumb[0] = 'http://placehold.it/26x48&text=Client';
 			//$url_thumb = $url_thumb[0];
 
-//trace($current_url);
+//echo get_permalink(get_the_ID());
+var_dump(get_permalink(get_the_ID()));
+var_dump($current_url);
 
-
-//trace(parse_url($link)["path"]);
-if($path == parse_url(get_permalink(get_the_ID()))["path"])
-	echo "same page";
 			$slug = $link."#".basename(get_permalink(get_the_ID()));
+			//$slug = get_permalink(get_the_ID());
 			$title = get_the_title();
 			$is2l = explode(" ",$title);
 			//trace($is2l);
@@ -36,23 +38,21 @@ if($path == parse_url(get_permalink(get_the_ID()))["path"])
 				$title .= $is2l[1]."";
 			}
 			
-			//include(locate_template('_/inc/jdb-article.php'));
+
 			echo "<li>";
 				echo '<div class="sous_menu_projets_thumbnail anime" style="background-image:url('.$url_thumb[0].')"></div>';
-			
-				//echo "<a data-role='hash' class='anime' href='".$slug."'>".get_the_title().'</a>';
-			
-				echo "<a data-role='hash' class='anime' title='".get_the_title()."' href='".$slug."'>";
+				echo "<a href='".$slug."' data-role='' class='anime' title='".get_the_title()."' >";
 					echo '<span>'.$title.'</span>';
-				echo '</a>';
-		
+				echo '</a>';		
 			echo "</li>";
 
 
 			
 		endwhile;
+
 		echo '</ul>';
 		echo '</div>';
+
 	endif;
 	wp_reset_postdata();
 ?>

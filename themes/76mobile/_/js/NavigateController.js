@@ -41,11 +41,11 @@ var NavigateController = function() {
 
         if(window.location.hash){
             //$('html,body').animate({ scrollTop: $(window.location.hash).position().top }, 400);
-            //console.log("hashchange : "+window.location.hash);
+            console.log("hashchange : "+window.location.hash);
             //console.log(timer)
             //clearTimeout(timer);
             setTimeout(function(){
-                _ScrollController.goToHash();
+                if(window.location.hash != "#")_ScrollController.goToHash();
             },1000);
         }
     };
@@ -53,20 +53,23 @@ var NavigateController = function() {
     this.bindEvents = function(){
 
         //
+        /*
         $.navigate.init({
             //ajaxLinks:'a:not(.btn_popup)[rel!="external"][target!="_blank"][data-role!="hash"], .ajaxLink',
             ajaxLinks:'a:not(.btn_popup)[rel!="external"][target!="_blank"][data-role!="hash"][data-role!="internal"]',
             defaultInsertFunction:'insertPageHtml'
         });
-
+        */
+        
         $(window).on( 'hashchange', function(){
             var hash = window.location.hash;
+            console.log(hash)
             //console.log("hashchange : "+window.location.hash);
-            _ScrollController.goToHash();
+            if(hash != "")_ScrollController.goToHash();
 
             clearTimeout(timer);
             timer = setTimeout(function(){
-                if($('#burger').hasClass("toggled"))$('#burger').click();
+                if(hash != "")if($('#burger').hasClass("toggled"))$('#burger').click();
             },400);
         });
 

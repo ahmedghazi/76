@@ -84,8 +84,8 @@
 
 
 	   	wp_deregister_script('navigate');
-	   	wp_register_script('navigate', ($templatedir."/_/js/vendor/navigate.js"), false);
-	   	wp_enqueue_script('navigate');
+	   	//wp_register_script('navigate', ($templatedir."/_/js/vendor/navigate.js"), false);
+	   	//wp_enqueue_script('navigate');
 
 	   	wp_deregister_script('MetiersController');
 	   	wp_register_script('MetiersController', ($templatedir."/_/js/MetiersController.js"), false);
@@ -120,6 +120,13 @@
 		$scripts .= '<script type="text/javascript" src="'.$templatedir.'/_/js/ScrollController.js"></script>'."\n";
 		$scripts .= '<script type="text/javascript" src="'.$templatedir.'/_/js/functions.js"></script>'."\n";
 		echo $scripts;
+	}
+
+
+	function trace($o){
+		echo "<pre>";
+		print_r($o);
+		echo "</pre>";
 	}
 
 ?>
