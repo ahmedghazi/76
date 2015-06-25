@@ -110,7 +110,7 @@ function reveal(){
 function handle_anime(){
 	var path = window.location.pathname;
 	//console.log(path)
-	/*switch(path){
+	switch(path){
 		case "/contacts/":
 		$(".contact_content").removeClass("slideBottom");
 		var sourceImage = $("article").eq(0).css("background-image").slice(4,$("article").eq(0).css("background-image").length-1);
@@ -119,15 +119,15 @@ function handle_anime(){
 
 		case "/agence/":
 		case "/":
-		if($("article")){
+		/*if($("article")){
 			console.log($("article").eq(0).css())
 			var sourceImage = $("article").eq(0).css("background-image").slice(4,$("article").eq(0).css("background-image").length-1);
 			_ScrollController.handleDominanteColorByUrl(sourceImage);
-		}
+		}*/
 		
 		break;
 
-	}*/
+	}
 $(".page_controls").css({color:"#ffffff"});
 		$(".page_controls .stripes div").css({"background-color":"#ffffff"});
 		$("#burger div").css({"background-color":"#ffffff"});
