@@ -63,7 +63,7 @@ var NavigateController = function() {
         
         $(window).on( 'hashchange', function(){
             var hash = window.location.hash;
-            console.log(hash)
+            //console.log(hash)
             //console.log("hashchange : "+window.location.hash);
             if(hash != "")_ScrollController.goToHash();
 

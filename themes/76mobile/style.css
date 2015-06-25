@@ -480,14 +480,14 @@ article{
 	HEADER
    ============================================================================== */
 #burger{
-    position: absolute;
+    position: fixed;
     height: 15px;
   	width: 19px;
     display: block;
     cursor: pointer;
     left: 23px;
     top: 23px;
-    z-index: 1;
+    z-index: 999;
     pointer-events:auto;
 }
 #burger:hover div{}
@@ -532,6 +532,7 @@ article{
 	-moz-transform: rotate(-45deg);
 	-o-transform: rotate(-45deg);
  	margin-top: 8px;
+ 	background-color: rgba(176, 176, 176, 1) !important;
  }
 .toggled .burgx2{
 	-webkit-transform: rotate(45deg);
@@ -539,6 +540,7 @@ article{
 	-moz-transform: rotate(45deg);
 	-o-transform: rotate(45deg);
 	margin-top: 8px;
+	background-color: rgba(176, 176, 176, 1) !important;
 }
 .toggled .burgx3{
 	-webkit-transform: rotate(45deg);
@@ -546,6 +548,7 @@ article{
 	-moz-transform: rotate(45deg);
 	-o-transform: rotate(45deg);
 	margin-top: 8px;
+	background-color: rgba(176, 176, 176, 1) !important;
 }
 
 
