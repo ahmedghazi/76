@@ -28,7 +28,11 @@
 			$class = "";
 			if(get_the_ID() == $current_id)$class = "current-menu";
 			echo "<li class='l0 anime ".$class."' id='client-".get_the_ID()."'>";
-				echo '<div class="sous_menu_logo"><div class="sous_menu_logo_inside" style="background-image:url('.$url_thumb[0].')"></div></div>';
+				echo '<div class="sous_menu_logo">';
+					echo "<a href='#' data-role='ajax' class='anime ' >";
+						echo '<div class="sous_menu_logo_inside" style="background-image:url('.$url_thumb[0].')"></div>';
+					echo '</a>';
+				echo '</div>';
 				echo '<div class="sous_menu_">';
 					echo "<a href='#' data-role='ajax' class='anime ' >".get_the_title().'</a>';
 				echo '</div>';

@@ -734,6 +734,10 @@ article{
 }
 #menu li:hover a,
 #menu li.current-menu a{margin-left: 20px;}
+
+#menu li:hover .sous_menu_logo a,
+#menu li.current-menu .sous_menu_logo a{margin-left: 0px;}
+
 #menu li:hover:after{
     -webkit-animation-name: kittmenu;
 	-webkit-animation-duration: .6s;

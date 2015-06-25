@@ -40,7 +40,7 @@ function init_app(){
 //return;
 	clearTimeout(timer);
 
-	
+	/*
 	$("#prehomeAnime").css({"background-image": "url("+templateDir+"/_/img/logo-soixanteseize-anime.gif)"});
     timer = setTimeout(function(){
     	reveal();
@@ -50,7 +50,25 @@ function init_app(){
 	        handle_anime();
 	    },1000);
 
-    },2400);
+    },2400);*/
+	if(getCookie("visited")){
+		reveal();
+		handle_anime();
+	}else{
+		setCookie("visited", true, 365);
+		clearTimeout(timer);
+
+		$("#prehomeAnime").css({"background-image": "url("+templateDir+"/_/img/logo-soixanteseize-anime.gif)"});
+	    timer = setTimeout(function(){
+	    	reveal();
+
+			clearTimeout(timer);
+		    timer = setTimeout(function(){
+		        handle_anime();
+		    },1000);
+
+	    },2400);
+    }
 
 //$('#burger').click();	
 }
