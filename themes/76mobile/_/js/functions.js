@@ -190,6 +190,7 @@ function format(){
 	wh = $(window).height();
 
 	$("body,#wrapper").css({width:ww})
+	$("body").css({height:wh+100})
 /*
 	clearTimeout($.data(this, 'formatTimer'));
     $.data(this, 'formatTimer', setTimeout(function() {

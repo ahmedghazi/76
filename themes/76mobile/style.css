@@ -444,6 +444,7 @@ html,body{
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
+	overflow-y: auto;
 }
 
 #wrapper{
@@ -644,6 +645,7 @@ article{
 	left: 310px; top: 0;
   	background-color: black;
   	z-index: 0;
+  	overflow-y:auto;
 }
 .sous_menu_projets_bande.toggled{
 	transform: translateX(0);
