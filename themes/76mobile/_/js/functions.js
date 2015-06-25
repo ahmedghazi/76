@@ -188,7 +188,7 @@ function format(){
 
 	ww = $(window).width();
 	wh = $(window).height();
-alert(wh)
+//alert(wh)
 //console.log(wh)
 	$("body,#wrapper").css({width:ww})
 	if(wh <= 480){
