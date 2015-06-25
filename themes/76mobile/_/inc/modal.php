@@ -58,7 +58,7 @@
 		<div id="modal_tuto_inside">
 			<p>Sélectionnez les domaines de création qui vous intéressent
 			et lancez les diaporamas.</p>
-			<button class="btn">OK</button>
+			<button id="tuto_ok"class="btn">OK</button>
 		</div>
 	</div>
 </div>

@@ -34,7 +34,7 @@ var MetiersController = function() {
 			_this.metierAnimeOut(id);
 		});
 
-		$("#modal_tuto").find("button").on("click", function(event) {
+		$("#tuto_ok").on("click", function(event) {
 			/* Act on the event */
 			console.log(event);
 			$("#modal_tuto").fadeOut("fast")
