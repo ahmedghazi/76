@@ -61,10 +61,11 @@
 	
 	<meta name="google-site-verification" content="">
 	<!-- Speaking of Google, don't forget to set your site up: http://google.com/webmasters -->
-
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/_/img/favicon.ico">
 	<!-- This is the traditional favicon.
 		 - size: 16x16 or 32x32

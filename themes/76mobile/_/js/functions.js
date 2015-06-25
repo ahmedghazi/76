@@ -15,8 +15,10 @@ $(document).ready(function (){
 
 	//FastClick.attach(document.body);
 	
-	setTimeout(function() { window.scrollTo(0, 1) }, 100);
 	
+	setTimeout(function() { window.scrollTo(0, 1) }, 1000);
+
+
 	window.addEventListener("orientationchange", function() {
 		format();
 	}, false);
@@ -33,6 +35,34 @@ $(window).resize(function() {
 	format();
 });
 
+function hideBar(){
+	var doScrollTop, pageFill;
+
+	pageFill = null;
+
+	if ((document.body.clientHeight - 75) < window.innerHeight) {
+	  pageFill = document.createElement("div");
+	}
+
+	pageFill.style.height = (window.innerHeight - document.body.clientHeight + 75) + "px";
+
+	document.getElementsByTagName("body")[0].appendChild(pageFill);
+
+	doScrollTop = setInterval(function() {
+	  var pageYOffset;
+	  if (document.body) {
+	    clearInterval(doScrollTop);
+	    scrollTo(0, 1);
+	    pageYOffset = 0;
+	    scrollTo(0, (pageYOffset === document.body.scrollTop ? 1 : 0));
+	    return setTimeout(function() {
+	      if (pageFill) {
+	        return document.getElementsByTagName("body")[0].removeChild(pageFill);
+	      }
+	    }, 1000);
+	  }
+	}, 200);
+}
 /**********************
 
 **********************/
