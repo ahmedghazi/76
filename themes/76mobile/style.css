@@ -561,8 +561,10 @@ article{
 	-webkit-transform: translateX(-410px);
             transform: translateX(-410px);
 }
-#burger.toggled div{
-	background-color: #B0B0B0 !important;
+#burger.toggled .burgx1,
+#burger.toggled .burgx2,
+#burger.toggled .burgx3{
+	background-color: rgba(176, 176, 176, 1) !important;
 }
 
 .menu_scroll{
@@ -946,6 +948,9 @@ article{
 
 }
 
+.page-template-page-creations .creation_content .actionsBtn{
+	margin-bottom: 13px;
+}
 .page-template-page-creations .creation_content .btn{
 	margin: 0;
 	color: black;

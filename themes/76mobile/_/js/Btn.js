@@ -19,6 +19,7 @@ $("#menu li").removeClass("l0")
 			$("#menu").toggleClass("toggled");
 			$("section").toggleClass("toggled");
 			
+			
 			/*setTimeout(function(){
 				if($("#menu").hasClass("toggled")){
 					_this.animateOut();
@@ -86,7 +87,11 @@ $("#menu li").removeClass("l0")
 			_this.loadOEmbedVideo(o,$(this).parent());
 		});
 
-		$("html").on("click", ".sous_menu li", function(e){
+		$("html").on("click", ".sous_menu > li > a", function(e){
+			e.preventDefault();
+		});
+
+		$("html").on("click", ".sous_menu > li", function(e){
 			$(".sous_menu_projets_bande").removeClass("toggled");
 			var id = $(this).attr("id").split("-")[1];
 			$("#bande-"+id).addClass("toggled");

@@ -102,7 +102,7 @@ console.log(hash)
 		if(style == undefined){
 			$(".page_controls").css({color:"#ffffff"});
 			$(".page_controls .stripes div").css({"background-color":"#ffffff"});
-			$("#burger div").css({"background-color":"#ffffff"});
+			$("#burger:not(.toggled) div").css({"background-color":"#ffffff"});
 			return;
 		};
 
@@ -113,27 +113,27 @@ console.log(hash)
 			if(brightness > midDominante){
 				$(".page_controls").css({color:"#1c1c1c"});
 				$(".page_controls .stripes div").css({"background-color":"#1c1c1c"});
-				$("#burger div").css({"background-color":"#1c1c1c"});
+				$("#burger:not(.toggled) div").css({"background-color":"#1c1c1c"});
 			}else{
 				$(".page_controls").css({color:"#ffffff"});
 				$(".page_controls .stripes div").css({"background-color":"#ffffff"});
-				$("#burger div").css({"background-color":"#ffffff"});
+				$("#burger:not(.toggled) div").css({"background-color":"#ffffff"});
 			}
 		});
 	};
 
 	this.handleDominanteColorByUrl = function(sourceImage){
-		
+		console.log("handleDominanteColorByUrl")
 		getImageBrightness(sourceImage,function(brightness) {
 			//console.log(brightness)
 			if(brightness > midDominante){
 				$(".page_controls").css({color:"#1c1c1c"});
 				$(".page_controls .stripes div").css({"background-color":"#1c1c1c"});
-				$("#burger div").css({"background-color":"#1c1c1c"});
+				$("#burger:not(.toggled) div").css({"background-color":"#1c1c1c"});
 			}else{
 				$(".page_controls").css({color:"#ffffff"});
 				$(".page_controls .stripes div").css({"background-color":"#ffffff"});
-				$("#burger div").css({"background-color":"#ffffff"});
+				$("#burger:not(.toggled) div").css({"background-color":"#ffffff"});
 			}
 		});
 	};

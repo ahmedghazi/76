@@ -134,7 +134,7 @@ input:invalid, textarea:invalid {
 ::selection { background:#ffffff; color:#000000; text-shadow: none; }
 
 /* j.mp/webkit-tap-highlight-color */
-a:link { -webkit-tap-highlight-color: #f17d32; }
+a:link { -webkit-tap-highlight-color: #B0B0B0; }
 
 /* Make buttons play nice in IE:
    www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */

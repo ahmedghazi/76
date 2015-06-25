@@ -13,6 +13,8 @@ var dw,dh,ww,wh,
 /* trigger when page is ready */
 $(document).ready(function (){
 
+	FastClick.attach(document.body);
+	
 	setTimeout(function() { window.scrollTo(0, 1) }, 100);
 	
 	window.addEventListener("orientationchange", function() {
@@ -109,7 +111,7 @@ function reveal(){
 **********************/
 function handle_anime(){
 	var path = window.location.pathname;
-	//console.log(path)
+	console.log(path)
 	switch(path){
 		case "/contacts/":
 		$(".contact_content").removeClass("slideBottom");
@@ -128,14 +130,15 @@ function handle_anime(){
 		break;
 
 	}
-$(".page_controls").css({color:"#ffffff"});
-		$(".page_controls .stripes div").css({"background-color":"#ffffff"});
-		$("#burger div").css({"background-color":"#ffffff"});
-		return
+		
+		//$(".page_controls").css({color:"#ffffff"});
+		//$(".page_controls .stripes div").css({"background-color":"#ffffff"});
+		//$("#burger:not(.toggled) div").css({"background-color":"#ffffff"});
+		//return
 	if($("body").hasClass('page-template-page-client')){
 		$(".page_controls").css({color:"#ffffff"});
 		$(".page_controls .stripes div").css({"background-color":"#ffffff"});
-		$("#burger div").css({"background-color":"#ffffff"});
+		$("#burger:not(.toggled) div").css({"background-color":"#ffffff"});
 	}
 }
 
