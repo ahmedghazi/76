@@ -1415,11 +1415,13 @@ article{
 		max-width: 70%;
   		margin: 0 auto;
 	}
-	.agence_intro{position: relative;}
-	.agence_intro .action{
-		position: absolute;
+	.agence_intro,
+	.creation_intro{position: relative;}
+	.agence_intro .action,
+	.creation_intro .action{
+		position: fixed;
 		right: 21px;top: 23px;
-		color: white;
+		color: #B0B0B0;
 	}
 	.article_agence_1 .logo{margin-top: -3px;}
 
