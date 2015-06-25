@@ -25,11 +25,15 @@
 			//$url_thumb = $url_thumb[0];
 
 //echo get_permalink(get_the_ID());
-var_dump(get_permalink(get_the_ID()));
-var_dump($current_url);
+//var_dump(get_permalink(get_the_ID()));
+//var_dump( parse_url(get_permalink(get_the_ID())) );
+//var_dump($current_url);
 
-			$slug = $link."#".basename(get_permalink(get_the_ID()));
-			//$slug = get_permalink(get_the_ID());
+			$parts = explode( "/", parse_url(get_permalink(get_the_ID()))["path"] );
+//trace($parts);
+			$slug = "/".$parts[1]."/".$parts[2]."/#".$parts[3];
+			//$slug = $link."#".basename(get_permalink(get_the_ID()));
+//			$slug = get_permalink(get_the_ID());
 			$title = get_the_title();
 			$is2l = explode(" ",$title);
 			//trace($is2l);
@@ -37,7 +41,7 @@ var_dump($current_url);
 				$title = $is2l[0]."\n";
 				$title .= $is2l[1]."";
 			}
-			
+	//trace($slug);		
 
 			echo "<li>";
 				echo '<div class="sous_menu_projets_thumbnail anime" style="background-image:url('.$url_thumb[0].')"></div>';

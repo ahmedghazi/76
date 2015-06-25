@@ -9,33 +9,24 @@ var Btn = function() {
 			clearTimeout(timer)
 		});
 
+		$(".sous_menu li a").on("click", function(e){
+			e.preventDefault();
+		})
+
+$("#menu li").removeClass("l0")
 		$('#burger').click(function(){
 			$(this).toggleClass('toggled');
 			$("#menu").toggleClass("toggled");
 			$("section").toggleClass("toggled");
 			
-			setTimeout(function(){
+			/*setTimeout(function(){
 				if($("#menu").hasClass("toggled")){
 					_this.animateOut();
 				}else{
 					_this.animateIn();
 				}
-			},100);
+			},100);*/
 		});
-
-		/*$('#burger').on("mouseenter", function(){
-			$(this).toggleClass('toggled');
-			$("#menu").toggleClass("toggled");
-			$("section").toggleClass("toggled");
-			
-			setTimeout(function(){
-				if($("#menu").hasClass("toggled")){
-					_this.animateOut();
-				}else{
-					_this.animateIn();
-				}
-			},100);
-		});*/
 
 		$(document).keyup(function(e) {
 			console.log(e.keyCode);
@@ -95,6 +86,12 @@ var Btn = function() {
 			_this.loadOEmbedVideo(o,$(this).parent());
 		});
 
+		$("html").on("click", ".sous_menu li", function(e){
+			$(".sous_menu_projets_bande").removeClass("toggled");
+			var id = $(this).attr("id").split("-")[1];
+			$("#bande-"+id).addClass("toggled");
+		});
+
 	};
 
 	this.animateIn = function(){
@@ -111,7 +108,7 @@ var Btn = function() {
 		var d = 0;
 		$("#menu li").each(function(idx,el){
 			setTimeout(function(){
-				$(el).addClass("l0");
+				//$(el).addClass("l0");
 			},d);
 			d+=delay*2;
 		});

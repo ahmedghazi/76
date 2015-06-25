@@ -642,8 +642,15 @@ article{
 	left: 310px; top: 0;
   	background-color: black;
   	z-index: 0;
-  	
 }
+.sous_menu_projets_bande.toggled{
+	transform: translateX(0);
+  	-ms-transform: translateX(0);
+  	-webkit-transform: translateX(0);
+  	opacity: 1;
+  	z-index: 1;
+}
+
 .sous_menu_projets{
 	width: 100%; 
 	padding-left: 1px;

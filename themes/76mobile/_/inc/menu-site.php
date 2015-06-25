@@ -4,6 +4,8 @@
 $current_id = get_the_ID();
 $current_url = $_SERVER["REQUEST_URI"];
 //trace($current_url);
+	
+	$arr_enfants = array();
 
 	$args = array(
 		"post_type" => "page",
@@ -36,4 +38,12 @@ $current_url = $_SERVER["REQUEST_URI"];
 	endif;
 	wp_reset_postdata();
 ?>
+</div>
+
+<div class="menu_bande">
+	<?php 
+	foreach ($arr_enfants as $client_id) {
+		include(locate_template('_/inc/menu-site-enfant-clients-mobile.php'));
+	}
+	?>
 </div>
