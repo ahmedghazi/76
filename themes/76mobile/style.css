@@ -1425,7 +1425,7 @@ article{
 	.creation_intro{position: relative;}
 	.agence_intro .action,
 	.creation_intro .action{
-		position: fixed;
+		position: absolute;
 		right: 21px;top: 23px;
 		color: #B0B0B0;
 	}
@@ -1603,7 +1603,12 @@ article.agence_intro .logo svg{width: 100%; height: 100%;}
 	.creation_content .contenu{width: 100%;}
 	.page-template-page-agence .contenu, .page-template-page-agence .contenu_en{max-width: 100%}
 
-	.projet_content .contenu{width: 273px;}
+	.projet_content .contenu{
+		width: 273px;
+		max-height: 50px;
+		overflow: auto;
+		margin-bottom: 24px;
+	}
 
 	#modal{width: 320px;}
 
