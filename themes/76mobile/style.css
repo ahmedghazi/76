@@ -816,6 +816,13 @@ article{
 }
 .page_control.page_next span{margin-right: 0px;}
 
+.projet_content .contenu{
+	width: 273px;
+	max-height: 50px;
+	overflow: auto;
+	margin-bottom: 24px;
+}
+
 /* ==============================================================================
 	AGENCE
    ============================================================================== */
