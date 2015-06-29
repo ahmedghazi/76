@@ -253,11 +253,14 @@ var Btn = function() {
 						$(".diapo_item_image").show();
 						$(".diapo_play").removeClass('stripes_loading');
 						$('.diapo').cycle('resume');
+
+						//$("#modal_legende").text($(el_out).data("desc"));
 					}
 
 					$(el_in).addClass("scaleIt")
 					$(el_out).removeClass("scaleIt");
 
+					//if(!$('.diapo').find("iframe"))
 					$("#modal_legende").text($(el_out).data("desc"));
 				},
 				after:function(el_in,el_out,opt){

@@ -40,7 +40,7 @@ function handle_get_diapo_video_by_id() {
         foreach($_REQUEST['video'] as $video){
             $css = 'style="background-image:url('.$video['video_thumbnail'].')"';
             
-            $desc = $_REQUEST["description"];
+            $desc = $_REQUEST["video_legende"];
             
 
             $html .=  '<div class="diapo_item diapo_item_video" data-video="'.$video['video_url'].'" data-desc="'.$desc.'">';
