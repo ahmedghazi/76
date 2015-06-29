@@ -44,8 +44,8 @@ var Btn = function() {
 
 		$('#menu').on("mouseleave", function(e){
 			e.stopPropagation();
-			console.log(e.timeStamp)
-			console.log("mouseleave")
+		//	console.log(e.timeStamp)
+		//	console.log("mouseleave")
 			if($('#burger').hasClass('toggled')){
 				$('#burger').toggleClass('toggled');
 				$("#menu").toggleClass("toggled");
@@ -64,7 +64,7 @@ var Btn = function() {
 		
 
 		$(document).keyup(function(e) {
-			console.log(e.keyCode);
+		//	console.log(e.keyCode);
 			if (e.keyCode == 27) $('#modal_close').click();   // esc
 			if (e.keyCode == 37) { // left
 			    if( $("#modal").is(":visible") ) $('#modal_prev').click();
@@ -92,17 +92,14 @@ var Btn = function() {
 
 			$("#loader").fadeIn("fast");
 
-			var video = $(this).data("video"),
-				diaporama = $(this).data("diaporama"),
-				surtitre = $(this).data("surtitre"),
-				titre = $(this).data("titre");
+			
 			
 			var o = {
 				action: "get_diapo_video_by_id",
-				video: video,
-				diaporama: diaporama,
-				surtitre: surtitre,
-				titre: titre
+				video: $(this).data("video"),
+				diaporama: $(this).data("diaporama"),
+				surtitre: $(this).data("surtitre"),
+				titre: $(this).data("titre")
 			};
 			//console.log(o)
 			_this.loadModalContent(o);
@@ -227,10 +224,13 @@ var Btn = function() {
 
 		$("#modal").fadeIn();
 		$("#loader").fadeOut("fast");
+		format();
 	}
 
 	this.launchCycle = function(){
 		if($(".diapo_item").length > 1){
+			
+
 
 			$('.diapo').cycle({ 
 				fx:     'scrollHorz', 
@@ -256,7 +256,9 @@ var Btn = function() {
 					}
 
 					$(el_in).addClass("scaleIt")
-					$(el_out).removeClass("scaleIt")
+					$(el_out).removeClass("scaleIt");
+
+					$("#modal_legende").text($(el_out).data("desc"));
 				},
 				after:function(el_in,el_out,opt){
 

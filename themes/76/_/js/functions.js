@@ -165,6 +165,15 @@ function format(){
     		_ScrollController.goToHash();
     	}
     }, 400));
+
+    //console.log($("#modal_header").height(),$("#modal_slider").offset().top)
+    /*if($("#modal").css("display") == "block"){
+    	var pT = $("#modal_slider").offset().top - $("#modal_header").height();
+    	pT = pT/2;
+    	console.log(pT)
+    	$("#modal").css({paddingTop:pT, paddingBottom:pT})
+    	
+    }*/
 }
 
 

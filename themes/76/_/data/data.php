@@ -39,9 +39,12 @@ function handle_get_diapo_video_by_id() {
 
         foreach($_REQUEST['video'] as $video){
             $css = 'style="background-image:url('.$video['video_thumbnail'].')"';
-                    
-            $html .=  '<div class="diapo_item diapo_item_video" data-video="'.$video['video_url'].'">';
-                $html .=  '<div class="diapo_item_image" '.$css.'></div>';
+            
+            $desc = $_REQUEST["description"];
+            
+
+            $html .=  '<div class="diapo_item diapo_item_video" data-video="'.$video['video_url'].'" data-desc="'.$desc.'">';
+                $html .=  '<div class="diapo_item_image" '.$css.' ></div>';
                 $html .=  '<div class="diapo_play ">';
                     $html .=  '<div class="diapo_play_fond"></div>';
                     $html .=  '<div class="stripes">';
@@ -63,13 +66,16 @@ function handle_get_diapo_video_by_id() {
         $gallery_items = WPPGPhotoGallery::getGalleryItems($diaporama["diaporama_id"]);
         foreach($gallery_items as $item){
             $css = 'style="background-image:url('.$item["image_url"].')"';
-            $html .= '<div class="diapo_item">';
-            $html .= '<div class="diapo_item_image" '.$css.'></div>';
             
             $desc = $item["description"];
             if($desc == "")$desc = "desciption de l'image";
             $desc = str_replace("_", " ", $item["alt_text"]);
-            $html .= '<div class="diapo_description">'.$desc.'</div>';
+
+            $html .= '<div class="diapo_item" data-desc="'.$desc.'">';
+            $html .= '<div class="diapo_item_image" '.$css.'></div>';
+            
+            
+            //$html .= '<div class="diapo_description">'.$desc.'</div>';
             
             $html .= '</div>';
         }

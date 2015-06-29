@@ -11,7 +11,10 @@
 		</div>
 		
 		<div id="modal_slider"></div>
-
+		
+		<div id="modal_legende" class="align_center">
+			Légende
+		</div>
 		<div id="modal_footer" class="align_center">
 			<?php include(locate_template('_/img/logo-soixanteseize-blanc.svg'));?>
 		</div>
