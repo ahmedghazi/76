@@ -260,7 +260,7 @@ var Btn = function() {
 					$(el_in).addClass("scaleIt")
 					$(el_out).removeClass("scaleIt");
 
-					//if(!$('.diapo').find("iframe"))
+					console.log($('.diapo'))
 					$("#modal_legende").text($(el_out).data("desc"));
 				},
 				after:function(el_in,el_out,opt){
